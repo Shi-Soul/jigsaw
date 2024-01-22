@@ -1,0 +1,2435 @@
+INFO:root:
+
+----------Sat May 20 15:55:58 2023----------
+INFO:root:Config: {'use_cuda': 1, 'preprocess': True, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'criterion': 'jittor_cel', 'enable_sinkhorn': False, 'n_input': [3, 16, 16], 'epoch': 50, 'eval_epoch': 2, 'lr': 5e-05, 'betas': (0.9, 0.8), 'dropout': 0.05, 'batch_size': 512, 'num_workers': 8, 'enable_scheduler': True, 'milestones': [10, 20, 30, 40, 60, 70, 80], 'gamma': 0.3}
+INFO:root:Model: RealSmallCNN(
+    features: Sequential(
+        0: Conv(3, 32, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[32,], None, Kw=None, fan=None, i=None, bound=None)
+        1: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        2: relu()
+        3: Dropout(0.05, is_train=False)
+        4: Conv(32, 64, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[64,], None, Kw=None, fan=None, i=None, bound=None)
+        5: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        6: relu()
+        7: Dropout(0.05, is_train=False)
+        8: Conv(64, 128, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[128,], None, Kw=None, fan=None, i=None, bound=None)
+        9: relu()
+        10: Dropout(0.05, is_train=False)
+        11: Conv(128, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        12: relu()
+        13: Dropout(0.05, is_train=False)
+        14: Conv(256, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        15: relu()
+        16: Dropout(0.05, is_train=False)
+    )
+    avgpool: AdaptiveAvgPool2d((2, 2))
+    classifier: Sequential(
+        0: Linear(1024, 2048, float32[2048,], None)
+        1: relu()
+        2: Dropout(0.05, is_train=False)
+        3: Linear(2048, 1024, float32[1024,], None)
+        4: relu()
+        5: Dropout(0.05, is_train=False)
+    )
+    tail: Sequential(
+        0: Linear(4096, 8192, float32[8192,], None)
+        1: relu()
+        2: Dropout(0.05, is_train=False)
+        3: Linear(8192, 4096, float32[4096,], None)
+        4: relu()
+        5: Dropout(0.05, is_train=False)
+        6: Linear(4096, 16, float32[16,], None)
+    )
+) , Params num: 72362576
+INFO:root:Start Training: Sat May 20 15:56:05 2023
+INFO:root:Model Save at ./save/598165_epoch0.model/.optim, 
+INFO:root:Epoch 0: train_loss 1.284652, train_acc 0.038, dev_loss 1.110203, dev_acc 0.074, 
+	 time 26.759 s/epoch, total time 26.759 s, time left 1311.208 s
+INFO:root:Epoch 1: train_loss 1.018708, train_acc 0.16, dev_loss 1.110203, dev_acc 0.074, 
+	 time 16.803 s/epoch, total time 33.606 s, time left 806.554 s
+INFO:root:Model Save at ./save/598165_epoch2.model/.optim, 
+INFO:root:Epoch 2: train_loss 0.833536, train_acc 0.352, dev_loss 0.695961, dev_acc 0.484, 
+	 time 19.541 s/epoch, total time 58.623 s, time left 918.422 s
+INFO:root:Epoch 3: train_loss 0.731334, train_acc 0.448, dev_loss 0.695961, dev_acc 0.484, 
+	 time 16.332 s/epoch, total time 65.329 s, time left 751.287 s
+INFO:root:Model Save at ./save/598165_epoch4.model/.optim, 
+INFO:root:Epoch 4: train_loss 0.649244, train_acc 0.505, dev_loss 0.537985, dev_acc 0.599, 
+	 time 18.097 s/epoch, total time 90.484 s, time left 814.355 s
+INFO:root:Epoch 5: train_loss 0.58516, train_acc 0.548, dev_loss 0.537985, dev_acc 0.599, 
+	 time 16.215 s/epoch, total time 97.292 s, time left 713.476 s
+INFO:root:Model Save at ./save/598165_epoch6.model/.optim, 
+INFO:root:Epoch 6: train_loss 0.540793, train_acc 0.583, dev_loss 0.457253, dev_acc 0.651, 
+	 time 17.467 s/epoch, total time 122.268 s, time left 751.073 s
+INFO:root:Epoch 7: train_loss 0.501366, train_acc 0.611, dev_loss 0.457253, dev_acc 0.651, 
+	 time 16.137 s/epoch, total time 129.093 s, time left 677.738 s
+INFO:root:Model Save at ./save/598165_epoch8.model/.optim, 
+INFO:root:Epoch 8: train_loss 0.470457, train_acc 0.638, dev_loss 0.409527, dev_acc 0.685, 
+	 time 17.177 s/epoch, total time 154.591 s, time left 704.248 s
+INFO:root:Epoch 9: train_loss 0.441258, train_acc 0.661, dev_loss 0.409527, dev_acc 0.685, 
+	 time 16.139 s/epoch, total time 161.389 s, time left 645.554 s
+INFO:root:Model Save at ./save/598165_epoch10.model/.optim, 
+INFO:root:Epoch 10: train_loss 0.419008, train_acc 0.679, dev_loss 0.34338, dev_acc 0.746, 
+	 time 16.938 s/epoch, total time 186.315 s, time left 660.57 s
+INFO:root:Epoch 11: train_loss 0.387725, train_acc 0.709, dev_loss 0.34338, dev_acc 0.746, 
+	 time 16.094 s/epoch, total time 193.123 s, time left 611.558 s
+INFO:root:Model Save at ./save/598165_epoch12.model/.optim, 
+INFO:root:Epoch 12: train_loss 0.379107, train_acc 0.712, dev_loss 0.314186, dev_acc 0.764, 
+	 time 16.785 s/epoch, total time 218.205 s, time left 621.046 s
+INFO:root:Epoch 13: train_loss 0.371229, train_acc 0.718, dev_loss 0.314186, dev_acc 0.764, 
+	 time 16.072 s/epoch, total time 225.007 s, time left 578.589 s
+INFO:root:Model Save at ./save/598165_epoch14.model/.optim, 
+INFO:root:Epoch 14: train_loss 0.363128, train_acc 0.723, dev_loss 0.30817, dev_acc 0.77, 
+	 time 16.886 s/epoch, total time 253.284 s, time left 590.996 s
+INFO:root:Epoch 15: train_loss 0.357795, train_acc 0.729, dev_loss 0.30817, dev_acc 0.77, 
+	 time 16.251 s/epoch, total time 260.016 s, time left 552.534 s
+INFO:root:Model Save at ./save/598165_epoch16.model/.optim, 
+INFO:root:Epoch 16: train_loss 0.352215, train_acc 0.73, dev_loss 0.293071, dev_acc 0.781, 
+	 time 16.772 s/epoch, total time 285.129 s, time left 553.486 s
+INFO:root:Epoch 17: train_loss 0.348491, train_acc 0.736, dev_loss 0.293071, dev_acc 0.781, 
+	 time 16.213 s/epoch, total time 291.833 s, time left 518.814 s
+INFO:root:Model Save at ./save/598165_epoch18.model/.optim, 
+INFO:root:Epoch 18: train_loss 0.343448, train_acc 0.741, dev_loss 0.288747, dev_acc 0.786, 
+	 time 16.722 s/epoch, total time 317.719 s, time left 518.384 s
+INFO:root:Epoch 19: train_loss 0.337691, train_acc 0.744, dev_loss 0.288747, dev_acc 0.786, 
+	 time 16.223 s/epoch, total time 324.458 s, time left 486.688 s
+INFO:root:Model Save at ./save/598165_epoch20.model/.optim, 
+INFO:root:Epoch 20: train_loss 0.332422, train_acc 0.747, dev_loss 0.276705, dev_acc 0.796, 
+	 time 16.645 s/epoch, total time 349.536 s, time left 482.693 s
+INFO:root:Epoch 21: train_loss 0.323146, train_acc 0.754, dev_loss 0.276705, dev_acc 0.796, 
+	 time 16.198 s/epoch, total time 356.358 s, time left 453.546 s
+INFO:root:Model Save at ./save/598165_epoch22.model/.optim, 
+INFO:root:Epoch 22: train_loss 0.319013, train_acc 0.758, dev_loss 0.267716, dev_acc 0.803, 
+	 time 16.592 s/epoch, total time 381.62 s, time left 447.988 s
+INFO:root:Epoch 23: train_loss 0.318743, train_acc 0.759, dev_loss 0.267716, dev_acc 0.803, 
+	 time 16.186 s/epoch, total time 388.467 s, time left 420.839 s
+INFO:root:Model Save at ./save/598165_epoch24.model/.optim, 
+INFO:root:Epoch 24: train_loss 0.315352, train_acc 0.761, dev_loss 0.262881, dev_acc 0.806, 
+	 time 16.523 s/epoch, total time 413.08 s, time left 413.08 s
+INFO:root:Epoch 25: train_loss 0.31451, train_acc 0.763, dev_loss 0.262881, dev_acc 0.806, 
+	 time 16.147 s/epoch, total time 419.824 s, time left 387.53 s
+INFO:root:Model Save at ./save/598165_epoch26.model/.optim, 
+INFO:root:Epoch 26: train_loss 0.311915, train_acc 0.764, dev_loss 0.257286, dev_acc 0.807, 
+	 time 16.493 s/epoch, total time 445.316 s, time left 379.343 s
+INFO:root:Epoch 27: train_loss 0.309001, train_acc 0.766, dev_loss 0.257286, dev_acc 0.807, 
+	 time 16.145 s/epoch, total time 452.05 s, time left 355.182 s
+INFO:root:Model Save at ./save/598165_epoch28.model/.optim, 
+INFO:root:Epoch 28: train_loss 0.308249, train_acc 0.765, dev_loss 0.254245, dev_acc 0.808, 
+	 time 16.455 s/epoch, total time 477.194 s, time left 345.554 s
+INFO:root:Epoch 29: train_loss 0.308599, train_acc 0.767, dev_loss 0.254245, dev_acc 0.808, 
+	 time 16.135 s/epoch, total time 484.052 s, time left 322.701 s
+INFO:root:Model Save at ./save/598165_epoch30.model/.optim, 
+INFO:root:Epoch 30: train_loss 0.30611, train_acc 0.768, dev_loss 0.254231, dev_acc 0.808, 
+	 time 16.439 s/epoch, total time 509.603 s, time left 312.338 s
+INFO:root:Epoch 31: train_loss 0.302354, train_acc 0.771, dev_loss 0.254231, dev_acc 0.808, 
+	 time 16.136 s/epoch, total time 516.359 s, time left 290.452 s
+INFO:root:Model Save at ./save/598165_epoch32.model/.optim, 
+INFO:root:Epoch 32: train_loss 0.301826, train_acc 0.769, dev_loss 0.24929, dev_acc 0.816, 
+	 time 16.414 s/epoch, total time 541.676 s, time left 279.045 s
+INFO:root:Epoch 33: train_loss 0.30223, train_acc 0.772, dev_loss 0.24929, dev_acc 0.816, 
+	 time 16.129 s/epoch, total time 548.401 s, time left 258.071 s
+INFO:root:Model Save at ./save/598165_epoch34.model/.optim, 
+INFO:root:Epoch 34: train_loss 0.300785, train_acc 0.772, dev_loss 0.249623, dev_acc 0.817, 
+	 time 16.391 s/epoch, total time 573.68 s, time left 245.863 s
+INFO:root:Epoch 35: train_loss 0.299538, train_acc 0.772, dev_loss 0.249623, dev_acc 0.817, 
+	 time 16.125 s/epoch, total time 580.484 s, time left 225.744 s
+INFO:root:Model Save at ./save/598165_epoch36.model/.optim, 
+INFO:root:Epoch 36: train_loss 0.30018, train_acc 0.773, dev_loss 0.247737, dev_acc 0.819, 
+	 time 16.44 s/epoch, total time 608.27 s, time left 213.717 s
+INFO:root:Epoch 37: train_loss 0.299195, train_acc 0.772, dev_loss 0.247737, dev_acc 0.819, 
+	 time 16.184 s/epoch, total time 614.993 s, time left 194.208 s
+INFO:root:Epoch 38: train_loss 0.298713, train_acc 0.771, dev_loss 0.24975, dev_acc 0.817, 
+	 time 15.945 s/epoch, total time 621.867 s, time left 175.398 s
+INFO:root:Epoch 39: train_loss 0.297571, train_acc 0.774, dev_loss 0.24975, dev_acc 0.817, 
+	 time 15.715 s/epoch, total time 628.607 s, time left 157.152 s
+INFO:root:Epoch 40: train_loss 0.296318, train_acc 0.775, dev_loss 0.24733, dev_acc 0.816, 
+	 time 15.506 s/epoch, total time 635.742 s, time left 139.553 s
+INFO:root:Epoch 41: train_loss 0.298582, train_acc 0.773, dev_loss 0.24733, dev_acc 0.816, 
+	 time 15.3 s/epoch, total time 642.601 s, time left 122.4 s
+INFO:root:Epoch 42: train_loss 0.296569, train_acc 0.775, dev_loss 0.245839, dev_acc 0.818, 
+	 time 15.113 s/epoch, total time 649.839 s, time left 105.788 s
+INFO:root:Epoch 43: train_loss 0.296515, train_acc 0.774, dev_loss 0.245839, dev_acc 0.818, 
+	 time 14.927 s/epoch, total time 656.774 s, time left 89.56 s
+INFO:root:Epoch 44: train_loss 0.296418, train_acc 0.774, dev_loss 0.246372, dev_acc 0.816, 
+	 time 14.759 s/epoch, total time 664.158 s, time left 73.795 s
+INFO:root:Epoch 45: train_loss 0.29416, train_acc 0.775, dev_loss 0.246372, dev_acc 0.816, 
+	 time 14.594 s/epoch, total time 671.306 s, time left 58.374 s
+INFO:root:Epoch 46: train_loss 0.295211, train_acc 0.777, dev_loss 0.245679, dev_acc 0.817, 
+	 time 14.44 s/epoch, total time 678.688 s, time left 43.321 s
+INFO:root:Epoch 47: train_loss 0.295508, train_acc 0.775, dev_loss 0.245679, dev_acc 0.817, 
+	 time 14.291 s/epoch, total time 685.946 s, time left 28.581 s
+INFO:root:Epoch 48: train_loss 0.294346, train_acc 0.776, dev_loss 0.245738, dev_acc 0.819, 
+	 time 14.155 s/epoch, total time 693.591 s, time left 14.155 s
+INFO:root:Epoch 49: train_loss 0.298047, train_acc 0.773, dev_loss 0.2454, dev_acc 0.817, 
+	 time 14.02 s/epoch, total time 700.991 s, time left 0.0 s
+INFO:root:Model: RealSmallCNN(
+    features: Sequential(
+        0: Conv(3, 32, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[32,], None, Kw=None, fan=None, i=None, bound=None)
+        1: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        2: relu()
+        3: Dropout(0.05, is_train=False)
+        4: Conv(32, 64, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[64,], None, Kw=None, fan=None, i=None, bound=None)
+        5: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        6: relu()
+        7: Dropout(0.05, is_train=False)
+        8: Conv(64, 128, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[128,], None, Kw=None, fan=None, i=None, bound=None)
+        9: relu()
+        10: Dropout(0.05, is_train=False)
+        11: Conv(128, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        12: relu()
+        13: Dropout(0.05, is_train=False)
+        14: Conv(256, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        15: relu()
+        16: Dropout(0.05, is_train=False)
+    )
+    avgpool: AdaptiveAvgPool2d((2, 2))
+    classifier: Sequential(
+        0: Linear(1024, 2048, float32[2048,], None)
+        1: relu()
+        2: Dropout(0.05, is_train=False)
+        3: Linear(2048, 1024, float32[1024,], None)
+        4: relu()
+        5: Dropout(0.05, is_train=False)
+    )
+    tail: Sequential(
+        0: Linear(4096, 8192, float32[8192,], None)
+        1: relu()
+        2: Dropout(0.05, is_train=False)
+        3: Linear(8192, 4096, float32[4096,], None)
+        4: relu()
+        5: Dropout(0.05, is_train=False)
+        6: Linear(4096, 16, float32[16,], None)
+    )
+) , Params num: 72362576
+INFO:root:Best epoch: 36, best acc: 0.8189781526548673
+Final train_loss: 0.298047 dev_loss: 0.2454
+Final train_acc: 0.7733 dev_acc: 0.81744
+Config: {'use_cuda': 1, 'preprocess': True, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'criterion': 'jittor_cel', 'enable_sinkhorn': False, 'n_input': [3, 16, 16], 'epoch': 50, 'eval_epoch': 2, 'lr': 5e-05, 'betas': (0.9, 0.8), 'dropout': 0.05, 'batch_size': 512, 'num_workers': 8, 'enable_scheduler': True, 'milestones': [10, 20, 30, 40, 60, 70, 80], 'gamma': 0.3}
+
+INFO:root:
+
+----------Sat May 20 16:13:58 2023----------
+INFO:root:Config: {'use_cuda': 1, 'preprocess': True, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'criterion': 'jittor_cel', 'enable_sinkhorn': False, 'n_input': [3, 16, 16], 'epoch': 50, 'eval_epoch': 2, 'lr': 5e-05, 'betas': (0.9, 0.8), 'dropout': 0.05, 'batch_size': 512, 'num_workers': 8, 'enable_scheduler': True, 'milestones': [10, 20, 30, 40, 60, 70, 80], 'gamma': 0.3}
+INFO:root:Model: RealSmallCNN(
+    features: Sequential(
+        0: Conv(3, 64, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[64,], None, Kw=None, fan=None, i=None, bound=None)
+        1: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        2: relu()
+        3: Dropout(0.05, is_train=False)
+        4: Conv(64, 96, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[96,], None, Kw=None, fan=None, i=None, bound=None)
+        5: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        6: relu()
+        7: Dropout(0.05, is_train=False)
+        8: Conv(96, 128, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[128,], None, Kw=None, fan=None, i=None, bound=None)
+        9: relu()
+        10: Dropout(0.05, is_train=False)
+        11: Conv(128, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        12: relu()
+        13: Dropout(0.05, is_train=False)
+        14: Conv(256, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        15: relu()
+        16: Dropout(0.05, is_train=False)
+    )
+    avgpool: AdaptiveAvgPool2d((2, 2))
+    classifier: Sequential(
+        0: Linear(1024, 2048, float32[2048,], None)
+        1: relu()
+        2: Dropout(0.05, is_train=False)
+        3: Linear(2048, 1024, float32[1024,], None)
+        4: relu()
+        5: Dropout(0.05, is_train=False)
+    )
+    tail: Sequential(
+        0: Linear(4096, 8192, float32[8192,], None)
+        1: relu()
+        2: Dropout(0.05, is_train=False)
+        3: Linear(8192, 4096, float32[4096,], None)
+        4: relu()
+        5: Dropout(0.05, is_train=False)
+        6: Linear(4096, 16, float32[16,], None)
+    )
+) , Params num: 72437232
+INFO:root:Start Training: Sat May 20 16:14:05 2023
+INFO:root:Model Save at ./save/599245_epoch0.model/.optim, 
+INFO:root:Epoch 0: train_loss 1.244269, train_acc 0.053, dev_loss 1.071423, dev_acc 0.108, 
+	 time 35.311 s/epoch, total time 35.311 s, time left 1730.229 s
+INFO:root:Epoch 1: train_loss 0.932753, train_acc 0.255, dev_loss 1.071423, dev_acc 0.108, 
+	 time 21.38 s/epoch, total time 42.76 s, time left 1026.244 s
+INFO:root:Model Save at ./save/599245_epoch2.model/.optim, 
+INFO:root:Epoch 2: train_loss 0.753648, train_acc 0.429, dev_loss 0.645191, dev_acc 0.525, 
+	 time 23.051 s/epoch, total time 69.152 s, time left 1083.384 s
+INFO:root:Epoch 3: train_loss 0.677647, train_acc 0.499, dev_loss 0.645191, dev_acc 0.525, 
+	 time 19.135 s/epoch, total time 76.539 s, time left 880.2 s
+INFO:root:Model Save at ./save/599245_epoch4.model/.optim, 
+INFO:root:Epoch 4: train_loss 0.626288, train_acc 0.542, dev_loss 0.541442, dev_acc 0.613, 
+	 time 20.529 s/epoch, total time 102.644 s, time left 923.794 s
+INFO:root:Epoch 5: train_loss 0.581798, train_acc 0.573, dev_loss 0.541442, dev_acc 0.613, 
+	 time 18.331 s/epoch, total time 109.986 s, time left 806.565 s
+INFO:root:Model Save at ./save/599245_epoch6.model/.optim, 
+INFO:root:Epoch 6: train_loss 0.530608, train_acc 0.604, dev_loss 0.456204, dev_acc 0.646, 
+	 time 19.481 s/epoch, total time 136.37 s, time left 837.704 s
+INFO:root:Epoch 7: train_loss 0.486889, train_acc 0.629, dev_loss 0.456204, dev_acc 0.646, 
+	 time 17.971 s/epoch, total time 143.766 s, time left 754.771 s
+INFO:root:Model Save at ./save/599245_epoch8.model/.optim, 
+INFO:root:Epoch 8: train_loss 0.448344, train_acc 0.655, dev_loss 0.387257, dev_acc 0.704, 
+	 time 18.945 s/epoch, total time 170.501 s, time left 776.727 s
+INFO:root:Epoch 9: train_loss 0.415267, train_acc 0.679, dev_loss 0.387257, dev_acc 0.704, 
+	 time 17.782 s/epoch, total time 177.819 s, time left 711.276 s
+INFO:root:Model Save at ./save/599245_epoch10.model/.optim, 
+INFO:root:Epoch 10: train_loss 0.393135, train_acc 0.7, dev_loss 0.338353, dev_acc 0.747, 
+	 time 18.548 s/epoch, total time 204.029 s, time left 723.377 s
+INFO:root:Epoch 11: train_loss 0.360749, train_acc 0.726, dev_loss 0.338353, dev_acc 0.747, 
+	 time 17.608 s/epoch, total time 211.297 s, time left 669.107 s
+INFO:root:Model Save at ./save/599245_epoch12.model/.optim, 
+INFO:root:Epoch 12: train_loss 0.349959, train_acc 0.734, dev_loss 0.303442, dev_acc 0.777, 
+	 time 18.264 s/epoch, total time 237.428 s, time left 675.755 s
+INFO:root:Epoch 13: train_loss 0.343226, train_acc 0.74, dev_loss 0.303442, dev_acc 0.777, 
+	 time 17.485 s/epoch, total time 244.795 s, time left 629.473 s
+INFO:root:Model Save at ./save/599245_epoch14.model/.optim, 
+INFO:root:Epoch 14: train_loss 0.336154, train_acc 0.743, dev_loss 0.292345, dev_acc 0.782, 
+	 time 18.068 s/epoch, total time 271.023 s, time left 632.387 s
+INFO:root:Epoch 15: train_loss 0.330292, train_acc 0.751, dev_loss 0.292345, dev_acc 0.782, 
+	 time 17.401 s/epoch, total time 278.42 s, time left 591.642 s
+INFO:root:Model Save at ./save/599245_epoch16.model/.optim, 
+INFO:root:Epoch 16: train_loss 0.328215, train_acc 0.752, dev_loss 0.283134, dev_acc 0.793, 
+	 time 17.881 s/epoch, total time 303.979 s, time left 590.076 s
+INFO:root:Epoch 17: train_loss 0.321222, train_acc 0.757, dev_loss 0.283134, dev_acc 0.793, 
+	 time 17.294 s/epoch, total time 311.298 s, time left 553.419 s
+INFO:root:Model Save at ./save/599245_epoch18.model/.optim, 
+INFO:root:Epoch 18: train_loss 0.316574, train_acc 0.76, dev_loss 0.279935, dev_acc 0.798, 
+	 time 17.801 s/epoch, total time 338.219 s, time left 551.831 s
+INFO:root:
+
+----------Sat May 20 16:19:48 2023----------
+INFO:root:Config: {'use_cuda': 1, 'preprocess': True, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'criterion': 'jittor_cel', 'enable_sinkhorn': False, 'n_input': [3, 16, 16], 'epoch': 50, 'eval_epoch': 2, 'lr': 5e-05, 'betas': (0.9, 0.8), 'dropout': 0.05, 'batch_size': 512, 'num_workers': 8, 'enable_scheduler': True, 'milestones': [10, 20, 30, 40, 60, 70, 80], 'gamma': 0.3}
+INFO:root:Model: RealSmallCNN(
+    features: Sequential(
+        0: Conv(3, 64, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[64,], None, Kw=None, fan=None, i=None, bound=None)
+        1: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        2: relu()
+        3: Dropout(0.05, is_train=False)
+        4: Conv(64, 96, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[96,], None, Kw=None, fan=None, i=None, bound=None)
+        5: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        6: relu()
+        7: Dropout(0.05, is_train=False)
+        8: Conv(96, 128, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[128,], None, Kw=None, fan=None, i=None, bound=None)
+        9: relu()
+        10: Dropout(0.05, is_train=False)
+        11: Conv(128, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        12: relu()
+        13: Dropout(0.05, is_train=False)
+        14: Conv(256, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        15: relu()
+        16: Dropout(0.05, is_train=False)
+    )
+    avgpool: AdaptiveAvgPool2d((2, 2))
+    classifier: Sequential(
+        0: Linear(1024, 2048, float32[2048,], None)
+        1: relu()
+        2: Dropout(0.05, is_train=False)
+        3: Linear(2048, 1024, float32[1024,], None)
+        4: relu()
+        5: Dropout(0.05, is_train=False)
+    )
+    tail: Sequential(
+        0: Linear(4096, 8192, float32[8192,], None)
+        1: relu()
+        2: Dropout(0.05, is_train=False)
+        3: Linear(8192, 4096, float32[4096,], None)
+        4: relu()
+        5: Dropout(0.05, is_train=False)
+        6: Linear(4096, 16, float32[16,], None)
+    )
+) , Params num: 72437232
+INFO:root:Start Training: Sat May 20 16:19:52 2023
+INFO:root:
+
+----------Sat May 20 16:28:37 2023----------
+INFO:root:Config: {'use_cuda': 1, 'preprocess': True, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'criterion': 'jittor_cel', 'enable_sinkhorn': False, 'n_input': [3, 16, 16], 'epoch': 50, 'eval_epoch': 2, 'lr': 5e-05, 'betas': (0.9, 0.8), 'dropout': 0.05, 'batch_size': 512, 'num_workers': 8, 'enable_scheduler': True, 'milestones': [10, 20, 30, 40, 60, 70, 80], 'gamma': 0.3}
+INFO:root:Model: RealSmallCNN(
+    features: Sequential(
+        0: Conv(3, 16, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[16,], None, Kw=None, fan=None, i=None, bound=None)
+        1: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        2: relu()
+        3: Dropout(0.05, is_train=False)
+        4: Conv(16, 64, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[64,], None, Kw=None, fan=None, i=None, bound=None)
+        5: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        6: relu()
+        7: Dropout(0.05, is_train=False)
+        8: Conv(64, 128, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[128,], None, Kw=None, fan=None, i=None, bound=None)
+        9: relu()
+        10: Dropout(0.05, is_train=False)
+        11: Conv(128, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        12: relu()
+        13: Dropout(0.05, is_train=False)
+        14: Conv(256, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        15: relu()
+        16: Dropout(0.05, is_train=False)
+    )
+    avgpool: AdaptiveAvgPool2d((2, 2))
+    classifier: Sequential(
+        0: Linear(1024, 2048, float32[2048,], None)
+        1: relu()
+        2: Dropout(0.05, is_train=False)
+        3: Linear(2048, 1024, float32[1024,], None)
+        4: relu()
+        5: Dropout(0.05, is_train=False)
+    )
+    tail: Sequential(
+        0: Linear(4096, 8192, float32[8192,], None)
+        1: relu()
+        2: Dropout(0.05, is_train=False)
+        3: Linear(8192, 4096, float32[4096,], None)
+        4: relu()
+        5: Dropout(0.05, is_train=False)
+        6: Linear(4096, 16, float32[16,], None)
+    )
+) , Params num: 72352912
+INFO:root:Start Training: Sat May 20 16:28:43 2023
+INFO:root:Model Save at ./save/600123_epoch0.model/.optim, 
+INFO:root:Epoch 0: train_loss 1.254006, train_acc 0.052, dev_loss 1.060399, dev_acc 0.139, 
+	 time 27.844 s/epoch, total time 27.844 s, time left 1364.353 s
+INFO:root:Epoch 1: train_loss 0.966116, train_acc 0.23, dev_loss 1.060399, dev_acc 0.139, 
+	 time 17.267 s/epoch, total time 34.535 s, time left 828.837 s
+INFO:root:Model Save at ./save/600123_epoch2.model/.optim, 
+INFO:root:Epoch 2: train_loss 0.814589, train_acc 0.374, dev_loss 0.703881, dev_acc 0.476, 
+	 time 20.327 s/epoch, total time 60.98 s, time left 955.347 s
+INFO:root:Epoch 3: train_loss 0.732826, train_acc 0.452, dev_loss 0.703881, dev_acc 0.476, 
+	 time 16.928 s/epoch, total time 67.711 s, time left 778.676 s
+INFO:root:Model Save at ./save/600123_epoch4.model/.optim, 
+INFO:root:Epoch 4: train_loss 0.669669, train_acc 0.503, dev_loss 0.575257, dev_acc 0.576, 
+	 time 18.736 s/epoch, total time 93.681 s, time left 843.125 s
+INFO:root:Epoch 5: train_loss 0.60413, train_acc 0.541, dev_loss 0.575257, dev_acc 0.576, 
+	 time 16.726 s/epoch, total time 100.355 s, time left 735.939 s
+INFO:root:Model Save at ./save/600123_epoch6.model/.optim, 
+INFO:root:Epoch 6: train_loss 0.552399, train_acc 0.576, dev_loss 0.474825, dev_acc 0.633, 
+	 time 17.973 s/epoch, total time 125.814 s, time left 772.859 s
+INFO:root:Epoch 7: train_loss 0.515526, train_acc 0.603, dev_loss 0.474825, dev_acc 0.633, 
+	 time 16.562 s/epoch, total time 132.494 s, time left 695.595 s
+INFO:root:Model Save at ./save/600123_epoch8.model/.optim, 
+INFO:root:Epoch 8: train_loss 0.481183, train_acc 0.626, dev_loss 0.421702, dev_acc 0.665, 
+	 time 17.574 s/epoch, total time 158.168 s, time left 720.545 s
+INFO:root:Epoch 9: train_loss 0.455942, train_acc 0.651, dev_loss 0.421702, dev_acc 0.665, 
+	 time 16.481 s/epoch, total time 164.808 s, time left 659.232 s
+INFO:root:Model Save at ./save/600123_epoch10.model/.optim, 
+INFO:root:Epoch 10: train_loss 0.43469, train_acc 0.665, dev_loss 0.36486, dev_acc 0.717, 
+	 time 17.34 s/epoch, total time 190.735 s, time left 676.242 s
+INFO:root:Epoch 11: train_loss 0.401892, train_acc 0.691, dev_loss 0.36486, dev_acc 0.717, 
+	 time 16.448 s/epoch, total time 197.378 s, time left 625.031 s
+INFO:root:Model Save at ./save/600123_epoch12.model/.optim, 
+INFO:root:Epoch 12: train_loss 0.390743, train_acc 0.7, dev_loss 0.3374, dev_acc 0.747, 
+	 time 17.158 s/epoch, total time 223.05 s, time left 634.834 s
+INFO:root:Epoch 13: train_loss 0.386389, train_acc 0.705, dev_loss 0.3374, dev_acc 0.747, 
+	 time 16.408 s/epoch, total time 229.715 s, time left 590.696 s
+INFO:root:Model Save at ./save/600123_epoch14.model/.optim, 
+INFO:root:Epoch 14: train_loss 0.381681, train_acc 0.707, dev_loss 0.328241, dev_acc 0.751, 
+	 time 16.976 s/epoch, total time 254.641 s, time left 594.163 s
+INFO:root:Epoch 15: train_loss 0.37581, train_acc 0.714, dev_loss 0.328241, dev_acc 0.751, 
+	 time 16.332 s/epoch, total time 261.309 s, time left 555.282 s
+INFO:root:Model Save at ./save/600123_epoch16.model/.optim, 
+INFO:root:Epoch 16: train_loss 0.370873, train_acc 0.717, dev_loss 0.312286, dev_acc 0.76, 
+	 time 16.827 s/epoch, total time 286.053 s, time left 555.28 s
+INFO:root:Epoch 17: train_loss 0.367459, train_acc 0.719, dev_loss 0.312286, dev_acc 0.76, 
+	 time 16.253 s/epoch, total time 292.559 s, time left 520.104 s
+INFO:root:Model Save at ./save/600123_epoch18.model/.optim, 
+INFO:root:Epoch 18: train_loss 0.362016, train_acc 0.723, dev_loss 0.312607, dev_acc 0.768, 
+	 time 16.734 s/epoch, total time 317.946 s, time left 518.754 s
+INFO:root:Epoch 19: train_loss 0.356279, train_acc 0.728, dev_loss 0.312607, dev_acc 0.768, 
+	 time 16.224 s/epoch, total time 324.48 s, time left 486.721 s
+INFO:root:Model Save at ./save/600123_epoch20.model/.optim, 
+INFO:root:Epoch 20: train_loss 0.350712, train_acc 0.736, dev_loss 0.29396, dev_acc 0.777, 
+	 time 16.651 s/epoch, total time 349.661 s, time left 482.865 s
+INFO:root:Epoch 21: train_loss 0.343493, train_acc 0.739, dev_loss 0.29396, dev_acc 0.777, 
+	 time 16.19 s/epoch, total time 356.18 s, time left 453.321 s
+INFO:root:
+
+----------Sat May 20 16:34:49 2023----------
+INFO:root:Config: {'use_cuda': 1, 'preprocess': True, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'criterion': 'jittor_cel', 'enable_sinkhorn': False, 'n_input': [3, 16, 16], 'epoch': 50, 'eval_epoch': 2, 'lr': 5e-05, 'betas': (0.9, 0.8), 'dropout': 0.05, 'batch_size': 512, 'num_workers': 8, 'enable_scheduler': True, 'milestones': [10, 20, 30, 40, 60, 70, 80], 'gamma': 0.3}
+INFO:root:Model: RealSmallCNN(
+    features: Sequential(
+        0: Conv(3, 16, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[16,], None, Kw=None, fan=None, i=None, bound=None)
+        1: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        2: relu()
+        3: Dropout(0.05, is_train=False)
+        4: Conv(16, 64, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[64,], None, Kw=None, fan=None, i=None, bound=None)
+        5: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        6: relu()
+        7: Dropout(0.05, is_train=False)
+        8: Conv(64, 128, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[128,], None, Kw=None, fan=None, i=None, bound=None)
+        9: relu()
+        10: Dropout(0.05, is_train=False)
+        11: Conv(128, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        12: relu()
+        13: Dropout(0.05, is_train=False)
+        14: Conv(256, 384, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[384,], None, Kw=None, fan=None, i=None, bound=None)
+        15: relu()
+        16: Dropout(0.05, is_train=False)
+        17: Conv(384, 512, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[512,], None, Kw=None, fan=None, i=None, bound=None)
+        18: relu()
+        19: Dropout(0.05, is_train=False)
+    )
+    avgpool: AdaptiveAvgPool2d((2, 2))
+    classifier: Sequential(
+        0: Linear(2048, 4096, float32[4096,], None)
+        1: relu()
+        2: Dropout(0.05, is_train=False)
+        3: Linear(4096, 1024, float32[1024,], None)
+        4: relu()
+        5: Dropout(0.05, is_train=False)
+    )
+    tail: Sequential(
+        0: Linear(4096, 8192, float32[8192,], None)
+        1: relu()
+        2: Dropout(0.05, is_train=False)
+        3: Linear(8192, 4096, float32[4096,], None)
+        4: relu()
+        5: Dropout(0.05, is_train=False)
+        6: Linear(4096, 16, float32[16,], None)
+    )
+) , Params num: 82808592
+INFO:root:Start Training: Sat May 20 16:34:55 2023
+INFO:root:
+
+----------Sat May 20 16:36:00 2023----------
+INFO:root:Config: {'use_cuda': 1, 'preprocess': True, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'criterion': 'jittor_cel', 'enable_sinkhorn': False, 'n_input': [3, 16, 16], 'epoch': 50, 'eval_epoch': 2, 'lr': 5e-05, 'betas': (0.9, 0.8), 'dropout': 0.05, 'batch_size': 512, 'num_workers': 8, 'enable_scheduler': True, 'milestones': [10, 20, 30, 40, 60, 70, 80], 'gamma': 0.3}
+INFO:root:Model: RealSmallCNN(
+    features: Sequential(
+        0: Conv(3, 16, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[16,], None, Kw=None, fan=None, i=None, bound=None)
+        1: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        2: relu()
+        3: Dropout(0.05, is_train=False)
+        4: Conv(16, 64, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[64,], None, Kw=None, fan=None, i=None, bound=None)
+        5: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        6: relu()
+        7: Dropout(0.05, is_train=False)
+        8: Conv(64, 128, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[128,], None, Kw=None, fan=None, i=None, bound=None)
+        9: relu()
+        10: Dropout(0.05, is_train=False)
+        11: Conv(128, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        12: relu()
+        13: Dropout(0.05, is_train=False)
+        14: Conv(256, 384, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[384,], None, Kw=None, fan=None, i=None, bound=None)
+        15: relu()
+        16: Dropout(0.05, is_train=False)
+        17: Conv(384, 512, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[512,], None, Kw=None, fan=None, i=None, bound=None)
+        18: relu()
+        19: Dropout(0.05, is_train=False)
+    )
+    avgpool: AdaptiveAvgPool2d((2, 2))
+    classifier: Sequential(
+        0: Linear(2048, 4096, float32[4096,], None)
+        1: relu()
+        2: Dropout(0.05, is_train=False)
+        3: Linear(4096, 1024, float32[1024,], None)
+        4: relu()
+        5: Dropout(0.05, is_train=False)
+    )
+    tail: Sequential(
+        0: Linear(4096, 8192, float32[8192,], None)
+        1: relu()
+        2: Dropout(0.05, is_train=False)
+        3: Linear(8192, 4096, float32[4096,], None)
+        4: relu()
+        5: Dropout(0.05, is_train=False)
+        6: Linear(4096, 16, float32[16,], None)
+    )
+) , Params num: 82808592
+INFO:root:Start Training: Sat May 20 16:36:06 2023
+INFO:root:Model Save at ./save/600566_epoch0.model/.optim, 
+INFO:root:Epoch 0: train_loss 1.290024, train_acc 0.028, dev_loss 1.137833, dev_acc 0.069, 
+	 time 37.073 s/epoch, total time 37.073 s, time left 1816.575 s
+INFO:root:Epoch 1: train_loss 1.110625, train_acc 0.076, dev_loss 1.137833, dev_acc 0.069, 
+	 time 23.382 s/epoch, total time 46.763 s, time left 1122.312 s
+INFO:root:Model Save at ./save/600566_epoch2.model/.optim, 
+INFO:root:Epoch 2: train_loss 0.947488, train_acc 0.229, dev_loss 0.755075, dev_acc 0.427, 
+	 time 25.799 s/epoch, total time 77.398 s, time left 1212.575 s
+INFO:root:Epoch 3: train_loss 0.820123, train_acc 0.385, dev_loss 0.755075, dev_acc 0.427, 
+	 time 21.786 s/epoch, total time 87.142 s, time left 1002.138 s
+INFO:root:Model Save at ./save/600566_epoch4.model/.optim, 
+INFO:root:Epoch 4: train_loss 0.753191, train_acc 0.45, dev_loss 0.626055, dev_acc 0.558, 
+	 time 23.514 s/epoch, total time 117.572 s, time left 1058.15 s
+INFO:root:Epoch 5: train_loss 0.702873, train_acc 0.487, dev_loss 0.626055, dev_acc 0.558, 
+	 time 21.233 s/epoch, total time 127.397 s, time left 934.243 s
+INFO:root:Model Save at ./save/600566_epoch6.model/.optim, 
+INFO:root:Epoch 6: train_loss 0.65604, train_acc 0.52, dev_loss 0.554318, dev_acc 0.598, 
+	 time 22.522 s/epoch, total time 157.652 s, time left 968.434 s
+INFO:root:Epoch 7: train_loss 0.6019, train_acc 0.552, dev_loss 0.554318, dev_acc 0.598, 
+	 time 20.933 s/epoch, total time 167.462 s, time left 879.178 s
+INFO:root:Model Save at ./save/600566_epoch8.model/.optim, 
+INFO:root:Epoch 8: train_loss 0.553742, train_acc 0.584, dev_loss 0.476938, dev_acc 0.641, 
+	 time 22.086 s/epoch, total time 198.776 s, time left 905.535 s
+INFO:root:Epoch 9: train_loss 0.518042, train_acc 0.609, dev_loss 0.476938, dev_acc 0.641, 
+	 time 20.85 s/epoch, total time 208.499 s, time left 833.998 s
+INFO:root:Model Save at ./save/600566_epoch10.model/.optim, 
+INFO:root:Epoch 10: train_loss 0.484087, train_acc 0.635, dev_loss 0.403857, dev_acc 0.688, 
+	 time 21.889 s/epoch, total time 240.774 s, time left 853.654 s
+INFO:root:Epoch 11: train_loss 0.444106, train_acc 0.663, dev_loss 0.403857, dev_acc 0.688, 
+	 time 20.87 s/epoch, total time 250.438 s, time left 793.054 s
+INFO:root:Model Save at ./save/600566_epoch12.model/.optim, 
+INFO:root:Epoch 12: train_loss 0.430178, train_acc 0.673, dev_loss 0.360929, dev_acc 0.724, 
+	 time 21.635 s/epoch, total time 281.257 s, time left 800.502 s
+INFO:root:Epoch 13: train_loss 0.413802, train_acc 0.684, dev_loss 0.360929, dev_acc 0.724, 
+	 time 20.791 s/epoch, total time 291.068 s, time left 748.46 s
+INFO:root:Model Save at ./save/600566_epoch14.model/.optim, 
+INFO:root:Epoch 14: train_loss 0.406684, train_acc 0.687, dev_loss 0.342988, dev_acc 0.741, 
+	 time 21.447 s/epoch, total time 321.706 s, time left 750.648 s
+INFO:root:Epoch 15: train_loss 0.400351, train_acc 0.695, dev_loss 0.342988, dev_acc 0.741, 
+	 time 20.718 s/epoch, total time 331.487 s, time left 704.41 s
+INFO:root:Model Save at ./save/600566_epoch16.model/.optim, 
+INFO:root:Epoch 16: train_loss 0.392157, train_acc 0.702, dev_loss 0.329585, dev_acc 0.753, 
+	 time 21.334 s/epoch, total time 362.683 s, time left 704.032 s
+INFO:root:Epoch 17: train_loss 0.387899, train_acc 0.705, dev_loss 0.329585, dev_acc 0.753, 
+	 time 20.687 s/epoch, total time 372.369 s, time left 661.99 s
+INFO:root:Epoch 18: train_loss 0.379704, train_acc 0.715, dev_loss 0.335419, dev_acc 0.747, 
+	 time 20.13 s/epoch, total time 382.474 s, time left 624.036 s
+INFO:root:Epoch 19: train_loss 0.372211, train_acc 0.718, dev_loss 0.335419, dev_acc 0.747, 
+	 time 19.617 s/epoch, total time 392.343 s, time left 588.515 s
+INFO:root:Model Save at ./save/600566_epoch20.model/.optim, 
+INFO:root:Epoch 20: train_loss 0.368567, train_acc 0.721, dev_loss 0.310211, dev_acc 0.77, 
+	 time 20.153 s/epoch, total time 423.22 s, time left 584.447 s
+INFO:root:Epoch 21: train_loss 0.357238, train_acc 0.727, dev_loss 0.310211, dev_acc 0.77, 
+	 time 19.679 s/epoch, total time 432.949 s, time left 551.026 s
+INFO:root:Model Save at ./save/600566_epoch22.model/.optim, 
+INFO:root:Epoch 22: train_loss 0.354091, train_acc 0.732, dev_loss 0.299029, dev_acc 0.779, 
+	 time 20.164 s/epoch, total time 463.78 s, time left 544.437 s
+INFO:root:Epoch 23: train_loss 0.353426, train_acc 0.732, dev_loss 0.299029, dev_acc 0.779, 
+	 time 19.737 s/epoch, total time 473.68 s, time left 513.153 s
+INFO:root:Model Save at ./save/600566_epoch24.model/.optim, 
+INFO:root:Epoch 24: train_loss 0.35108, train_acc 0.735, dev_loss 0.297788, dev_acc 0.78, 
+	 time 20.173 s/epoch, total time 504.333 s, time left 504.333 s
+INFO:root:Epoch 25: train_loss 0.348088, train_acc 0.736, dev_loss 0.297788, dev_acc 0.78, 
+	 time 19.771 s/epoch, total time 514.04 s, time left 474.499 s
+INFO:root:Model Save at ./save/600566_epoch26.model/.optim, 
+INFO:root:Epoch 26: train_loss 0.346048, train_acc 0.736, dev_loss 0.297226, dev_acc 0.78, 
+	 time 20.174 s/epoch, total time 544.691 s, time left 463.996 s
+INFO:root:Epoch 27: train_loss 0.345359, train_acc 0.737, dev_loss 0.297226, dev_acc 0.78, 
+	 time 19.801 s/epoch, total time 554.419 s, time left 435.615 s
+INFO:root:Model Save at ./save/600566_epoch28.model/.optim, 
+INFO:root:Epoch 28: train_loss 0.34429, train_acc 0.738, dev_loss 0.294403, dev_acc 0.784, 
+	 time 20.263 s/epoch, total time 587.619 s, time left 425.517 s
+INFO:root:Epoch 29: train_loss 0.342458, train_acc 0.741, dev_loss 0.294403, dev_acc 0.784, 
+	 time 19.921 s/epoch, total time 597.628 s, time left 398.419 s
+INFO:root:Model Save at ./save/600566_epoch30.model/.optim, 
+INFO:root:Epoch 30: train_loss 0.342458, train_acc 0.74, dev_loss 0.289787, dev_acc 0.789, 
+	 time 20.268 s/epoch, total time 628.316 s, time left 385.097 s
+INFO:root:Epoch 31: train_loss 0.337309, train_acc 0.745, dev_loss 0.289787, dev_acc 0.789, 
+	 time 19.938 s/epoch, total time 638.018 s, time left 358.885 s
+INFO:root:Epoch 32: train_loss 0.336559, train_acc 0.744, dev_loss 0.28699, dev_acc 0.783, 
+	 time 19.636 s/epoch, total time 647.982 s, time left 333.809 s
+INFO:root:Epoch 33: train_loss 0.337245, train_acc 0.743, dev_loss 0.28699, dev_acc 0.783, 
+	 time 19.355 s/epoch, total time 658.066 s, time left 309.678 s
+INFO:root:Model Save at ./save/600566_epoch34.model/.optim, 
+INFO:root:Epoch 34: train_loss 0.337359, train_acc 0.744, dev_loss 0.285883, dev_acc 0.79, 
+	 time 19.679 s/epoch, total time 688.778 s, time left 295.191 s
+INFO:root:Epoch 35: train_loss 0.334774, train_acc 0.746, dev_loss 0.285883, dev_acc 0.79, 
+	 time 19.403 s/epoch, total time 698.524 s, time left 271.648 s
+INFO:root:Epoch 36: train_loss 0.336551, train_acc 0.745, dev_loss 0.286406, dev_acc 0.787, 
+	 time 19.149 s/epoch, total time 708.525 s, time left 248.941 s
+INFO:root:Epoch 37: train_loss 0.334551, train_acc 0.746, dev_loss 0.286406, dev_acc 0.787, 
+	 time 18.913 s/epoch, total time 718.685 s, time left 226.953 s
+INFO:root:Model Save at ./save/600566_epoch38.model/.optim, 
+INFO:root:Epoch 38: train_loss 0.335004, train_acc 0.746, dev_loss 0.285388, dev_acc 0.794, 
+	 time 19.238 s/epoch, total time 750.283 s, time left 211.618 s
+INFO:root:Epoch 39: train_loss 0.334148, train_acc 0.748, dev_loss 0.285388, dev_acc 0.794, 
+	 time 19.003 s/epoch, total time 760.138 s, time left 190.034 s
+INFO:root:Model Save at ./save/600566_epoch40.model/.optim, 
+INFO:root:Epoch 40: train_loss 0.335264, train_acc 0.747, dev_loss 0.282143, dev_acc 0.795, 
+	 time 19.294 s/epoch, total time 791.041 s, time left 173.643 s
+INFO:root:Epoch 41: train_loss 0.333246, train_acc 0.749, dev_loss 0.282143, dev_acc 0.795, 
+	 time 19.07 s/epoch, total time 800.957 s, time left 152.563 s
+INFO:root:Epoch 42: train_loss 0.332439, train_acc 0.747, dev_loss 0.283081, dev_acc 0.794, 
+	 time 18.859 s/epoch, total time 810.956 s, time left 132.016 s
+INFO:root:Epoch 43: train_loss 0.333584, train_acc 0.748, dev_loss 0.283081, dev_acc 0.794, 
+	 time 18.657 s/epoch, total time 820.886 s, time left 111.939 s
+INFO:root:Model Save at ./save/600566_epoch44.model/.optim, 
+INFO:root:Epoch 44: train_loss 0.33161, train_acc 0.75, dev_loss 0.282902, dev_acc 0.797, 
+	 time 18.934 s/epoch, total time 852.043 s, time left 94.671 s
+INFO:root:Epoch 45: train_loss 0.331417, train_acc 0.749, dev_loss 0.282902, dev_acc 0.797, 
+	 time 18.739 s/epoch, total time 862.012 s, time left 74.958 s
+INFO:root:Model Save at ./save/600566_epoch46.model/.optim, 
+INFO:root:Epoch 46: train_loss 0.331596, train_acc 0.75, dev_loss 0.281778, dev_acc 0.799, 
+	 time 18.997 s/epoch, total time 892.857 s, time left 56.991 s
+INFO:root:Epoch 47: train_loss 0.330719, train_acc 0.75, dev_loss 0.281778, dev_acc 0.799, 
+	 time 18.803 s/epoch, total time 902.562 s, time left 37.607 s
+INFO:root:Epoch 48: train_loss 0.329481, train_acc 0.75, dev_loss 0.282213, dev_acc 0.798, 
+	 time 18.625 s/epoch, total time 912.618 s, time left 18.625 s
+INFO:root:Epoch 49: train_loss 0.332422, train_acc 0.748, dev_loss 0.283607, dev_acc 0.794, 
+	 time 18.455 s/epoch, total time 922.771 s, time left 0.0 s
+INFO:root:Model: RealSmallCNN(
+    features: Sequential(
+        0: Conv(3, 16, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[16,], None, Kw=None, fan=None, i=None, bound=None)
+        1: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        2: relu()
+        3: Dropout(0.05, is_train=False)
+        4: Conv(16, 64, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[64,], None, Kw=None, fan=None, i=None, bound=None)
+        5: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        6: relu()
+        7: Dropout(0.05, is_train=False)
+        8: Conv(64, 128, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[128,], None, Kw=None, fan=None, i=None, bound=None)
+        9: relu()
+        10: Dropout(0.05, is_train=False)
+        11: Conv(128, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        12: relu()
+        13: Dropout(0.05, is_train=False)
+        14: Conv(256, 384, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[384,], None, Kw=None, fan=None, i=None, bound=None)
+        15: relu()
+        16: Dropout(0.05, is_train=False)
+        17: Conv(384, 512, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[512,], None, Kw=None, fan=None, i=None, bound=None)
+        18: relu()
+        19: Dropout(0.05, is_train=False)
+    )
+    avgpool: AdaptiveAvgPool2d((2, 2))
+    classifier: Sequential(
+        0: Linear(2048, 4096, float32[4096,], None)
+        1: relu()
+        2: Dropout(0.05, is_train=False)
+        3: Linear(4096, 1024, float32[1024,], None)
+        4: relu()
+        5: Dropout(0.05, is_train=False)
+    )
+    tail: Sequential(
+        0: Linear(4096, 8192, float32[8192,], None)
+        1: relu()
+        2: Dropout(0.05, is_train=False)
+        3: Linear(8192, 4096, float32[4096,], None)
+        4: relu()
+        5: Dropout(0.05, is_train=False)
+        6: Linear(4096, 16, float32[16,], None)
+    )
+) , Params num: 82808592
+INFO:root:Best epoch: 46, best acc: 0.7986379977876107
+Final train_loss: 0.332422 dev_loss: 0.283607
+Final train_acc: 0.74831 dev_acc: 0.793847
+Config: {'use_cuda': 1, 'preprocess': True, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'criterion': 'jittor_cel', 'enable_sinkhorn': False, 'n_input': [3, 16, 16], 'epoch': 50, 'eval_epoch': 2, 'lr': 5e-05, 'betas': (0.9, 0.8), 'dropout': 0.05, 'batch_size': 512, 'num_workers': 8, 'enable_scheduler': True, 'milestones': [10, 20, 30, 40, 60, 70, 80], 'gamma': 0.3}
+
+INFO:root:
+
+----------Sun May 21 06:35:06 2023----------
+INFO:root:Config: {'use_cuda': 1, 'preprocess': True, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'criterion': 'jittor_cel', 'enable_sinkhorn': False, 'n_input': [3, 16, 16], 'epoch': 50, 'eval_epoch': 2, 'batch_size': 512, 'num_workers': 8, 'lr': 5e-05, 'betas': (0.9, 0.9), 'dropout': 0.1, 'enable_scheduler': True, 'milestones': [10, 20, 30, 40, 60, 70, 80], 'gamma': 0.3}
+INFO:root:
+
+----------Sun May 21 06:37:05 2023----------
+INFO:root:Config: {'use_cuda': 1, 'preprocess': True, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'criterion': 'jittor_cel', 'enable_sinkhorn': False, 'n_input': [3, 16, 16], 'epoch': 50, 'eval_epoch': 2, 'batch_size': 512, 'num_workers': 8, 'lr': 5e-05, 'betas': (0.9, 0.9), 'dropout': 0.1, 'enable_scheduler': True, 'milestones': [10, 20, 30, 40, 60, 70, 80], 'gamma': 0.3}
+INFO:root:
+
+----------Sun May 21 06:38:32 2023----------
+INFO:root:Config: {'use_cuda': 1, 'preprocess': True, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'criterion': 'jittor_cel', 'enable_sinkhorn': False, 'n_input': [3, 16, 16], 'epoch': 50, 'eval_epoch': 2, 'batch_size': 512, 'num_workers': 8, 'lr': 5e-05, 'betas': (0.9, 0.9), 'dropout': 0.1, 'enable_scheduler': True, 'milestones': [10, 20, 30, 40, 60, 70, 80], 'gamma': 0.3}
+INFO:root:Model: RealSmallCNN(
+    features: Sequential(
+        0: Conv(3, 32, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[32,], None, Kw=None, fan=None, i=None, bound=None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        4: Conv(32, 64, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[64,], None, Kw=None, fan=None, i=None, bound=None)
+        5: relu()
+        6: Dropout(0.1, is_train=False)
+        7: Conv(64, 128, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[128,], None, Kw=None, fan=None, i=None, bound=None)
+        8: relu()
+        9: Dropout(0.1, is_train=False)
+        10: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        11: Conv(128, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        12: relu()
+        13: Dropout(0.1, is_train=False)
+        14: Conv(256, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        15: relu()
+        16: Dropout(0.1, is_train=False)
+    )
+    avgpool: AdaptiveAvgPool2d((2, 2))
+    classifier: Sequential(
+        0: Linear(1024, 2048, float32[2048,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(2048, 1024, float32[1024,], None)
+    )
+    tail: Sequential(
+        0: Linear(4096, 8192, float32[8192,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(8192, 4096, float32[4096,], None)
+        4: relu()
+        5: Dropout(0.1, is_train=False)
+        6: Linear(4096, 16, float32[16,], None)
+    )
+) , Params num: 72362576
+INFO:root:Start Training: Sun May 21 06:38:40 2023
+INFO:root:Model Save at ./save/651120_epoch0.model/.optim, 
+INFO:root:Epoch 0: train_loss 1.223173, train_acc 0.061, dev_loss 1.026554, dev_acc 0.217, 
+	 time 29.503 s/epoch, total time 29.503 s, time left 1445.631 s
+INFO:root:Epoch 1: train_loss 0.891583, train_acc 0.312, dev_loss 1.026554, dev_acc 0.217, 
+	 time 18.453 s/epoch, total time 36.906 s, time left 885.748 s
+INFO:root:Model Save at ./save/651120_epoch2.model/.optim, 
+INFO:root:Epoch 2: train_loss 0.716236, train_acc 0.461, dev_loss 0.62775, dev_acc 0.546, 
+	 time 21.461 s/epoch, total time 64.384 s, time left 1008.685 s
+INFO:root:Epoch 3: train_loss 0.622206, train_acc 0.534, dev_loss 0.62775, dev_acc 0.546, 
+	 time 17.959 s/epoch, total time 71.835 s, time left 826.101 s
+INFO:root:Model Save at ./save/651120_epoch4.model/.optim, 
+INFO:root:Epoch 4: train_loss 0.550197, train_acc 0.579, dev_loss 0.482189, dev_acc 0.641, 
+	 time 19.7 s/epoch, total time 98.5 s, time left 886.496 s
+INFO:root:Epoch 5: train_loss 0.491548, train_acc 0.619, dev_loss 0.482189, dev_acc 0.641, 
+	 time 17.661 s/epoch, total time 105.966 s, time left 777.084 s
+INFO:root:Model Save at ./save/651120_epoch6.model/.optim, 
+INFO:root:Epoch 6: train_loss 0.447559, train_acc 0.653, dev_loss 0.393293, dev_acc 0.709, 
+	 time 18.955 s/epoch, total time 132.685 s, time left 815.062 s
+INFO:root:Epoch 7: train_loss 0.407935, train_acc 0.687, dev_loss 0.393293, dev_acc 0.709, 
+	 time 17.511 s/epoch, total time 140.087 s, time left 735.457 s
+INFO:root:Model Save at ./save/651120_epoch8.model/.optim, 
+INFO:root:Epoch 8: train_loss 0.383365, train_acc 0.708, dev_loss 0.340873, dev_acc 0.753, 
+	 time 18.647 s/epoch, total time 167.822 s, time left 764.524 s
+INFO:root:Epoch 9: train_loss 0.362699, train_acc 0.725, dev_loss 0.340873, dev_acc 0.753, 
+	 time 17.52 s/epoch, total time 175.202 s, time left 700.81 s
+INFO:root:Model Save at ./save/651120_epoch10.model/.optim, 
+INFO:root:Epoch 10: train_loss 0.34515, train_acc 0.741, dev_loss 0.306627, dev_acc 0.779, 
+	 time 18.457 s/epoch, total time 203.022 s, time left 719.804 s
+INFO:root:Epoch 11: train_loss 0.319073, train_acc 0.761, dev_loss 0.306627, dev_acc 0.779, 
+	 time 17.534 s/epoch, total time 210.408 s, time left 666.293 s
+INFO:root:Model Save at ./save/651120_epoch12.model/.optim, 
+INFO:root:Epoch 12: train_loss 0.306086, train_acc 0.77, dev_loss 0.278592, dev_acc 0.803, 
+	 time 18.297 s/epoch, total time 237.855 s, time left 676.972 s
+INFO:root:Epoch 13: train_loss 0.29979, train_acc 0.775, dev_loss 0.278592, dev_acc 0.803, 
+	 time 17.517 s/epoch, total time 245.237 s, time left 630.608 s
+INFO:root:Model Save at ./save/651120_epoch14.model/.optim, 
+INFO:root:Epoch 14: train_loss 0.296533, train_acc 0.776, dev_loss 0.265181, dev_acc 0.814, 
+	 time 18.145 s/epoch, total time 272.18 s, time left 635.086 s
+INFO:root:Epoch 15: train_loss 0.290006, train_acc 0.783, dev_loss 0.265181, dev_acc 0.814, 
+	 time 17.472 s/epoch, total time 279.558 s, time left 594.06 s
+INFO:root:Model Save at ./save/651120_epoch16.model/.optim, 
+INFO:root:Epoch 16: train_loss 0.286662, train_acc 0.784, dev_loss 0.256414, dev_acc 0.818, 
+	 time 18.023 s/epoch, total time 306.389 s, time left 594.755 s
+INFO:root:Epoch 17: train_loss 0.282093, train_acc 0.788, dev_loss 0.256414, dev_acc 0.818, 
+	 time 17.431 s/epoch, total time 313.766 s, time left 557.806 s
+INFO:root:Model Save at ./save/651120_epoch18.model/.optim, 
+INFO:root:Epoch 18: train_loss 0.277584, train_acc 0.791, dev_loss 0.252775, dev_acc 0.821, 
+	 time 17.924 s/epoch, total time 340.548 s, time left 555.632 s
+INFO:root:Epoch 19: train_loss 0.271268, train_acc 0.796, dev_loss 0.252775, dev_acc 0.821, 
+	 time 17.402 s/epoch, total time 348.041 s, time left 522.061 s
+INFO:root:Model Save at ./save/651120_epoch20.model/.optim, 
+INFO:root:Epoch 20: train_loss 0.269156, train_acc 0.797, dev_loss 0.237129, dev_acc 0.828, 
+	 time 17.827 s/epoch, total time 374.36 s, time left 516.973 s
+INFO:root:Epoch 21: train_loss 0.261111, train_acc 0.804, dev_loss 0.237129, dev_acc 0.828, 
+	 time 17.357 s/epoch, total time 381.855 s, time left 485.997 s
+INFO:root:Model Save at ./save/651120_epoch22.model/.optim, 
+INFO:root:Epoch 22: train_loss 0.25628, train_acc 0.805, dev_loss 0.235299, dev_acc 0.837, 
+	 time 17.752 s/epoch, total time 408.297 s, time left 479.305 s
+INFO:root:Epoch 23: train_loss 0.255423, train_acc 0.805, dev_loss 0.235299, dev_acc 0.837, 
+	 time 17.32 s/epoch, total time 415.685 s, time left 450.326 s
+INFO:root:Model Save at ./save/651120_epoch24.model/.optim, 
+INFO:root:Epoch 24: train_loss 0.252735, train_acc 0.808, dev_loss 0.229614, dev_acc 0.839, 
+	 time 17.675 s/epoch, total time 441.874 s, time left 441.874 s
+INFO:root:Epoch 25: train_loss 0.252685, train_acc 0.809, dev_loss 0.229614, dev_acc 0.839, 
+	 time 17.28 s/epoch, total time 449.281 s, time left 414.721 s
+INFO:root:Epoch 26: train_loss 0.251119, train_acc 0.81, dev_loss 0.229193, dev_acc 0.836, 
+	 time 16.919 s/epoch, total time 456.807 s, time left 389.132 s
+INFO:root:Epoch 27: train_loss 0.250584, train_acc 0.81, dev_loss 0.229193, dev_acc 0.836, 
+	 time 16.585 s/epoch, total time 464.392 s, time left 364.879 s
+INFO:root:Model Save at ./save/651120_epoch28.model/.optim, 
+INFO:root:Epoch 28: train_loss 0.247515, train_acc 0.811, dev_loss 0.226174, dev_acc 0.845, 
+	 time 16.923 s/epoch, total time 490.774 s, time left 355.388 s
+INFO:root:Epoch 29: train_loss 0.246947, train_acc 0.811, dev_loss 0.226174, dev_acc 0.845, 
+	 time 16.606 s/epoch, total time 498.171 s, time left 332.114 s
+INFO:root:Epoch 30: train_loss 0.244801, train_acc 0.816, dev_loss 0.226369, dev_acc 0.842, 
+	 time 16.319 s/epoch, total time 505.902 s, time left 310.069 s
+INFO:root:Epoch 31: train_loss 0.242885, train_acc 0.815, dev_loss 0.226369, dev_acc 0.842, 
+	 time 16.043 s/epoch, total time 513.366 s, time left 288.768 s
+INFO:root:Epoch 32: train_loss 0.242357, train_acc 0.817, dev_loss 0.2218, dev_acc 0.843, 
+	 time 15.792 s/epoch, total time 521.141 s, time left 268.467 s
+INFO:root:Epoch 33: train_loss 0.242278, train_acc 0.817, dev_loss 0.2218, dev_acc 0.843, 
+	 time 15.553 s/epoch, total time 528.788 s, time left 248.841 s
+INFO:root:Epoch 34: train_loss 0.241146, train_acc 0.816, dev_loss 0.220658, dev_acc 0.841, 
+	 time 15.339 s/epoch, total time 536.861 s, time left 230.083 s
+INFO:root:Epoch 35: train_loss 0.239666, train_acc 0.818, dev_loss 0.220658, dev_acc 0.841, 
+	 time 15.13 s/epoch, total time 544.667 s, time left 211.815 s
+INFO:root:Model Save at ./save/651120_epoch36.model/.optim, 
+INFO:root:Epoch 36: train_loss 0.240546, train_acc 0.817, dev_loss 0.218924, dev_acc 0.849, 
+	 time 15.45 s/epoch, total time 571.643 s, time left 200.847 s
+INFO:root:Epoch 37: train_loss 0.238861, train_acc 0.819, dev_loss 0.218924, dev_acc 0.849, 
+	 time 15.243 s/epoch, total time 579.223 s, time left 182.912 s
+INFO:root:
+
+----------Sun May 21 06:48:32 2023----------
+INFO:root:Config: {'use_cuda': 1, 'preprocess': True, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'criterion': 'jittor_cel', 'enable_sinkhorn': False, 'n_input': [3, 16, 16], 'epoch': 50, 'eval_epoch': 2, 'batch_size': 512, 'num_workers': 8, 'lr': 5e-05, 'betas': (0.9, 0.9), 'dropout': 0.1, 'enable_scheduler': True, 'milestones': [15, 30, 40, 60, 70, 80], 'gamma': 0.4}
+INFO:root:Model: RealSmallCNN(
+    features: Sequential(
+        0: Conv(3, 32, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[32,], None, Kw=None, fan=None, i=None, bound=None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        4: Conv(32, 64, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[64,], None, Kw=None, fan=None, i=None, bound=None)
+        5: relu()
+        6: Dropout(0.1, is_train=False)
+        7: Conv(64, 128, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[128,], None, Kw=None, fan=None, i=None, bound=None)
+        8: relu()
+        9: Dropout(0.1, is_train=False)
+        10: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        11: Conv(128, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        12: relu()
+        13: Dropout(0.1, is_train=False)
+        14: Conv(256, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        15: relu()
+        16: Dropout(0.1, is_train=False)
+    )
+    avgpool: AdaptiveAvgPool2d((2, 2))
+    classifier: Sequential(
+        0: Linear(1024, 2048, float32[2048,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(2048, 1024, float32[1024,], None)
+    )
+    tail: Sequential(
+        0: Linear(4096, 8192, float32[8192,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(8192, 4096, float32[4096,], None)
+        4: relu()
+        5: Dropout(0.1, is_train=False)
+        6: Linear(4096, 16, float32[16,], None)
+    )
+) , Params num: 72362576
+INFO:root:Start Training: Sun May 21 06:48:38 2023
+INFO:root:Model Save at ./save/651718_epoch0.model/.optim, 
+INFO:root:Epoch 0: train_loss 1.226971, train_acc 0.054, dev_loss 1.019255, dev_acc 0.169, 
+	 time 28.393 s/epoch, total time 28.393 s, time left 1391.241 s
+INFO:root:Epoch 1: train_loss 0.856456, train_acc 0.327, dev_loss 1.019255, dev_acc 0.169, 
+	 time 17.941 s/epoch, total time 35.882 s, time left 861.178 s
+INFO:root:Model Save at ./save/651718_epoch2.model/.optim, 
+INFO:root:Epoch 2: train_loss 0.695996, train_acc 0.481, dev_loss 0.609635, dev_acc 0.559, 
+	 time 20.809 s/epoch, total time 62.426 s, time left 978.01 s
+INFO:root:Epoch 3: train_loss 0.627778, train_acc 0.538, dev_loss 0.609635, dev_acc 0.559, 
+	 time 17.48 s/epoch, total time 69.921 s, time left 804.095 s
+INFO:root:Model Save at ./save/651718_epoch4.model/.optim, 
+INFO:root:Epoch 4: train_loss 0.575177, train_acc 0.582, dev_loss 0.514592, dev_acc 0.634, 
+	 time 19.534 s/epoch, total time 97.669 s, time left 879.021 s
+INFO:root:Epoch 5: train_loss 0.521915, train_acc 0.616, dev_loss 0.514592, dev_acc 0.634, 
+	 time 17.527 s/epoch, total time 105.164 s, time left 771.204 s
+INFO:root:Model Save at ./save/651718_epoch6.model/.optim, 
+INFO:root:Epoch 6: train_loss 0.473494, train_acc 0.641, dev_loss 0.41135, dev_acc 0.698, 
+	 time 18.671 s/epoch, total time 130.696 s, time left 802.849 s
+INFO:root:Epoch 7: train_loss 0.431901, train_acc 0.672, dev_loss 0.41135, dev_acc 0.698, 
+	 time 17.274 s/epoch, total time 138.189 s, time left 725.493 s
+INFO:root:Model Save at ./save/651718_epoch8.model/.optim, 
+INFO:root:Epoch 8: train_loss 0.400862, train_acc 0.693, dev_loss 0.359003, dev_acc 0.74, 
+	 time 18.151 s/epoch, total time 163.355 s, time left 744.172 s
+INFO:root:Epoch 9: train_loss 0.376005, train_acc 0.715, dev_loss 0.359003, dev_acc 0.74, 
+	 time 17.088 s/epoch, total time 170.88 s, time left 683.519 s
+INFO:root:Model Save at ./save/651718_epoch10.model/.optim, 
+INFO:root:Epoch 10: train_loss 0.356783, train_acc 0.728, dev_loss 0.30984, dev_acc 0.775, 
+	 time 17.826 s/epoch, total time 196.089 s, time left 695.226 s
+INFO:root:Epoch 11: train_loss 0.339827, train_acc 0.744, dev_loss 0.30984, dev_acc 0.775, 
+	 time 16.964 s/epoch, total time 203.565 s, time left 644.621 s
+INFO:root:Model Save at ./save/651718_epoch12.model/.optim, 
+INFO:root:Epoch 12: train_loss 0.326352, train_acc 0.754, dev_loss 0.293794, dev_acc 0.791, 
+	 time 17.591 s/epoch, total time 228.689 s, time left 650.884 s
+INFO:root:Epoch 13: train_loss 0.317647, train_acc 0.761, dev_loss 0.293794, dev_acc 0.791, 
+	 time 16.87 s/epoch, total time 236.176 s, time left 607.309 s
+INFO:root:Model Save at ./save/651718_epoch14.model/.optim, 
+INFO:root:Epoch 14: train_loss 0.302374, train_acc 0.774, dev_loss 0.275971, dev_acc 0.8, 
+	 time 17.426 s/epoch, total time 261.391 s, time left 609.913 s
+INFO:root:Epoch 15: train_loss 0.293875, train_acc 0.78, dev_loss 0.275971, dev_acc 0.8, 
+	 time 16.807 s/epoch, total time 268.919 s, time left 571.452 s
+INFO:root:Model Save at ./save/651718_epoch16.model/.optim, 
+INFO:root:Epoch 16: train_loss 0.271489, train_acc 0.798, dev_loss 0.259004, dev_acc 0.812, 
+	 time 17.312 s/epoch, total time 294.304 s, time left 571.297 s
+INFO:root:Epoch 17: train_loss 0.263978, train_acc 0.803, dev_loss 0.259004, dev_acc 0.812, 
+	 time 16.762 s/epoch, total time 301.717 s, time left 536.386 s
+INFO:root:Model Save at ./save/651718_epoch18.model/.optim, 
+INFO:root:Epoch 18: train_loss 0.257309, train_acc 0.808, dev_loss 0.255708, dev_acc 0.815, 
+	 time 17.214 s/epoch, total time 327.057 s, time left 533.619 s
+INFO:root:Epoch 19: train_loss 0.253227, train_acc 0.811, dev_loss 0.255708, dev_acc 0.815, 
+	 time 16.724 s/epoch, total time 334.489 s, time left 501.733 s
+INFO:root:Model Save at ./save/651718_epoch20.model/.optim, 
+INFO:root:Epoch 20: train_loss 0.249008, train_acc 0.814, dev_loss 0.233592, dev_acc 0.83, 
+	 time 17.129 s/epoch, total time 359.719 s, time left 496.755 s
+INFO:root:Epoch 21: train_loss 0.245069, train_acc 0.814, dev_loss 0.233592, dev_acc 0.83, 
+	 time 16.691 s/epoch, total time 367.209 s, time left 467.357 s
+INFO:root:Model Save at ./save/651718_epoch22.model/.optim, 
+INFO:root:Epoch 22: train_loss 0.237717, train_acc 0.82, dev_loss 0.229805, dev_acc 0.833, 
+	 time 17.066 s/epoch, total time 392.518 s, time left 460.782 s
+INFO:root:Epoch 23: train_loss 0.233578, train_acc 0.821, dev_loss 0.229805, dev_acc 0.833, 
+	 time 16.663 s/epoch, total time 399.92 s, time left 433.246 s
+INFO:root:Model Save at ./save/651718_epoch24.model/.optim, 
+INFO:root:Epoch 24: train_loss 0.231843, train_acc 0.826, dev_loss 0.223782, dev_acc 0.839, 
+	 time 17.071 s/epoch, total time 426.774 s, time left 426.774 s
+INFO:root:Epoch 25: train_loss 0.227144, train_acc 0.827, dev_loss 0.223782, dev_acc 0.839, 
+	 time 16.7 s/epoch, total time 434.201 s, time left 400.801 s
+INFO:root:Model Save at ./save/651718_epoch26.model/.optim, 
+INFO:root:Epoch 26: train_loss 0.222345, train_acc 0.829, dev_loss 0.219971, dev_acc 0.846, 
+	 time 17.018 s/epoch, total time 459.486 s, time left 391.414 s
+INFO:root:Epoch 27: train_loss 0.217472, train_acc 0.834, dev_loss 0.219971, dev_acc 0.846, 
+	 time 16.68 s/epoch, total time 467.027 s, time left 366.95 s
+INFO:root:Epoch 28: train_loss 0.212781, train_acc 0.838, dev_loss 0.210585, dev_acc 0.843, 
+	 time 16.368 s/epoch, total time 474.661 s, time left 343.72 s
+INFO:root:Epoch 29: train_loss 0.207502, train_acc 0.842, dev_loss 0.210585, dev_acc 0.843, 
+	 time 16.074 s/epoch, total time 482.213 s, time left 321.476 s
+INFO:root:Epoch 30: train_loss 0.204201, train_acc 0.844, dev_loss 0.201466, dev_acc 0.844, 
+	 time 15.81 s/epoch, total time 490.123 s, time left 300.398 s
+INFO:root:Epoch 31: train_loss 0.194871, train_acc 0.851, dev_loss 0.201466, dev_acc 0.844, 
+	 time 15.557 s/epoch, total time 497.814 s, time left 280.02 s
+INFO:root:Model Save at ./save/651718_epoch32.model/.optim, 
+INFO:root:Epoch 32: train_loss 0.193681, train_acc 0.852, dev_loss 0.196596, dev_acc 0.854, 
+	 time 15.86 s/epoch, total time 523.368 s, time left 269.614 s
+INFO:root:Epoch 33: train_loss 0.189621, train_acc 0.856, dev_loss 0.196596, dev_acc 0.854, 
+	 time 15.616 s/epoch, total time 530.934 s, time left 249.851 s
+INFO:root:Model Save at ./save/651718_epoch34.model/.optim, 
+INFO:root:Epoch 34: train_loss 0.187187, train_acc 0.857, dev_loss 0.190937, dev_acc 0.858, 
+	 time 15.892 s/epoch, total time 556.233 s, time left 238.386 s
+INFO:root:Epoch 35: train_loss 0.187928, train_acc 0.856, dev_loss 0.190937, dev_acc 0.858, 
+	 time 15.657 s/epoch, total time 563.668 s, time left 219.204 s
+INFO:root:Model Save at ./save/651718_epoch36.model/.optim, 
+INFO:root:Epoch 36: train_loss 0.184503, train_acc 0.859, dev_loss 0.189771, dev_acc 0.864, 
+	 time 15.925 s/epoch, total time 589.242 s, time left 207.031 s
+INFO:root:Epoch 37: train_loss 0.182603, train_acc 0.859, dev_loss 0.189771, dev_acc 0.864, 
+	 time 15.703 s/epoch, total time 596.722 s, time left 188.439 s
+INFO:root:Model Save at ./save/651718_epoch38.model/.optim, 
+INFO:root:Epoch 38: train_loss 0.18002, train_acc 0.861, dev_loss 0.185513, dev_acc 0.869, 
+	 time 15.961 s/epoch, total time 622.48 s, time left 175.571 s
+INFO:root:Epoch 39: train_loss 0.18037, train_acc 0.861, dev_loss 0.185513, dev_acc 0.869, 
+	 time 15.748 s/epoch, total time 629.911 s, time left 157.478 s
+INFO:root:Model Save at ./save/651718_epoch40.model/.optim, 
+INFO:root:Epoch 40: train_loss 0.17585, train_acc 0.863, dev_loss 0.181592, dev_acc 0.87, 
+	 time 15.996 s/epoch, total time 655.829 s, time left 143.963 s
+INFO:root:Epoch 41: train_loss 0.173674, train_acc 0.866, dev_loss 0.181592, dev_acc 0.87, 
+	 time 15.791 s/epoch, total time 663.219 s, time left 126.327 s
+INFO:root:Model Save at ./save/651718_epoch42.model/.optim, 
+INFO:root:Epoch 42: train_loss 0.171789, train_acc 0.867, dev_loss 0.178745, dev_acc 0.872, 
+	 time 16.027 s/epoch, total time 689.162 s, time left 112.189 s
+INFO:root:Epoch 43: train_loss 0.17096, train_acc 0.868, dev_loss 0.178745, dev_acc 0.872, 
+	 time 15.832 s/epoch, total time 696.607 s, time left 94.992 s
+INFO:root:Epoch 44: train_loss 0.170896, train_acc 0.869, dev_loss 0.177433, dev_acc 0.871, 
+	 time 15.653 s/epoch, total time 704.395 s, time left 78.266 s
+INFO:root:Epoch 45: train_loss 0.170814, train_acc 0.869, dev_loss 0.177433, dev_acc 0.871, 
+	 time 15.477 s/epoch, total time 711.926 s, time left 61.907 s
+INFO:root:Epoch 46: train_loss 0.16903, train_acc 0.869, dev_loss 0.178133, dev_acc 0.865, 
+	 time 15.315 s/epoch, total time 719.787 s, time left 45.944 s
+INFO:root:Epoch 47: train_loss 0.166825, train_acc 0.872, dev_loss 0.178133, dev_acc 0.865, 
+	 time 15.156 s/epoch, total time 727.501 s, time left 30.313 s
+INFO:root:Epoch 48: train_loss 0.166352, train_acc 0.871, dev_loss 0.178283, dev_acc 0.867, 
+	 time 15.014 s/epoch, total time 735.671 s, time left 15.014 s
+INFO:root:Model Save at ./save/651718_epoch49.model/.optim, 
+INFO:root:Epoch 49: train_loss 0.167534, train_acc 0.869, dev_loss 0.175362, dev_acc 0.874, 
+	 time 15.239 s/epoch, total time 761.974 s, time left 0.0 s
+INFO:root:Model: RealSmallCNN(
+    features: Sequential(
+        0: Conv(3, 32, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[32,], None, Kw=None, fan=None, i=None, bound=None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        4: Conv(32, 64, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[64,], None, Kw=None, fan=None, i=None, bound=None)
+        5: relu()
+        6: Dropout(0.1, is_train=False)
+        7: Conv(64, 128, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[128,], None, Kw=None, fan=None, i=None, bound=None)
+        8: relu()
+        9: Dropout(0.1, is_train=False)
+        10: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        11: Conv(128, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        12: relu()
+        13: Dropout(0.1, is_train=False)
+        14: Conv(256, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        15: relu()
+        16: Dropout(0.1, is_train=False)
+    )
+    avgpool: AdaptiveAvgPool2d((2, 2))
+    classifier: Sequential(
+        0: Linear(1024, 2048, float32[2048,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(2048, 1024, float32[1024,], None)
+    )
+    tail: Sequential(
+        0: Linear(4096, 8192, float32[8192,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(8192, 4096, float32[4096,], None)
+        4: relu()
+        5: Dropout(0.1, is_train=False)
+        6: Linear(4096, 16, float32[16,], None)
+    )
+) , Params num: 72362576
+INFO:root:Best epoch: 49, best acc: 0.873866150442478
+Final train_loss: 0.167534 dev_loss: 0.175362
+Final train_acc: 0.869051 dev_acc: 0.873866
+Config: {'use_cuda': 1, 'preprocess': True, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'criterion': 'jittor_cel', 'enable_sinkhorn': False, 'n_input': [3, 16, 16], 'epoch': 50, 'eval_epoch': 2, 'batch_size': 512, 'num_workers': 8, 'lr': 5e-05, 'betas': (0.9, 0.9), 'dropout': 0.1, 'enable_scheduler': True, 'milestones': [15, 30, 40, 60, 70, 80], 'gamma': 0.4}
+
+INFO:root:
+INFO:root:
+INFO:root:Test: loss 0.189173, acc 0.865108
+INFO:root:
+
+----------Sun May 21 07:05:23 2023----------
+INFO:root:Config: {'use_cuda': 1, 'preprocess': True, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'criterion': 'jittor_cel', 'enable_sinkhorn': True, 'n_input': [3, 16, 16], 'epoch': 50, 'eval_epoch': 2, 'batch_size': 512, 'num_workers': 8, 'lr': 5e-05, 'betas': (0.9, 0.9), 'dropout': 0.1, 'enable_scheduler': True, 'milestones': [15, 30, 40, 60, 70, 80], 'gamma': 0.4}
+INFO:root:Model: RealSmallCNN(
+    features: Sequential(
+        0: Conv(3, 32, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[32,], None, Kw=None, fan=None, i=None, bound=None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        4: Conv(32, 64, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[64,], None, Kw=None, fan=None, i=None, bound=None)
+        5: relu()
+        6: Dropout(0.1, is_train=False)
+        7: Conv(64, 128, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[128,], None, Kw=None, fan=None, i=None, bound=None)
+        8: relu()
+        9: Dropout(0.1, is_train=False)
+        10: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        11: Conv(128, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        12: relu()
+        13: Dropout(0.1, is_train=False)
+        14: Conv(256, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        15: relu()
+        16: Dropout(0.1, is_train=False)
+    )
+    avgpool: AdaptiveAvgPool2d((2, 2))
+    classifier: Sequential(
+        0: Linear(1024, 2048, float32[2048,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(2048, 1024, float32[1024,], None)
+    )
+    tail: Sequential(
+        0: Linear(4096, 8192, float32[8192,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(8192, 4096, float32[4096,], None)
+        4: relu()
+        5: Dropout(0.1, is_train=False)
+        6: Linear(4096, 16, float32[16,], None)
+    )
+) , Params num: 72362576
+INFO:root:Start Training: Sun May 21 07:05:28 2023
+INFO:root:Model Save at ./save/652728_epoch0.model/.optim, 
+INFO:root:Epoch 0: train_loss 1.325699, train_acc 0.098, dev_loss 1.236191, dev_acc 0.236, 
+	 time 131.909 s/epoch, total time 131.909 s, time left 6463.543 s
+INFO:root:Epoch 1: train_loss 1.127684, train_acc 0.39, dev_loss 1.236191, dev_acc 0.236, 
+	 time 120.816 s/epoch, total time 241.633 s, time left 5799.183 s
+INFO:root:Model Save at ./save/652728_epoch2.model/.optim, 
+INFO:root:Epoch 2: train_loss 1.045105, train_acc 0.505, dev_loss 1.0023, dev_acc 0.574, 
+	 time 123.652 s/epoch, total time 370.955 s, time left 5811.629 s
+INFO:root:Epoch 3: train_loss 1.015975, train_acc 0.548, dev_loss 1.0023, dev_acc 0.574, 
+	 time 120.222 s/epoch, total time 480.888 s, time left 5530.209 s
+INFO:root:Model Save at ./save/652728_epoch4.model/.optim, 
+INFO:root:Epoch 4: train_loss 0.997863, train_acc 0.575, dev_loss 0.978673, dev_acc 0.606, 
+	 time 121.939 s/epoch, total time 609.697 s, time left 5487.273 s
+INFO:root:Epoch 5: train_loss 0.986967, train_acc 0.593, dev_loss 0.978673, dev_acc 0.606, 
+	 time 119.711 s/epoch, total time 718.267 s, time left 5267.291 s
+INFO:root:Model Save at ./save/652728_epoch6.model/.optim, 
+INFO:root:Epoch 6: train_loss 0.978021, train_acc 0.607, dev_loss 0.952172, dev_acc 0.644, 
+	 time 120.978 s/epoch, total time 846.844 s, time left 5202.044 s
+INFO:root:Epoch 7: train_loss 0.972805, train_acc 0.613, dev_loss 0.952172, dev_acc 0.644, 
+	 time 119.49 s/epoch, total time 955.923 s, time left 5018.598 s
+INFO:root:Model Save at ./save/652728_epoch8.model/.optim, 
+INFO:root:Epoch 8: train_loss 0.963635, train_acc 0.627, dev_loss 0.943311, dev_acc 0.659, 
+	 time 120.503 s/epoch, total time 1084.531 s, time left 4940.641 s
+INFO:root:Epoch 9: train_loss 0.959572, train_acc 0.634, dev_loss 0.943311, dev_acc 0.659, 
+	 time 119.448 s/epoch, total time 1194.482 s, time left 4777.926 s
+INFO:root:Model Save at ./save/652728_epoch10.model/.optim, 
+INFO:root:Epoch 10: train_loss 0.954462, train_acc 0.641, dev_loss 0.934638, dev_acc 0.673, 
+	 time 120.352 s/epoch, total time 1323.867 s, time left 4693.712 s
+INFO:root:Epoch 11: train_loss 0.949672, train_acc 0.649, dev_loss 0.934638, dev_acc 0.673, 
+	 time 119.405 s/epoch, total time 1432.855 s, time left 4537.374 s
+INFO:root:Model Save at ./save/652728_epoch12.model/.optim, 
+INFO:root:Epoch 12: train_loss 0.945078, train_acc 0.656, dev_loss 0.924402, dev_acc 0.686, 
+	 time 120.5 s/epoch, total time 1566.495 s, time left 4458.486 s
+INFO:root:Epoch 13: train_loss 0.942604, train_acc 0.658, dev_loss 0.924402, dev_acc 0.686, 
+	 time 119.74 s/epoch, total time 1676.367 s, time left 4310.657 s
+INFO:root:Model Save at ./save/652728_epoch14.model/.optim, 
+INFO:root:Epoch 14: train_loss 0.939322, train_acc 0.664, dev_loss 0.923244, dev_acc 0.688, 
+	 time 120.503 s/epoch, total time 1807.538 s, time left 4217.59 s
+INFO:root:Epoch 15: train_loss 0.935582, train_acc 0.67, dev_loss 0.923244, dev_acc 0.688, 
+	 time 119.788 s/epoch, total time 1916.611 s, time left 4072.798 s
+INFO:root:Model Save at ./save/652728_epoch16.model/.optim, 
+INFO:root:Epoch 16: train_loss 0.927417, train_acc 0.683, dev_loss 0.913129, dev_acc 0.707, 
+	 time 120.375 s/epoch, total time 2046.369 s, time left 3972.364 s
+INFO:root:Epoch 17: train_loss 0.92479, train_acc 0.688, dev_loss 0.913129, dev_acc 0.707, 
+	 time 119.668 s/epoch, total time 2154.022 s, time left 3829.372 s
+INFO:root:Epoch 18: train_loss 0.923181, train_acc 0.691, dev_loss 0.911751, dev_acc 0.704, 
+	 time 119.133 s/epoch, total time 2263.529 s, time left 3693.127 s
+INFO:root:Epoch 19: train_loss 0.920676, train_acc 0.695, dev_loss 0.911751, dev_acc 0.704, 
+	 time 118.564 s/epoch, total time 2371.283 s, time left 3556.924 s
+INFO:root:Model Save at ./save/652728_epoch20.model/.optim, 
+INFO:root:Epoch 20: train_loss 0.920548, train_acc 0.693, dev_loss 0.907372, dev_acc 0.717, 
+	 time 119.12 s/epoch, total time 2501.512 s, time left 3454.469 s
+INFO:root:Epoch 21: train_loss 0.918618, train_acc 0.698, dev_loss 0.907372, dev_acc 0.717, 
+	 time 118.6 s/epoch, total time 2609.195 s, time left 3320.793 s
+INFO:root:Epoch 22: train_loss 0.915775, train_acc 0.703, dev_loss 0.908892, dev_acc 0.711, 
+	 time 118.253 s/epoch, total time 2719.822 s, time left 3192.834 s
+INFO:root:Epoch 23: train_loss 0.915452, train_acc 0.702, dev_loss 0.908892, dev_acc 0.711, 
+	 time 117.817 s/epoch, total time 2827.608 s, time left 3063.241 s
+INFO:root:Epoch 24: train_loss 0.913787, train_acc 0.706, dev_loss 0.905986, dev_acc 0.715, 
+	 time 117.487 s/epoch, total time 2937.176 s, time left 2937.176 s
+INFO:root:Epoch 25: train_loss 0.913821, train_acc 0.705, dev_loss 0.905986, dev_acc 0.715, 
+	 time 117.115 s/epoch, total time 3044.997 s, time left 2810.766 s
+INFO:root:Model Save at ./save/652728_epoch26.model/.optim, 
+INFO:root:Epoch 26: train_loss 0.911661, train_acc 0.709, dev_loss 0.904391, dev_acc 0.719, 
+	 time 117.567 s/epoch, total time 3174.301 s, time left 2704.034 s
+INFO:root:Epoch 27: train_loss 0.910562, train_acc 0.71, dev_loss 0.904391, dev_acc 0.719, 
+	 time 117.218 s/epoch, total time 3282.105 s, time left 2578.797 s
+INFO:root:Model Save at ./save/652728_epoch28.model/.optim, 
+INFO:root:Epoch 28: train_loss 0.910563, train_acc 0.71, dev_loss 0.901274, dev_acc 0.725, 
+	 time 117.63 s/epoch, total time 3411.282 s, time left 2470.238 s
+INFO:root:Epoch 29: train_loss 0.909551, train_acc 0.713, dev_loss 0.901274, dev_acc 0.725, 
+	 time 117.306 s/epoch, total time 3519.175 s, time left 2346.117 s
+INFO:root:Epoch 30: train_loss 0.908214, train_acc 0.715, dev_loss 0.901383, dev_acc 0.723, 
+	 time 117.092 s/epoch, total time 3629.839 s, time left 2224.74 s
+INFO:root:Epoch 31: train_loss 0.903484, train_acc 0.724, dev_loss 0.901383, dev_acc 0.723, 
+	 time 116.78 s/epoch, total time 3736.944 s, time left 2102.031 s
+INFO:root:Epoch 32: train_loss 0.903707, train_acc 0.722, dev_loss 0.901532, dev_acc 0.721, 
+	 time 116.594 s/epoch, total time 3847.607 s, time left 1982.101 s
+INFO:root:Epoch 33: train_loss 0.902307, train_acc 0.726, dev_loss 0.901532, dev_acc 0.721, 
+	 time 116.332 s/epoch, total time 3955.295 s, time left 1861.315 s
+INFO:root:Model Save at ./save/652728_epoch34.model/.optim, 
+INFO:root:Epoch 34: train_loss 0.902393, train_acc 0.724, dev_loss 0.898505, dev_acc 0.728, 
+	 time 116.694 s/epoch, total time 4084.292 s, time left 1750.411 s
+INFO:root:Epoch 35: train_loss 0.90158, train_acc 0.725, dev_loss 0.898505, dev_acc 0.728, 
+	 time 116.443 s/epoch, total time 4191.942 s, time left 1630.2 s
+INFO:root:Model Save at ./save/652728_epoch36.model/.optim, 
+INFO:root:Epoch 36: train_loss 0.900877, train_acc 0.727, dev_loss 0.89711, dev_acc 0.729, 
+	 time 116.846 s/epoch, total time 4323.308 s, time left 1519.0 s
+INFO:root:Epoch 37: train_loss 0.898928, train_acc 0.731, dev_loss 0.89711, dev_acc 0.729, 
+	 time 116.612 s/epoch, total time 4431.248 s, time left 1399.341 s
+INFO:root:Model Save at ./save/652728_epoch38.model/.optim, 
+INFO:root:Epoch 38: train_loss 0.900293, train_acc 0.727, dev_loss 0.89684, dev_acc 0.734, 
+	 time 116.9 s/epoch, total time 4559.095 s, time left 1285.899 s
+INFO:root:Epoch 39: train_loss 0.899682, train_acc 0.729, dev_loss 0.89684, dev_acc 0.734, 
+	 time 116.668 s/epoch, total time 4666.734 s, time left 1166.683 s
+INFO:root:Epoch 40: train_loss 0.898906, train_acc 0.73, dev_loss 0.897445, dev_acc 0.731, 
+	 time 116.513 s/epoch, total time 4777.015 s, time left 1048.613 s
+INFO:root:Epoch 41: train_loss 0.896977, train_acc 0.734, dev_loss 0.897445, dev_acc 0.731, 
+	 time 116.301 s/epoch, total time 4884.624 s, time left 930.405 s
+INFO:root:Epoch 42: train_loss 0.898237, train_acc 0.731, dev_loss 0.895716, dev_acc 0.734, 
+	 time 116.165 s/epoch, total time 4995.113 s, time left 813.158 s
+INFO:root:Epoch 43: train_loss 0.896949, train_acc 0.734, dev_loss 0.895716, dev_acc 0.734, 
+	 time 115.955 s/epoch, total time 5102.0 s, time left 695.727 s
+INFO:root:Model Save at ./save/652728_epoch44.model/.optim, 
+INFO:root:Epoch 44: train_loss 0.895985, train_acc 0.736, dev_loss 0.894615, dev_acc 0.736, 
+	 time 116.258 s/epoch, total time 5231.595 s, time left 581.288 s
+INFO:root:Epoch 45: train_loss 0.895943, train_acc 0.736, dev_loss 0.894615, dev_acc 0.736, 
+	 time 116.076 s/epoch, total time 5339.508 s, time left 464.305 s
+INFO:root:Epoch 46: train_loss 0.895617, train_acc 0.735, dev_loss 0.895107, dev_acc 0.733, 
+	 time 115.965 s/epoch, total time 5450.341 s, time left 347.894 s
+INFO:root:Epoch 47: train_loss 0.895947, train_acc 0.736, dev_loss 0.895107, dev_acc 0.733, 
+	 time 115.792 s/epoch, total time 5558.025 s, time left 231.584 s
+INFO:root:Epoch 48: train_loss 0.895827, train_acc 0.735, dev_loss 0.896103, dev_acc 0.73, 
+	 time 115.683 s/epoch, total time 5668.49 s, time left 115.683 s
+INFO:root:Epoch 49: train_loss 0.8956, train_acc 0.736, dev_loss 0.895362, dev_acc 0.732, 
+	 time 115.588 s/epoch, total time 5779.402 s, time left 0.0 s
+INFO:root:Model: RealSmallCNN(
+    features: Sequential(
+        0: Conv(3, 32, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[32,], None, Kw=None, fan=None, i=None, bound=None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        4: Conv(32, 64, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[64,], None, Kw=None, fan=None, i=None, bound=None)
+        5: relu()
+        6: Dropout(0.1, is_train=False)
+        7: Conv(64, 128, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[128,], None, Kw=None, fan=None, i=None, bound=None)
+        8: relu()
+        9: Dropout(0.1, is_train=False)
+        10: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        11: Conv(128, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        12: relu()
+        13: Dropout(0.1, is_train=False)
+        14: Conv(256, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        15: relu()
+        16: Dropout(0.1, is_train=False)
+    )
+    avgpool: AdaptiveAvgPool2d((2, 2))
+    classifier: Sequential(
+        0: Linear(1024, 2048, float32[2048,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(2048, 1024, float32[1024,], None)
+    )
+    tail: Sequential(
+        0: Linear(4096, 8192, float32[8192,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(8192, 4096, float32[4096,], None)
+        4: relu()
+        5: Dropout(0.1, is_train=False)
+        6: Linear(4096, 16, float32[16,], None)
+    )
+) , Params num: 72362576
+INFO:root:Best epoch: 44, best acc: 0.7362244192477876
+Final train_loss: 0.8956 dev_loss: 0.895362
+Final train_acc: 0.735798 dev_acc: 0.73172
+Config: {'use_cuda': 1, 'preprocess': True, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'criterion': 'jittor_cel', 'enable_sinkhorn': True, 'n_input': [3, 16, 16], 'epoch': 50, 'eval_epoch': 2, 'batch_size': 512, 'num_workers': 8, 'lr': 5e-05, 'betas': (0.9, 0.9), 'dropout': 0.1, 'enable_scheduler': True, 'milestones': [15, 30, 40, 60, 70, 80], 'gamma': 0.4}
+
+INFO:root:Test: loss 0.901863, acc 0.725264
+INFO:root:
+
+
+----------Sun May 21 09:01:57 2023----------
+INFO:root:Config: {'use_cuda': 1, 'preprocess': True, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'method': 'relate', 'criterion': 'jittor_cel', 'enable_sinkhorn': False, 'n_input': [3, 16, 16], 'epoch': 50, 'eval_epoch': 2, 'batch_size': 512, 'num_workers': 8, 'lr': 5e-05, 'betas': (0.9, 0.9), 'dropout': 0.1, 'enable_scheduler': True, 'milestones': [15, 30, 40, 60, 70, 80], 'gamma': 0.4}
+INFO:root:Model: RealSmallCNN(
+    features: Sequential(
+        0: Conv(3, 32, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[32,], None, Kw=None, fan=None, i=None, bound=None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        4: Conv(32, 64, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[64,], None, Kw=None, fan=None, i=None, bound=None)
+        5: relu()
+        6: Dropout(0.1, is_train=False)
+        7: Conv(64, 128, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[128,], None, Kw=None, fan=None, i=None, bound=None)
+        8: relu()
+        9: Dropout(0.1, is_train=False)
+        10: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        11: Conv(128, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        12: relu()
+        13: Dropout(0.1, is_train=False)
+        14: Conv(256, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        15: relu()
+        16: Dropout(0.1, is_train=False)
+    )
+    avgpool: AdaptiveAvgPool2d((2, 2))
+    classifier: Sequential(
+        0: Linear(1024, 2048, float32[2048,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(2048, 1024, float32[1024,], None)
+    )
+    tail: Sequential(
+        0: Linear(4096, 8192, float32[8192,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(8192, 4096, float32[4096,], None)
+        4: relu()
+        5: Dropout(0.1, is_train=False)
+        6: Linear(4096, 16, float32[16,], None)
+    )
+) , Params num: 72362576
+INFO:root:Start Training: Sun May 21 09:02:02 2023
+INFO:root:Model Save at ./save/659722_epoch0.model/.optim, 
+INFO:root:Epoch 0: train_loss 2.659297, train_acc 0.182, dev_loss 2.049459, dev_acc 0.401, 
+	 time 27.585 s/epoch, total time 27.585 s, time left 1351.682 s
+INFO:root:Epoch 1: train_loss 1.769991, train_acc 0.466, dev_loss 2.049459, dev_acc 0.401, 
+	 time 17.494 s/epoch, total time 34.987 s, time left 839.7 s
+INFO:root:Model Save at ./save/659722_epoch2.model/.optim, 
+INFO:root:Epoch 2: train_loss 1.444109, train_acc 0.56, dev_loss 1.222114, dev_acc 0.632, 
+	 time 20.091 s/epoch, total time 60.272 s, time left 944.261 s
+INFO:root:Epoch 3: train_loss 1.246444, train_acc 0.619, dev_loss 1.222114, dev_acc 0.632, 
+	 time 16.925 s/epoch, total time 67.698 s, time left 778.53 s
+INFO:root:Model Save at ./save/659722_epoch4.model/.optim, 
+INFO:root:Epoch 4: train_loss 1.090105, train_acc 0.66, dev_loss 0.938747, dev_acc 0.707, 
+	 time 18.665 s/epoch, total time 93.323 s, time left 839.909 s
+INFO:root:Epoch 5: train_loss 0.98127, train_acc 0.691, dev_loss 0.938747, dev_acc 0.707, 
+	 time 16.796 s/epoch, total time 100.778 s, time left 739.04 s
+INFO:root:Model Save at ./save/659722_epoch6.model/.optim, 
+INFO:root:Epoch 6: train_loss 0.891646, train_acc 0.715, dev_loss 0.778474, dev_acc 0.758, 
+	 time 17.992 s/epoch, total time 125.943 s, time left 773.65 s
+INFO:root:Epoch 7: train_loss 0.824399, train_acc 0.734, dev_loss 0.778474, dev_acc 0.758, 
+	 time 16.673 s/epoch, total time 133.383 s, time left 700.26 s
+INFO:root:Model Save at ./save/659722_epoch8.model/.optim, 
+INFO:root:Epoch 8: train_loss 0.782009, train_acc 0.75, dev_loss 0.710155, dev_acc 0.773, 
+	 time 17.625 s/epoch, total time 158.626 s, time left 722.628 s
+INFO:root:Epoch 9: train_loss 0.735441, train_acc 0.765, dev_loss 0.710155, dev_acc 0.773, 
+	 time 16.596 s/epoch, total time 165.965 s, time left 663.86 s
+INFO:root:Model Save at ./save/659722_epoch10.model/.optim, 
+INFO:root:Epoch 10: train_loss 0.697012, train_acc 0.776, dev_loss 0.609951, dev_acc 0.801, 
+	 time 17.39 s/epoch, total time 191.292 s, time left 678.217 s
+INFO:root:Epoch 11: train_loss 0.657318, train_acc 0.789, dev_loss 0.609951, dev_acc 0.801, 
+	 time 16.558 s/epoch, total time 198.702 s, time left 629.223 s
+INFO:root:Model Save at ./save/659722_epoch12.model/.optim, 
+INFO:root:Epoch 12: train_loss 0.620088, train_acc 0.8, dev_loss 0.548177, dev_acc 0.826, 
+	 time 17.277 s/epoch, total time 224.599 s, time left 639.243 s
+INFO:root:Epoch 13: train_loss 0.601768, train_acc 0.809, dev_loss 0.548177, dev_acc 0.826, 
+	 time 16.578 s/epoch, total time 232.099 s, time left 596.826 s
+INFO:root:Model Save at ./save/659722_epoch14.model/.optim, 
+INFO:root:Epoch 14: train_loss 0.565596, train_acc 0.821, dev_loss 0.507695, dev_acc 0.845, 
+	 time 17.148 s/epoch, total time 257.217 s, time left 600.173 s
+INFO:root:Epoch 15: train_loss 0.544451, train_acc 0.827, dev_loss 0.507695, dev_acc 0.845, 
+	 time 16.543 s/epoch, total time 264.688 s, time left 562.461 s
+INFO:root:Model Save at ./save/659722_epoch16.model/.optim, 
+INFO:root:Epoch 16: train_loss 0.489837, train_acc 0.842, dev_loss 0.436225, dev_acc 0.858, 
+	 time 17.057 s/epoch, total time 289.966 s, time left 562.875 s
+INFO:root:Epoch 17: train_loss 0.468105, train_acc 0.85, dev_loss 0.436225, dev_acc 0.858, 
+	 time 16.52 s/epoch, total time 297.354 s, time left 528.63 s
+INFO:root:Model Save at ./save/659722_epoch18.model/.optim, 
+INFO:root:Epoch 18: train_loss 0.451741, train_acc 0.854, dev_loss 0.420987, dev_acc 0.869, 
+	 time 17.185 s/epoch, total time 326.52 s, time left 532.742 s
+INFO:root:Epoch 19: train_loss 0.445922, train_acc 0.856, dev_loss 0.420987, dev_acc 0.869, 
+	 time 16.696 s/epoch, total time 333.916 s, time left 500.874 s
+INFO:root:Model Save at ./save/659722_epoch20.model/.optim, 
+INFO:root:Epoch 20: train_loss 0.432704, train_acc 0.86, dev_loss 0.395511, dev_acc 0.879, 
+	 time 17.112 s/epoch, total time 359.348 s, time left 496.242 s
+INFO:root:Epoch 21: train_loss 0.422956, train_acc 0.864, dev_loss 0.395511, dev_acc 0.879, 
+	 time 16.67 s/epoch, total time 366.733 s, time left 466.751 s
+INFO:root:Model Save at ./save/659722_epoch22.model/.optim, 
+INFO:root:Epoch 22: train_loss 0.41831, train_acc 0.868, dev_loss 0.378145, dev_acc 0.887, 
+	 time 17.09 s/epoch, total time 393.078 s, time left 461.439 s
+INFO:root:Epoch 23: train_loss 0.403477, train_acc 0.87, dev_loss 0.378145, dev_acc 0.887, 
+	 time 16.691 s/epoch, total time 400.591 s, time left 433.974 s
+INFO:root:Model Save at ./save/659722_epoch24.model/.optim, 
+INFO:root:Epoch 24: train_loss 0.397596, train_acc 0.871, dev_loss 0.360987, dev_acc 0.891, 
+	 time 17.146 s/epoch, total time 428.655 s, time left 428.655 s
+INFO:root:Epoch 25: train_loss 0.387031, train_acc 0.875, dev_loss 0.360987, dev_acc 0.891, 
+	 time 16.77 s/epoch, total time 436.009 s, time left 402.469 s
+INFO:root:Model Save at ./save/659722_epoch26.model/.optim, 
+INFO:root:Epoch 26: train_loss 0.380622, train_acc 0.878, dev_loss 0.360995, dev_acc 0.892, 
+	 time 17.083 s/epoch, total time 461.249 s, time left 392.916 s
+INFO:root:Epoch 27: train_loss 0.372138, train_acc 0.881, dev_loss 0.360995, dev_acc 0.892, 
+	 time 16.743 s/epoch, total time 468.792 s, time left 368.337 s
+INFO:root:Epoch 28: train_loss 0.362417, train_acc 0.884, dev_loss 0.351184, dev_acc 0.887, 
+	 time 16.425 s/epoch, total time 476.329 s, time left 344.928 s
+INFO:root:Epoch 29: train_loss 0.353101, train_acc 0.885, dev_loss 0.351184, dev_acc 0.887, 
+	 time 16.131 s/epoch, total time 483.919 s, time left 322.613 s
+INFO:root:Model Save at ./save/659722_epoch30.model/.optim, 
+INFO:root:Epoch 30: train_loss 0.346517, train_acc 0.889, dev_loss 0.330577, dev_acc 0.894, 
+	 time 16.501 s/epoch, total time 511.519 s, time left 313.511 s
+INFO:root:Epoch 31: train_loss 0.328845, train_acc 0.894, dev_loss 0.330577, dev_acc 0.894, 
+	 time 16.216 s/epoch, total time 518.923 s, time left 291.894 s
+INFO:root:Model Save at ./save/659722_epoch32.model/.optim, 
+INFO:root:Epoch 32: train_loss 0.31865, train_acc 0.898, dev_loss 0.300883, dev_acc 0.909, 
+	 time 16.506 s/epoch, total time 544.692 s, time left 280.599 s
+INFO:root:Epoch 33: train_loss 0.316213, train_acc 0.9, dev_loss 0.300883, dev_acc 0.909, 
+	 time 16.243 s/epoch, total time 552.265 s, time left 259.889 s
+INFO:root:Model Save at ./save/659722_epoch34.model/.optim, 
+INFO:root:Epoch 34: train_loss 0.31566, train_acc 0.897, dev_loss 0.298125, dev_acc 0.911, 
+	 time 16.518 s/epoch, total time 578.128 s, time left 247.769 s
+INFO:root:Epoch 35: train_loss 0.308479, train_acc 0.901, dev_loss 0.298125, dev_acc 0.911, 
+	 time 16.264 s/epoch, total time 585.5 s, time left 227.694 s
+INFO:root:Epoch 36: train_loss 0.302117, train_acc 0.903, dev_loss 0.291403, dev_acc 0.91, 
+	 time 16.028 s/epoch, total time 593.051 s, time left 208.369 s
+INFO:root:Epoch 37: train_loss 0.297317, train_acc 0.903, dev_loss 0.291403, dev_acc 0.91, 
+	 time 15.807 s/epoch, total time 600.677 s, time left 189.688 s
+INFO:root:Model Save at ./save/659722_epoch38.model/.optim, 
+INFO:root:Epoch 38: train_loss 0.296523, train_acc 0.904, dev_loss 0.295428, dev_acc 0.914, 
+	 time 16.056 s/epoch, total time 626.173 s, time left 176.613 s
+INFO:root:Epoch 39: train_loss 0.295265, train_acc 0.904, dev_loss 0.295428, dev_acc 0.914, 
+	 time 15.839 s/epoch, total time 633.56 s, time left 158.39 s
+INFO:root:Model Save at ./save/659722_epoch40.model/.optim, 
+INFO:root:Epoch 40: train_loss 0.294022, train_acc 0.905, dev_loss 0.285871, dev_acc 0.915, 
+	 time 16.069 s/epoch, total time 658.837 s, time left 144.623 s
+INFO:root:Epoch 41: train_loss 0.280274, train_acc 0.909, dev_loss 0.285871, dev_acc 0.915, 
+	 time 15.868 s/epoch, total time 666.435 s, time left 126.94 s
+INFO:root:Model Save at ./save/659722_epoch42.model/.optim, 
+INFO:root:Epoch 42: train_loss 0.279051, train_acc 0.909, dev_loss 0.276032, dev_acc 0.92, 
+	 time 16.098 s/epoch, total time 692.216 s, time left 112.686 s
+INFO:root:Epoch 43: train_loss 0.278446, train_acc 0.91, dev_loss 0.276032, dev_acc 0.92, 
+	 time 15.9 s/epoch, total time 699.589 s, time left 95.399 s
+INFO:root:Epoch 44: train_loss 0.276234, train_acc 0.91, dev_loss 0.278988, dev_acc 0.918, 
+	 time 15.714 s/epoch, total time 707.139 s, time left 78.571 s
+INFO:root:Epoch 45: train_loss 0.278704, train_acc 0.91, dev_loss 0.278988, dev_acc 0.918, 
+	 time 15.539 s/epoch, total time 714.809 s, time left 62.157 s
+INFO:root:Epoch 46: train_loss 0.273596, train_acc 0.91, dev_loss 0.277267, dev_acc 0.917, 
+	 time 15.372 s/epoch, total time 722.463 s, time left 46.115 s
+INFO:root:Epoch 47: train_loss 0.274573, train_acc 0.91, dev_loss 0.277267, dev_acc 0.917, 
+	 time 15.21 s/epoch, total time 730.06 s, time left 30.419 s
+INFO:root:Epoch 48: train_loss 0.271518, train_acc 0.912, dev_loss 0.273193, dev_acc 0.918, 
+	 time 15.061 s/epoch, total time 737.976 s, time left 15.061 s
+INFO:root:Epoch 49: train_loss 0.270003, train_acc 0.912, dev_loss 0.269466, dev_acc 0.919, 
+	 time 14.922 s/epoch, total time 746.098 s, time left 0.0 s
+INFO:root:Model: RealSmallCNN(
+    features: Sequential(
+        0: Conv(3, 32, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[32,], None, Kw=None, fan=None, i=None, bound=None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        4: Conv(32, 64, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[64,], None, Kw=None, fan=None, i=None, bound=None)
+        5: relu()
+        6: Dropout(0.1, is_train=False)
+        7: Conv(64, 128, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[128,], None, Kw=None, fan=None, i=None, bound=None)
+        8: relu()
+        9: Dropout(0.1, is_train=False)
+        10: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        11: Conv(128, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        12: relu()
+        13: Dropout(0.1, is_train=False)
+        14: Conv(256, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        15: relu()
+        16: Dropout(0.1, is_train=False)
+    )
+    avgpool: AdaptiveAvgPool2d((2, 2))
+    classifier: Sequential(
+        0: Linear(1024, 2048, float32[2048,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(2048, 1024, float32[1024,], None)
+    )
+    tail: Sequential(
+        0: Linear(4096, 8192, float32[8192,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(8192, 4096, float32[4096,], None)
+        4: relu()
+        5: Dropout(0.1, is_train=False)
+        6: Linear(4096, 16, float32[16,], None)
+    )
+) , Params num: 72362576
+INFO:root:Best epoch: 42, best acc: 0.9196176714601769
+Final train_loss: 0.270003 dev_loss: 0.269466
+Final train_acc: 0.911983 dev_acc: 0.919175
+Config: {'use_cuda': 1, 'preprocess': True, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'method': 'relate', 'criterion': 'jittor_cel', 'enable_sinkhorn': False, 'n_input': [3, 16, 16], 'epoch': 50, 'eval_epoch': 2, 'batch_size': 512, 'num_workers': 8, 'lr': 5e-05, 'betas': (0.9, 0.9), 'dropout': 0.1, 'enable_scheduler': True, 'milestones': [15, 30, 40, 60, 70, 80], 'gamma': 0.4}
+
+INFO:root:Test: loss 0.31278, acc 0.909197
+INFO:root:
+
+
+
+INFO:root:
+INFO:root:
+
+----------Sun May 21 12:27:48 2023----------
+INFO:root:Config: {'use_cuda': 1, 'preprocess': True, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'method': 'classic', 'criterion': 'my_cel', 'enable_sinkhorn': True, 'n_input': [3, 16, 16], 'epoch': 50, 'eval_epoch': 2, 'batch_size': 512, 'num_workers': 8, 'lr': 0.05, 'betas': (0.9, 0.9), 'dropout': 0.1, 'enable_scheduler': True, 'milestones': [15, 30, 40, 60, 70, 80], 'gamma': 0.4}
+INFO:root:Model: RealSmallCNN(
+    features: Sequential(
+        0: Conv(3, 32, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[32,], None, Kw=None, fan=None, i=None, bound=None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        4: Conv(32, 64, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[64,], None, Kw=None, fan=None, i=None, bound=None)
+        5: relu()
+        6: Dropout(0.1, is_train=False)
+        7: Conv(64, 128, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[128,], None, Kw=None, fan=None, i=None, bound=None)
+        8: relu()
+        9: Dropout(0.1, is_train=False)
+        10: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        11: Conv(128, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        12: relu()
+        13: Dropout(0.1, is_train=False)
+        14: Conv(256, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        15: relu()
+        16: Dropout(0.1, is_train=False)
+    )
+    avgpool: AdaptiveAvgPool2d((2, 2))
+    classifier: Sequential(
+        0: Linear(1024, 2048, float32[2048,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(2048, 1024, float32[1024,], None)
+    )
+    tail: Sequential(
+        0: Linear(4096, 8192, float32[8192,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(8192, 4096, float32[4096,], None)
+        4: relu()
+        5: Dropout(0.1, is_train=False)
+        6: Linear(4096, 16, float32[16,], None)
+        7: relu()
+    )
+) , Params num: 72362576
+INFO:root:Start Training: Sun May 21 12:27:53 2023
+INFO:root:Epoch 0: train_loss 8.565418, train_acc 0.0, dev_loss 8.605029, dev_acc 0.0, 
+	 time 122.889 s/epoch, total time 122.889 s, time left 6021.543 s
+INFO:root:Epoch 1: train_loss 8.660509, train_acc 0.0, dev_loss 8.605029, dev_acc 0.0, 
+	 time 115.274 s/epoch, total time 230.548 s, time left 5533.148 s
+INFO:root:Model: RealSmallCNN(
+    features: Sequential(
+        0: Conv(3, 32, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[32,], None, Kw=None, fan=None, i=None, bound=None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        4: Conv(32, 64, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[64,], None, Kw=None, fan=None, i=None, bound=None)
+        5: relu()
+        6: Dropout(0.1, is_train=False)
+        7: Conv(64, 128, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[128,], None, Kw=None, fan=None, i=None, bound=None)
+        8: relu()
+        9: Dropout(0.1, is_train=False)
+        10: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        11: Conv(128, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        12: relu()
+        13: Dropout(0.1, is_train=False)
+        14: Conv(256, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        15: relu()
+        16: Dropout(0.1, is_train=False)
+    )
+    avgpool: AdaptiveAvgPool2d((2, 2))
+    classifier: Sequential(
+        0: Linear(1024, 2048, float32[2048,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(2048, 1024, float32[1024,], None)
+    )
+    tail: Sequential(
+        0: Linear(4096, 8192, float32[8192,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(8192, 4096, float32[4096,], None)
+        4: relu()
+        5: Dropout(0.1, is_train=False)
+        6: Linear(4096, 16, float32[16,], None)
+        7: relu()
+    )
+) , Params num: 72362576
+INFO:root:
+
+INFO:root:Start Training: Sun May 21 12:41:56 2023
+INFO:root:Model Save at ./save/672916_epoch0.model/.optim, 
+INFO:root:Epoch 0: train_loss 66730113972.92767, train_acc 0.041, dev_loss 2637209.05, dev_acc 0.04, 
+	 time 26.459 s/epoch, total time 26.459 s, time left 238.127 s
+INFO:root:Epoch 1: train_loss 6328178.042003, train_acc 0.041, dev_loss 2637209.05, dev_acc 0.04, 
+	 time 16.866 s/epoch, total time 33.732 s, time left 134.926 s
+INFO:root:Model Save at ./save/672916_epoch2.model/.optim, 
+INFO:root:Epoch 2: train_loss 355134.494004, train_acc 0.042, dev_loss 3.956787, dev_acc 0.052, 
+	 time 19.821 s/epoch, total time 59.462 s, time left 138.744 s
+INFO:root:Epoch 3: train_loss 89.2181, train_acc 0.041, dev_loss 3.956787, dev_acc 0.052, 
+	 time 16.661 s/epoch, total time 66.643 s, time left 99.964 s
+INFO:root:Epoch 4: train_loss 137.594096, train_acc 0.042, dev_loss 3.178162, dev_acc 0.044, 
+	 time 14.823 s/epoch, total time 74.115 s, time left 74.115 s
+INFO:root:Epoch 5: train_loss 4.130184, train_acc 0.041, dev_loss 3.178162, dev_acc 0.044, 
+	 time 13.56 s/epoch, total time 81.361 s, time left 54.241 s
+INFO:root:Epoch 6: train_loss 4.101332, train_acc 0.04, dev_loss 3.181044, dev_acc 0.04, 
+	 time 12.692 s/epoch, total time 88.846 s, time left 38.077 s
+INFO:root:Epoch 7: train_loss 3.181484, train_acc 0.041, dev_loss 3.181044, dev_acc 0.04, 
+	 time 12.02 s/epoch, total time 96.162 s, time left 24.041 s
+INFO:root:Epoch 8: train_loss 3.311938, train_acc 0.042, dev_loss 3.185466, dev_acc 0.04, 
+	 time 11.517 s/epoch, total time 103.649 s, time left 11.517 s
+INFO:root:Epoch 9: train_loss 3.659793, train_acc 0.043, dev_loss 3.185192, dev_acc 0.035, 
+	 time 11.132 s/epoch, total time 111.322 s, time left 0.0 s
+INFO:root:Model: RealSmallCNN(
+    features: Sequential(
+        0: Conv(3, 32, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[32,], None, Kw=None, fan=None, i=None, bound=None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        4: Conv(32, 64, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[64,], None, Kw=None, fan=None, i=None, bound=None)
+        5: relu()
+        6: Dropout(0.1, is_train=False)
+        7: Conv(64, 128, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[128,], None, Kw=None, fan=None, i=None, bound=None)
+        8: relu()
+        9: Dropout(0.1, is_train=False)
+        10: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        11: Conv(128, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        12: relu()
+        13: Dropout(0.1, is_train=False)
+        14: Conv(256, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        15: relu()
+        16: Dropout(0.1, is_train=False)
+    )
+    avgpool: AdaptiveAvgPool2d((2, 2))
+    classifier: Sequential(
+        0: Linear(1024, 2048, float32[2048,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(2048, 1024, float32[1024,], None)
+    )
+    tail: Sequential(
+        0: Linear(4096, 8192, float32[8192,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(8192, 4096, float32[4096,], None)
+        4: relu()
+        5: Dropout(0.1, is_train=False)
+        6: Linear(4096, 16, float32[16,], None)
+    )
+) , Params num: 72362576
+INFO:root:Best epoch: 2, best acc: 0.05179065265486725
+Final train_loss: 3.659793 dev_loss: 3.185192
+Final train_acc: 0.042605 dev_acc: 0.03544
+Config: {'use_cuda': 1, 'preprocess': True, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'method': 'relate', 'criterion': 'jittor_cel', 'enable_sinkhorn': False, 'n_input': [3, 16, 16], 'epoch': 10, 'eval_epoch': 2, 'batch_size': 512, 'num_workers': 8, 'lr': 0.05, 'betas': (0.9, 0.9), 'dropout': 0.1, 'enable_scheduler': True, 'milestones': [15, 30, 40, 60, 70, 80], 'gamma': 0.4}
+
+INFO:root:Start Training: Sun May 21 12:46:16 2023
+INFO:root:Epoch 0: train_loss 3.181663, train_acc 0.043, dev_loss 3.180017, dev_acc 0.044, 
+	 time 7.384 s/epoch, total time 7.384 s, time left 66.459 s
+INFO:root:Epoch 1: train_loss 3.181905, train_acc 0.043, dev_loss 3.180017, dev_acc 0.044, 
+	 time 7.261 s/epoch, total time 14.521 s, time left 58.086 s
+INFO:root:Epoch 2: train_loss 3.18153, train_acc 0.042, dev_loss 3.180499, dev_acc 0.044, 
+	 time 7.265 s/epoch, total time 21.796 s, time left 50.857 s
+INFO:root:Epoch 3: train_loss 3.181422, train_acc 0.043, dev_loss 3.180499, dev_acc 0.044, 
+	 time 7.273 s/epoch, total time 29.093 s, time left 43.64 s
+INFO:root:Epoch 4: train_loss 3.182027, train_acc 0.042, dev_loss 3.185137, dev_acc 0.041, 
+	 time 7.277 s/epoch, total time 36.387 s, time left 36.387 s
+INFO:root:Epoch 5: train_loss 3.182343, train_acc 0.041, dev_loss 3.185137, dev_acc 0.041, 
+	 time 7.28 s/epoch, total time 43.68 s, time left 29.12 s
+INFO:root:Epoch 6: train_loss 3.179495, train_acc 0.042, dev_loss 3.17876, dev_acc 0.051, 
+	 time 7.293 s/epoch, total time 51.053 s, time left 21.88 s
+INFO:root:Epoch 7: train_loss 3.179597, train_acc 0.042, dev_loss 3.17876, dev_acc 0.051, 
+	 time 7.288 s/epoch, total time 58.304 s, time left 14.576 s
+INFO:root:Epoch 8: train_loss 3.179361, train_acc 0.041, dev_loss 3.179103, dev_acc 0.038, 
+	 time 7.325 s/epoch, total time 65.925 s, time left 7.325 s
+INFO:root:Epoch 9: train_loss 3.179388, train_acc 0.042, dev_loss 3.176722, dev_acc 0.046, 
+	 time 7.345 s/epoch, total time 73.452 s, time left 0.0 s
+INFO:root:Model: RealSmallCNN(
+    features: Sequential(
+        0: Conv(3, 32, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[32,], None, Kw=None, fan=None, i=None, bound=None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        4: Conv(32, 64, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[64,], None, Kw=None, fan=None, i=None, bound=None)
+        5: relu()
+        6: Dropout(0.1, is_train=False)
+        7: Conv(64, 128, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[128,], None, Kw=None, fan=None, i=None, bound=None)
+        8: relu()
+        9: Dropout(0.1, is_train=False)
+        10: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        11: Conv(128, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        12: relu()
+        13: Dropout(0.1, is_train=False)
+        14: Conv(256, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        15: relu()
+        16: Dropout(0.1, is_train=False)
+    )
+    avgpool: AdaptiveAvgPool2d((2, 2))
+    classifier: Sequential(
+        0: Linear(1024, 2048, float32[2048,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(2048, 1024, float32[1024,], None)
+    )
+    tail: Sequential(
+        0: Linear(4096, 8192, float32[8192,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(8192, 4096, float32[4096,], None)
+        4: relu()
+        5: Dropout(0.1, is_train=False)
+        6: Linear(4096, 16, float32[16,], None)
+    )
+) , Params num: 72362576
+INFO:root:Best epoch: 2, best acc: 0.05179065265486725
+Final train_loss: 3.179388 dev_loss: 3.176722
+Final train_acc: 0.042443 dev_acc: 0.04562
+Config: {'use_cuda': 1, 'preprocess': True, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'method': 'relate', 'criterion': 'jittor_cel', 'enable_sinkhorn': False, 'n_input': [3, 16, 16], 'epoch': 10, 'eval_epoch': 2, 'batch_size': 512, 'num_workers': 8, 'lr': 0.05, 'betas': (0.9, 0.9), 'dropout': 0.1, 'enable_scheduler': True, 'milestones': [15, 30, 40, 60, 70, 80], 'gamma': 0.4}
+
+INFO:root:Test: loss 3.1794, acc 0.042147
+INFO:root:
+
+----------Sun May 21 12:51:58 2023----------
+INFO:root:Config: {'use_cuda': 1, 'preprocess': True, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'method': 'relate', 'criterion': 'jittor_cel', 'enable_sinkhorn': False, 'n_input': [3, 16, 16], 'epoch': 10, 'eval_epoch': 2, 'batch_size': 512, 'num_workers': 8, 'lr': 5e-05, 'betas': (0.9, 0.9), 'dropout': 0.1, 'enable_scheduler': True, 'milestones': [15, 30, 40, 60, 70, 80], 'gamma': 0.4}
+INFO:root:Model: RealSmallCNN(
+    features: Sequential(
+        0: Conv(3, 32, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[32,], None, Kw=None, fan=None, i=None, bound=None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        4: Conv(32, 64, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[64,], None, Kw=None, fan=None, i=None, bound=None)
+        5: relu()
+        6: Dropout(0.1, is_train=False)
+        7: Conv(64, 128, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[128,], None, Kw=None, fan=None, i=None, bound=None)
+        8: relu()
+        9: Dropout(0.1, is_train=False)
+        10: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        11: Conv(128, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        12: relu()
+        13: Dropout(0.1, is_train=False)
+        14: Conv(256, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        15: relu()
+        16: Dropout(0.1, is_train=False)
+    )
+    avgpool: AdaptiveAvgPool2d((2, 2))
+    classifier: Sequential(
+        0: Linear(1024, 2048, float32[2048,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(2048, 1024, float32[1024,], None)
+    )
+    tail: Sequential(
+        0: Linear(4096, 8192, float32[8192,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(8192, 4096, float32[4096,], None)
+        4: relu()
+        5: Dropout(0.1, is_train=False)
+        6: Linear(4096, 16, float32[16,], None)
+    )
+) , Params num: 72362576
+INFO:root:Start Training: Sun May 21 12:52:02 2023
+INFO:root:Model Save at ./save/673522_epoch0.model/.optim, 
+INFO:root:Epoch 0: train_loss 2.80959, train_acc 0.148, dev_loss 2.321846, dev_acc 0.32, 
+	 time 25.468 s/epoch, total time 25.468 s, time left 229.213 s
+INFO:root:Epoch 1: train_loss 1.879943, train_acc 0.432, dev_loss 2.321846, dev_acc 0.32, 
+	 time 16.392 s/epoch, total time 32.784 s, time left 131.136 s
+INFO:root:
+
+----------Sun May 21 12:52:53 2023----------
+INFO:root:Config: {'use_cuda': 1, 'preprocess': True, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'method': 'relate', 'criterion': 'jittor_cel', 'enable_sinkhorn': False, 'n_input': [3, 16, 16], 'epoch': 50, 'eval_epoch': 2, 'batch_size': 512, 'num_workers': 8, 'lr': 5e-05, 'betas': (0.9, 0.9), 'dropout': 0.1, 'enable_scheduler': True, 'milestones': [15, 30, 40, 60, 70, 80], 'gamma': 0.3}
+INFO:root:Model: RealSmallCNN(
+    features: Sequential(
+        0: Conv(3, 32, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[32,], None, Kw=None, fan=None, i=None, bound=None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        4: Conv(32, 64, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[64,], None, Kw=None, fan=None, i=None, bound=None)
+        5: relu()
+        6: Dropout(0.1, is_train=False)
+        7: Conv(64, 128, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[128,], None, Kw=None, fan=None, i=None, bound=None)
+        8: relu()
+        9: Dropout(0.1, is_train=False)
+        10: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        11: Conv(128, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        12: relu()
+        13: Dropout(0.1, is_train=False)
+        14: Conv(256, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        15: relu()
+        16: Dropout(0.1, is_train=False)
+    )
+    avgpool: AdaptiveAvgPool2d((2, 2))
+    classifier: Sequential(
+        0: Linear(1024, 2048, float32[2048,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(2048, 1024, float32[1024,], None)
+    )
+    tail: Sequential(
+        0: Linear(4096, 8192, float32[8192,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(8192, 4096, float32[4096,], None)
+        4: relu()
+        5: Dropout(0.1, is_train=False)
+        6: Linear(4096, 16, float32[16,], None)
+    )
+) , Params num: 72362576
+INFO:root:Start Training: Sun May 21 12:52:57 2023
+INFO:root:Model Save at ./save/673577_epoch0.model/.optim, 
+INFO:root:Epoch 0: train_loss 2.664316, train_acc 0.186, dev_loss 1.999105, dev_acc 0.425, 
+	 time 25.81 s/epoch, total time 25.81 s, time left 1264.708 s
+INFO:root:Epoch 1: train_loss 1.753057, train_acc 0.469, dev_loss 1.999105, dev_acc 0.425, 
+	 time 16.622 s/epoch, total time 33.244 s, time left 797.867 s
+INFO:root:Model Save at ./save/673577_epoch2.model/.optim, 
+INFO:root:Epoch 2: train_loss 1.454569, train_acc 0.558, dev_loss 1.236952, dev_acc 0.632, 
+	 time 19.518 s/epoch, total time 58.555 s, time left 917.365 s
+INFO:root:Epoch 3: train_loss 1.273382, train_acc 0.612, dev_loss 1.236952, dev_acc 0.632, 
+	 time 16.489 s/epoch, total time 65.955 s, time left 758.482 s
+INFO:root:Model Save at ./save/673577_epoch4.model/.optim, 
+INFO:root:Epoch 4: train_loss 1.113488, train_acc 0.652, dev_loss 0.960029, dev_acc 0.714, 
+	 time 18.316 s/epoch, total time 91.58 s, time left 824.217 s
+INFO:root:Epoch 5: train_loss 1.006561, train_acc 0.683, dev_loss 0.960029, dev_acc 0.714, 
+	 time 16.49 s/epoch, total time 98.943 s, time left 725.581 s
+INFO:root:Model Save at ./save/673577_epoch6.model/.optim, 
+INFO:root:Epoch 6: train_loss 0.917884, train_acc 0.711, dev_loss 0.793228, dev_acc 0.75, 
+	 time 17.786 s/epoch, total time 124.499 s, time left 764.778 s
+INFO:root:Epoch 7: train_loss 0.848551, train_acc 0.73, dev_loss 0.793228, dev_acc 0.75, 
+	 time 16.478 s/epoch, total time 131.824 s, time left 692.078 s
+INFO:root:Model Save at ./save/673577_epoch8.model/.optim, 
+INFO:root:Epoch 8: train_loss 0.796475, train_acc 0.747, dev_loss 0.708648, dev_acc 0.784, 
+	 time 17.569 s/epoch, total time 158.119 s, time left 720.318 s
+INFO:root:Epoch 9: train_loss 0.748382, train_acc 0.763, dev_loss 0.708648, dev_acc 0.784, 
+	 time 16.566 s/epoch, total time 165.664 s, time left 662.657 s
+INFO:root:Model Save at ./save/673577_epoch10.model/.optim, 
+INFO:root:Epoch 10: train_loss 0.716932, train_acc 0.77, dev_loss 0.609647, dev_acc 0.814, 
+	 time 17.413 s/epoch, total time 191.538 s, time left 679.088 s
+INFO:root:Epoch 11: train_loss 0.671132, train_acc 0.786, dev_loss 0.609647, dev_acc 0.814, 
+	 time 16.581 s/epoch, total time 198.972 s, time left 630.078 s
+INFO:root:Model Save at ./save/673577_epoch12.model/.optim, 
+INFO:root:Epoch 12: train_loss 0.640086, train_acc 0.797, dev_loss 0.544379, dev_acc 0.839, 
+	 time 17.267 s/epoch, total time 224.47 s, time left 638.877 s
+INFO:root:Epoch 13: train_loss 0.614805, train_acc 0.805, dev_loss 0.544379, dev_acc 0.839, 
+	 time 16.564 s/epoch, total time 231.897 s, time left 596.306 s
+INFO:root:Model Save at ./save/673577_epoch14.model/.optim, 
+INFO:root:Epoch 14: train_loss 0.588438, train_acc 0.813, dev_loss 0.519721, dev_acc 0.841, 
+	 time 17.232 s/epoch, total time 258.478 s, time left 603.114 s
+INFO:root:Epoch 15: train_loss 0.568995, train_acc 0.819, dev_loss 0.519721, dev_acc 0.841, 
+	 time 16.617 s/epoch, total time 265.877 s, time left 564.99 s
+INFO:root:Model Save at ./save/673577_epoch16.model/.optim, 
+INFO:root:Epoch 16: train_loss 0.512282, train_acc 0.837, dev_loss 0.456098, dev_acc 0.86, 
+	 time 17.229 s/epoch, total time 292.885 s, time left 568.542 s
+INFO:root:Epoch 17: train_loss 0.491145, train_acc 0.841, dev_loss 0.456098, dev_acc 0.86, 
+	 time 16.686 s/epoch, total time 300.342 s, time left 533.941 s
+INFO:root:Model Save at ./save/673577_epoch18.model/.optim, 
+INFO:root:Epoch 18: train_loss 0.480493, train_acc 0.846, dev_loss 0.43623, dev_acc 0.869, 
+	 time 17.197 s/epoch, total time 326.746 s, time left 533.111 s
+INFO:root:Epoch 19: train_loss 0.473718, train_acc 0.848, dev_loss 0.43623, dev_acc 0.869, 
+	 time 16.703 s/epoch, total time 334.055 s, time left 501.082 s
+INFO:root:Model Save at ./save/673577_epoch20.model/.optim, 
+INFO:root:Epoch 20: train_loss 0.465278, train_acc 0.85, dev_loss 0.414841, dev_acc 0.876, 
+	 time 17.199 s/epoch, total time 361.177 s, time left 498.768 s
+INFO:root:Epoch 21: train_loss 0.453488, train_acc 0.855, dev_loss 0.414841, dev_acc 0.876, 
+	 time 16.752 s/epoch, total time 368.555 s, time left 469.07 s
+INFO:root:Model Save at ./save/673577_epoch22.model/.optim, 
+INFO:root:Epoch 22: train_loss 0.45048, train_acc 0.855, dev_loss 0.409972, dev_acc 0.878, 
+	 time 17.256 s/epoch, total time 396.879 s, time left 465.901 s
+INFO:root:Epoch 23: train_loss 0.443737, train_acc 0.857, dev_loss 0.409972, dev_acc 0.878, 
+	 time 16.851 s/epoch, total time 404.424 s, time left 438.126 s
+INFO:root:Epoch 24: train_loss 0.431551, train_acc 0.861, dev_loss 0.40395, dev_acc 0.876, 
+	 time 16.479 s/epoch, total time 411.977 s, time left 411.977 s
+INFO:root:Epoch 25: train_loss 0.4299, train_acc 0.861, dev_loss 0.40395, dev_acc 0.876, 
+	 time 16.13 s/epoch, total time 419.39 s, time left 387.13 s
+INFO:root:Model Save at ./save/673577_epoch26.model/.optim, 
+INFO:root:Epoch 26: train_loss 0.419345, train_acc 0.866, dev_loss 0.392401, dev_acc 0.88, 
+	 time 16.504 s/epoch, total time 445.611 s, time left 379.594 s
+INFO:root:Epoch 27: train_loss 0.412869, train_acc 0.867, dev_loss 0.392401, dev_acc 0.88, 
+	 time 16.185 s/epoch, total time 453.187 s, time left 356.075 s
+INFO:root:Model Save at ./save/673577_epoch28.model/.optim, 
+INFO:root:Epoch 28: train_loss 0.406131, train_acc 0.869, dev_loss 0.375203, dev_acc 0.884, 
+	 time 16.528 s/epoch, total time 479.325 s, time left 347.097 s
+INFO:root:Epoch 29: train_loss 0.402272, train_acc 0.871, dev_loss 0.375203, dev_acc 0.884, 
+	 time 16.223 s/epoch, total time 486.677 s, time left 324.451 s
+INFO:root:Model Save at ./save/673577_epoch30.model/.optim, 
+INFO:root:Epoch 30: train_loss 0.395243, train_acc 0.874, dev_loss 0.373641, dev_acc 0.885, 
+	 time 16.528 s/epoch, total time 512.376 s, time left 314.037 s
+INFO:root:Epoch 31: train_loss 0.375892, train_acc 0.879, dev_loss 0.373641, dev_acc 0.885, 
+	 time 16.248 s/epoch, total time 519.938 s, time left 292.465 s
+INFO:root:Model Save at ./save/673577_epoch32.model/.optim, 
+INFO:root:Epoch 32: train_loss 0.371809, train_acc 0.879, dev_loss 0.355714, dev_acc 0.893, 
+	 time 16.59 s/epoch, total time 547.486 s, time left 282.038 s
+INFO:root:Epoch 33: train_loss 0.36387, train_acc 0.882, dev_loss 0.355714, dev_acc 0.893, 
+	 time 16.319 s/epoch, total time 554.861 s, time left 261.111 s
+INFO:root:Model Save at ./save/673577_epoch34.model/.optim, 
+INFO:root:Epoch 34: train_loss 0.365559, train_acc 0.881, dev_loss 0.35408, dev_acc 0.894, 
+	 time 16.591 s/epoch, total time 580.691 s, time left 248.867 s
+INFO:root:Epoch 35: train_loss 0.36212, train_acc 0.883, dev_loss 0.35408, dev_acc 0.894, 
+	 time 16.335 s/epoch, total time 588.07 s, time left 228.694 s
+INFO:root:Model Save at ./save/673577_epoch36.model/.optim, 
+INFO:root:Epoch 36: train_loss 0.358545, train_acc 0.885, dev_loss 0.338596, dev_acc 0.895, 
+	 time 16.584 s/epoch, total time 613.609 s, time left 215.592 s
+INFO:root:Epoch 37: train_loss 0.356273, train_acc 0.885, dev_loss 0.338596, dev_acc 0.895, 
+	 time 16.343 s/epoch, total time 621.019 s, time left 196.111 s
+INFO:root:Epoch 38: train_loss 0.355156, train_acc 0.884, dev_loss 0.346194, dev_acc 0.892, 
+	 time 16.121 s/epoch, total time 628.733 s, time left 177.335 s
+INFO:root:Epoch 39: train_loss 0.352167, train_acc 0.886, dev_loss 0.346194, dev_acc 0.892, 
+	 time 15.903 s/epoch, total time 636.138 s, time left 159.035 s
+INFO:root:Epoch 40: train_loss 0.350111, train_acc 0.889, dev_loss 0.345125, dev_acc 0.894, 
+	 time 15.703 s/epoch, total time 643.805 s, time left 141.323 s
+INFO:root:Epoch 41: train_loss 0.344345, train_acc 0.889, dev_loss 0.345125, dev_acc 0.894, 
+	 time 15.509 s/epoch, total time 651.385 s, time left 124.073 s
+INFO:root:Epoch 42: train_loss 0.343197, train_acc 0.889, dev_loss 0.336024, dev_acc 0.894, 
+	 time 15.332 s/epoch, total time 659.262 s, time left 107.322 s
+INFO:root:Epoch 43: train_loss 0.344589, train_acc 0.89, dev_loss 0.336024, dev_acc 0.894, 
+	 time 15.165 s/epoch, total time 667.28 s, time left 90.993 s
+INFO:root:Model Save at ./save/673577_epoch44.model/.optim, 
+INFO:root:Epoch 44: train_loss 0.340904, train_acc 0.891, dev_loss 0.331507, dev_acc 0.899, 
+	 time 15.413 s/epoch, total time 693.603 s, time left 77.067 s
+INFO:root:Epoch 45: train_loss 0.343041, train_acc 0.89, dev_loss 0.331507, dev_acc 0.899, 
+	 time 15.239 s/epoch, total time 701.004 s, time left 60.957 s
+INFO:root:Epoch 46: train_loss 0.344957, train_acc 0.888, dev_loss 0.334157, dev_acc 0.894, 
+	 time 15.076 s/epoch, total time 708.581 s, time left 45.229 s
+INFO:root:Epoch 47: train_loss 0.340443, train_acc 0.888, dev_loss 0.334157, dev_acc 0.894, 
+	 time 14.923 s/epoch, total time 716.31 s, time left 29.846 s
+INFO:root:Epoch 48: train_loss 0.335969, train_acc 0.892, dev_loss 0.333226, dev_acc 0.894, 
+	 time 14.778 s/epoch, total time 724.099 s, time left 14.778 s
+INFO:root:Epoch 49: train_loss 0.335038, train_acc 0.892, dev_loss 0.332043, dev_acc 0.894, 
+	 time 14.641 s/epoch, total time 732.045 s, time left 0.0 s
+INFO:root:Model: RealSmallCNN(
+    features: Sequential(
+        0: Conv(3, 32, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[32,], None, Kw=None, fan=None, i=None, bound=None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        4: Conv(32, 64, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[64,], None, Kw=None, fan=None, i=None, bound=None)
+        5: relu()
+        6: Dropout(0.1, is_train=False)
+        7: Conv(64, 128, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[128,], None, Kw=None, fan=None, i=None, bound=None)
+        8: relu()
+        9: Dropout(0.1, is_train=False)
+        10: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        11: Conv(128, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        12: relu()
+        13: Dropout(0.1, is_train=False)
+        14: Conv(256, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        15: relu()
+        16: Dropout(0.1, is_train=False)
+    )
+    avgpool: AdaptiveAvgPool2d((2, 2))
+    classifier: Sequential(
+        0: Linear(1024, 2048, float32[2048,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(2048, 1024, float32[1024,], None)
+    )
+    tail: Sequential(
+        0: Linear(4096, 8192, float32[8192,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(8192, 4096, float32[4096,], None)
+        4: relu()
+        5: Dropout(0.1, is_train=False)
+        6: Linear(4096, 16, float32[16,], None)
+    )
+) , Params num: 72362576
+INFO:root:Best epoch: 44, best acc: 0.8990182522123893
+Final train_loss: 0.335038 dev_loss: 0.332043
+Final train_acc: 0.891887 dev_acc: 0.893577
+Config: {'use_cuda': 1, 'preprocess': True, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'method': 'relate', 'criterion': 'jittor_cel', 'enable_sinkhorn': False, 'n_input': [3, 16, 16], 'epoch': 50, 'eval_epoch': 2, 'batch_size': 512, 'num_workers': 8, 'lr': 5e-05, 'betas': (0.9, 0.9), 'dropout': 0.1, 'enable_scheduler': True, 'milestones': [15, 30, 40, 60, 70, 80], 'gamma': 0.3}
+
+INFO:root:
+
+----------Sun May 21 13:06:03 2023----------
+INFO:root:Config: {'use_cuda': 1, 'preprocess': True, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'method': 'relate', 'criterion': 'jittor_cel', 'enable_sinkhorn': False, 'n_input': [3, 16, 16], 'epoch': 50, 'eval_epoch': 2, 'batch_size': 512, 'num_workers': 8, 'lr': 5e-05, 'betas': (0.9, 0.9), 'dropout': 0.1, 'enable_scheduler': True, 'milestones': [15, 30, 40, 60, 70, 80], 'gamma': 0.3}
+INFO:root:Model: RealSmallCNN(
+    features: Sequential(
+        0: Conv(3, 32, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[32,], None, Kw=None, fan=None, i=None, bound=None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        4: Conv(32, 64, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[64,], None, Kw=None, fan=None, i=None, bound=None)
+        5: relu()
+        6: Dropout(0.1, is_train=False)
+        7: Conv(64, 128, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[128,], None, Kw=None, fan=None, i=None, bound=None)
+        8: relu()
+        9: Dropout(0.1, is_train=False)
+        10: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        11: Conv(128, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        12: relu()
+        13: Dropout(0.1, is_train=False)
+        14: Conv(256, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        15: relu()
+        16: Dropout(0.1, is_train=False)
+    )
+    avgpool: AdaptiveAvgPool2d((2, 2))
+    classifier: Sequential(
+        0: Linear(1024, 2048, float32[2048,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(2048, 1024, float32[1024,], None)
+    )
+    tail: Sequential(
+        0: Linear(4096, 8192, float32[8192,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(8192, 4096, float32[4096,], None)
+        4: relu()
+        5: Dropout(0.1, is_train=False)
+        6: Linear(4096, 16, float32[16,], None)
+    )
+) , Params num: 72362576
+INFO:root:Start Training: Sun May 21 13:06:09 2023
+INFO:root:Model Save at ./save/674369_epoch0.model/.optim, 
+INFO:root:Epoch 0: train_loss 2.736483, train_acc 0.169, dev_loss 2.124881, dev_acc 0.386, 
+	 time 27.419 s/epoch, total time 27.419 s, time left 1343.543 s
+INFO:root:Epoch 1: train_loss 1.79196, train_acc 0.466, dev_loss 2.124881, dev_acc 0.386, 
+	 time 17.401 s/epoch, total time 34.802 s, time left 835.254 s
+INFO:root:Model Save at ./save/674369_epoch2.model/.optim, 
+INFO:root:Epoch 2: train_loss 1.445208, train_acc 0.564, dev_loss 1.234546, dev_acc 0.631, 
+	 time 20.273 s/epoch, total time 60.819 s, time left 952.838 s
+INFO:root:Epoch 3: train_loss 1.236549, train_acc 0.621, dev_loss 1.234546, dev_acc 0.631, 
+	 time 17.082 s/epoch, total time 68.327 s, time left 785.763 s
+INFO:root:Model Save at ./save/674369_epoch4.model/.optim, 
+INFO:root:Epoch 4: train_loss 1.076693, train_acc 0.661, dev_loss 0.92793, dev_acc 0.708, 
+	 time 18.801 s/epoch, total time 94.004 s, time left 846.034 s
+INFO:root:Epoch 5: train_loss 0.967188, train_acc 0.695, dev_loss 0.92793, dev_acc 0.708, 
+	 time 16.923 s/epoch, total time 101.539 s, time left 744.62 s
+INFO:root:Model Save at ./save/674369_epoch6.model/.optim, 
+INFO:root:Epoch 6: train_loss 0.893065, train_acc 0.718, dev_loss 0.75805, dev_acc 0.766, 
+	 time 18.272 s/epoch, total time 127.907 s, time left 785.716 s
+INFO:root:Epoch 7: train_loss 0.820831, train_acc 0.741, dev_loss 0.75805, dev_acc 0.766, 
+	 time 16.928 s/epoch, total time 135.424 s, time left 710.974 s
+INFO:root:Model Save at ./save/674369_epoch8.model/.optim, 
+INFO:root:Epoch 8: train_loss 0.781742, train_acc 0.752, dev_loss 0.712704, dev_acc 0.77, 
+	 time 17.912 s/epoch, total time 161.211 s, time left 734.407 s
+INFO:root:Epoch 9: train_loss 0.730995, train_acc 0.767, dev_loss 0.712704, dev_acc 0.77, 
+	 time 16.872 s/epoch, total time 168.72 s, time left 674.879 s
+INFO:root:Model Save at ./save/674369_epoch10.model/.optim, 
+INFO:root:Epoch 10: train_loss 0.692477, train_acc 0.777, dev_loss 0.610379, dev_acc 0.807, 
+	 time 17.685 s/epoch, total time 194.537 s, time left 689.721 s
+INFO:root:Epoch 11: train_loss 0.665249, train_acc 0.789, dev_loss 0.610379, dev_acc 0.807, 
+	 time 16.831 s/epoch, total time 201.967 s, time left 639.562 s
+INFO:root:Model Save at ./save/674369_epoch12.model/.optim, 
+INFO:root:Epoch 12: train_loss 0.624337, train_acc 0.801, dev_loss 0.538393, dev_acc 0.834, 
+	 time 17.551 s/epoch, total time 228.16 s, time left 649.378 s
+INFO:root:Epoch 13: train_loss 0.593806, train_acc 0.811, dev_loss 0.538393, dev_acc 0.834, 
+	 time 16.83 s/epoch, total time 235.625 s, time left 605.893 s
+INFO:root:Model Save at ./save/674369_epoch14.model/.optim, 
+INFO:root:Epoch 14: train_loss 0.571648, train_acc 0.817, dev_loss 0.520371, dev_acc 0.835, 
+	 time 17.439 s/epoch, total time 261.589 s, time left 610.375 s
+INFO:root:Epoch 15: train_loss 0.549477, train_acc 0.825, dev_loss 0.520371, dev_acc 0.835, 
+	 time 16.809 s/epoch, total time 268.951 s, time left 571.52 s
+INFO:root:Model Save at ./save/674369_epoch16.model/.optim, 
+INFO:root:Epoch 16: train_loss 0.488805, train_acc 0.846, dev_loss 0.429266, dev_acc 0.874, 
+	 time 17.335 s/epoch, total time 294.689 s, time left 572.043 s
+INFO:root:Epoch 17: train_loss 0.468264, train_acc 0.848, dev_loss 0.429266, dev_acc 0.874, 
+	 time 16.787 s/epoch, total time 302.172 s, time left 537.194 s
+INFO:root:Epoch 18: train_loss 0.451634, train_acc 0.856, dev_loss 0.416737, dev_acc 0.871, 
+	 time 16.3 s/epoch, total time 309.708 s, time left 505.313 s
+INFO:root:Epoch 19: train_loss 0.444634, train_acc 0.857, dev_loss 0.416737, dev_acc 0.871, 
+	 time 15.857 s/epoch, total time 317.135 s, time left 475.702 s
+INFO:root:Model Save at ./save/674369_epoch20.model/.optim, 
+INFO:root:Epoch 20: train_loss 0.436389, train_acc 0.859, dev_loss 0.388419, dev_acc 0.882, 
+	 time 16.354 s/epoch, total time 343.435 s, time left 474.268 s
+INFO:root:Epoch 21: train_loss 0.425621, train_acc 0.864, dev_loss 0.388419, dev_acc 0.882, 
+	 time 15.946 s/epoch, total time 350.808 s, time left 446.483 s
+INFO:root:Epoch 22: train_loss 0.413689, train_acc 0.868, dev_loss 0.378464, dev_acc 0.882, 
+	 time 15.585 s/epoch, total time 358.465 s, time left 420.807 s
+INFO:root:Epoch 23: train_loss 0.410614, train_acc 0.869, dev_loss 0.378464, dev_acc 0.882, 
+	 time 15.248 s/epoch, total time 365.942 s, time left 396.437 s
+INFO:root:Model Save at ./save/674369_epoch24.model/.optim, 
+INFO:root:Epoch 24: train_loss 0.398779, train_acc 0.872, dev_loss 0.366205, dev_acc 0.893, 
+	 time 15.684 s/epoch, total time 392.107 s, time left 392.107 s
+INFO:root:Epoch 25: train_loss 0.395347, train_acc 0.874, dev_loss 0.366205, dev_acc 0.893, 
+	 time 15.37 s/epoch, total time 399.609 s, time left 368.87 s
+INFO:root:Epoch 26: train_loss 0.394586, train_acc 0.873, dev_loss 0.362398, dev_acc 0.886, 
+	 time 15.08 s/epoch, total time 407.152 s, time left 346.833 s
+INFO:root:Epoch 27: train_loss 0.381272, train_acc 0.877, dev_loss 0.362398, dev_acc 0.886, 
+	 time 14.809 s/epoch, total time 414.652 s, time left 325.798 s
+INFO:root:Epoch 28: train_loss 0.374162, train_acc 0.88, dev_loss 0.351653, dev_acc 0.891, 
+	 time 14.574 s/epoch, total time 422.648 s, time left 306.055 s
+INFO:root:Epoch 29: train_loss 0.367364, train_acc 0.882, dev_loss 0.351653, dev_acc 0.891, 
+	 time 14.343 s/epoch, total time 430.276 s, time left 286.851 s
+INFO:root:Model Save at ./save/674369_epoch30.model/.optim, 
+INFO:root:Epoch 30: train_loss 0.36219, train_acc 0.882, dev_loss 0.346124, dev_acc 0.894, 
+	 time 14.726 s/epoch, total time 456.503 s, time left 279.792 s
+INFO:root:Epoch 31: train_loss 0.343421, train_acc 0.89, dev_loss 0.346124, dev_acc 0.894, 
+	 time 14.501 s/epoch, total time 464.032 s, time left 261.018 s
+INFO:root:Model Save at ./save/674369_epoch32.model/.optim, 
+INFO:root:Epoch 32: train_loss 0.336033, train_acc 0.891, dev_loss 0.323236, dev_acc 0.898, 
+	 time 14.848 s/epoch, total time 489.993 s, time left 252.421 s
+INFO:root:Epoch 33: train_loss 0.330063, train_acc 0.894, dev_loss 0.323236, dev_acc 0.898, 
+	 time 14.629 s/epoch, total time 497.371 s, time left 234.057 s
+INFO:root:Model Save at ./save/674369_epoch34.model/.optim, 
+INFO:root:Epoch 34: train_loss 0.327807, train_acc 0.895, dev_loss 0.317455, dev_acc 0.901, 
+	 time 14.956 s/epoch, total time 523.445 s, time left 224.334 s
+INFO:root:Epoch 35: train_loss 0.325467, train_acc 0.896, dev_loss 0.317455, dev_acc 0.901, 
+	 time 14.745 s/epoch, total time 530.817 s, time left 206.429 s
+INFO:root:Model Save at ./save/674369_epoch36.model/.optim, 
+INFO:root:Epoch 36: train_loss 0.326408, train_acc 0.896, dev_loss 0.307274, dev_acc 0.911, 
+	 time 15.039 s/epoch, total time 556.434 s, time left 195.504 s
+INFO:root:Epoch 37: train_loss 0.320073, train_acc 0.898, dev_loss 0.307274, dev_acc 0.911, 
+	 time 14.839 s/epoch, total time 563.878 s, time left 178.067 s
+INFO:root:Epoch 38: train_loss 0.318469, train_acc 0.898, dev_loss 0.312549, dev_acc 0.905, 
+	 time 14.656 s/epoch, total time 571.573 s, time left 161.213 s
+INFO:root:Epoch 39: train_loss 0.315664, train_acc 0.897, dev_loss 0.312549, dev_acc 0.905, 
+	 time 14.476 s/epoch, total time 579.035 s, time left 144.759 s
+INFO:root:Epoch 40: train_loss 0.314432, train_acc 0.897, dev_loss 0.310842, dev_acc 0.908, 
+	 time 14.31 s/epoch, total time 586.696 s, time left 128.787 s
+INFO:root:Epoch 41: train_loss 0.306653, train_acc 0.9, dev_loss 0.310842, dev_acc 0.908, 
+	 time 14.151 s/epoch, total time 594.363 s, time left 113.212 s
+INFO:root:Model Save at ./save/674369_epoch42.model/.optim, 
+INFO:root:Epoch 42: train_loss 0.307438, train_acc 0.901, dev_loss 0.296516, dev_acc 0.913, 
+	 time 14.435 s/epoch, total time 620.7 s, time left 101.044 s
+INFO:root:Epoch 43: train_loss 0.308165, train_acc 0.9, dev_loss 0.296516, dev_acc 0.913, 
+	 time 14.275 s/epoch, total time 628.102 s, time left 85.65 s
+INFO:root:Epoch 44: train_loss 0.307069, train_acc 0.9, dev_loss 0.296319, dev_acc 0.908, 
+	 time 14.126 s/epoch, total time 635.691 s, time left 70.632 s
+INFO:root:Epoch 45: train_loss 0.303982, train_acc 0.902, dev_loss 0.296319, dev_acc 0.908, 
+	 time 13.983 s/epoch, total time 643.204 s, time left 55.931 s
+INFO:root:Epoch 46: train_loss 0.302056, train_acc 0.903, dev_loss 0.297945, dev_acc 0.908, 
+	 time 13.857 s/epoch, total time 651.259 s, time left 41.57 s
+INFO:root:Epoch 47: train_loss 0.304856, train_acc 0.902, dev_loss 0.297945, dev_acc 0.908, 
+	 time 13.727 s/epoch, total time 658.9 s, time left 27.454 s
+INFO:root:Epoch 48: train_loss 0.301845, train_acc 0.903, dev_loss 0.295466, dev_acc 0.91, 
+	 time 13.61 s/epoch, total time 666.873 s, time left 13.61 s
+INFO:root:Epoch 49: train_loss 0.299368, train_acc 0.902, dev_loss 0.297223, dev_acc 0.913, 
+	 time 13.5 s/epoch, total time 675.012 s, time left 0.0 s
+INFO:root:Model: RealSmallCNN(
+    features: Sequential(
+        0: Conv(3, 32, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[32,], None, Kw=None, fan=None, i=None, bound=None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        4: Conv(32, 64, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[64,], None, Kw=None, fan=None, i=None, bound=None)
+        5: relu()
+        6: Dropout(0.1, is_train=False)
+        7: Conv(64, 128, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[128,], None, Kw=None, fan=None, i=None, bound=None)
+        8: relu()
+        9: Dropout(0.1, is_train=False)
+        10: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        11: Conv(128, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        12: relu()
+        13: Dropout(0.1, is_train=False)
+        14: Conv(256, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        15: relu()
+        16: Dropout(0.1, is_train=False)
+    )
+    avgpool: AdaptiveAvgPool2d((2, 2))
+    classifier: Sequential(
+        0: Linear(1024, 2048, float32[2048,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(2048, 1024, float32[1024,], None)
+    )
+    tail: Sequential(
+        0: Linear(4096, 8192, float32[8192,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(8192, 4096, float32[4096,], None)
+        4: relu()
+        5: Dropout(0.1, is_train=False)
+        6: Linear(4096, 16, float32[16,], None)
+    )
+) , Params num: 72362576
+INFO:root:Best epoch: 42, best acc: 0.9128975387168141
+Final train_loss: 0.299368 dev_loss: 0.297223
+Final train_acc: 0.902449 dev_acc: 0.912559
+Config: {'use_cuda': 1, 'preprocess': True, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'method': 'relate', 'criterion': 'jittor_cel', 'enable_sinkhorn': False, 'n_input': [3, 16, 16], 'epoch': 50, 'eval_epoch': 2, 'batch_size': 512, 'num_workers': 8, 'lr': 5e-05, 'betas': (0.9, 0.9), 'dropout': 0.1, 'enable_scheduler': True, 'milestones': [15, 30, 40, 60, 70, 80], 'gamma': 0.3}
+
+INFO:root:Test: loss 0.337045, acc 0.900316
+INFO:root:
+
+----------Sun May 21 13:19:54 2023----------
+INFO:root:Config: {'use_cuda': 1, 'preprocess': True, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'method': 'classic', 'criterion': 'my_mse', 'enable_sinkhorn': False, 'n_input': [3, 16, 16], 'epoch': 50, 'eval_epoch': 2, 'batch_size': 512, 'num_workers': 8, 'lr': 5e-05, 'betas': (0.9, 0.9), 'dropout': 0.1, 'enable_scheduler': True, 'milestones': [15, 30, 40, 60, 70, 80], 'gamma': 0.3}
+INFO:root:
+
+----------Sun May 21 13:20:10 2023----------
+INFO:root:Config: {'use_cuda': 1, 'preprocess': True, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'method': 'classic', 'criterion': 'my_mse', 'enable_sinkhorn': False, 'n_input': [3, 16, 16], 'epoch': 10, 'eval_epoch': 2, 'batch_size': 512, 'num_workers': 8, 'lr': 5e-05, 'betas': (0.9, 0.9), 'dropout': 0.1, 'enable_scheduler': True, 'milestones': [15, 30, 40, 60, 70, 80], 'gamma': 0.3}
+INFO:root:Model: RealSmallCNN(
+    features: Sequential(
+        0: Conv(3, 32, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[32,], None, Kw=None, fan=None, i=None, bound=None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        4: Conv(32, 64, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[64,], None, Kw=None, fan=None, i=None, bound=None)
+        5: relu()
+        6: Dropout(0.1, is_train=False)
+        7: Conv(64, 128, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[128,], None, Kw=None, fan=None, i=None, bound=None)
+        8: relu()
+        9: Dropout(0.1, is_train=False)
+        10: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        11: Conv(128, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        12: relu()
+        13: Dropout(0.1, is_train=False)
+        14: Conv(256, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        15: relu()
+        16: Dropout(0.1, is_train=False)
+    )
+    avgpool: AdaptiveAvgPool2d((2, 2))
+    classifier: Sequential(
+        0: Linear(1024, 2048, float32[2048,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(2048, 1024, float32[1024,], None)
+    )
+    tail: Sequential(
+        0: Linear(4096, 8192, float32[8192,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(8192, 4096, float32[4096,], None)
+        4: relu()
+        5: Dropout(0.1, is_train=False)
+        6: Linear(4096, 16, float32[16,], None)
+    )
+) , Params num: 72362576
+INFO:root:Start Training: Sun May 21 13:20:16 2023
+INFO:root:Model Save at ./save/675216_epoch0.model/.optim, 
+INFO:root:Epoch 0: train_loss 387.640731, train_acc 0.003, dev_loss 375.082288, dev_acc 0.002, 
+	 time 27.712 s/epoch, total time 27.712 s, time left 249.408 s
+INFO:root:Epoch 1: train_loss 383.207425, train_acc 0.004, dev_loss 375.082288, dev_acc 0.002, 
+	 time 17.552 s/epoch, total time 35.105 s, time left 140.419 s
+INFO:root:Epoch 2: train_loss 383.166138, train_acc 0.004, dev_loss 375.001526, dev_acc 0.0, 
+	 time 14.249 s/epoch, total time 42.746 s, time left 99.742 s
+INFO:root:Epoch 3: train_loss 383.144909, train_acc 0.004, dev_loss 375.001526, dev_acc 0.0, 
+	 time 12.557 s/epoch, total time 50.228 s, time left 75.342 s
+INFO:root:Epoch 4: train_loss 383.137682, train_acc 0.004, dev_loss 375.006842, dev_acc 0.0, 
+	 time 11.564 s/epoch, total time 57.819 s, time left 57.819 s
+INFO:root:Epoch 5: train_loss 383.127824, train_acc 0.004, dev_loss 375.006842, dev_acc 0.0, 
+	 time 10.894 s/epoch, total time 65.364 s, time left 43.576 s
+INFO:root:Model Save at ./save/675216_epoch6.model/.optim, 
+INFO:root:Epoch 6: train_loss 383.125458, train_acc 0.003, dev_loss 375.012238, dev_acc 0.04, 
+	 time 13.004 s/epoch, total time 91.025 s, time left 39.011 s
+INFO:root:Epoch 7: train_loss 383.11905, train_acc 0.004, dev_loss 375.012238, dev_acc 0.04, 
+	 time 12.319 s/epoch, total time 98.554 s, time left 24.638 s
+INFO:root:Epoch 8: train_loss 383.118781, train_acc 0.004, dev_loss 375.005621, dev_acc 0.0, 
+	 time 11.796 s/epoch, total time 106.163 s, time left 11.796 s
+INFO:root:Epoch 9: train_loss 383.114355, train_acc 0.004, dev_loss 374.995813, dev_acc 0.011, 
+	 time 11.393 s/epoch, total time 113.929 s, time left 0.0 s
+INFO:root:Model: RealSmallCNN(
+    features: Sequential(
+        0: Conv(3, 32, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[32,], None, Kw=None, fan=None, i=None, bound=None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        4: Conv(32, 64, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[64,], None, Kw=None, fan=None, i=None, bound=None)
+        5: relu()
+        6: Dropout(0.1, is_train=False)
+        7: Conv(64, 128, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[128,], None, Kw=None, fan=None, i=None, bound=None)
+        8: relu()
+        9: Dropout(0.1, is_train=False)
+        10: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        11: Conv(128, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        12: relu()
+        13: Dropout(0.1, is_train=False)
+        14: Conv(256, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        15: relu()
+        16: Dropout(0.1, is_train=False)
+    )
+    avgpool: AdaptiveAvgPool2d((2, 2))
+    classifier: Sequential(
+        0: Linear(1024, 2048, float32[2048,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(2048, 1024, float32[1024,], None)
+    )
+    tail: Sequential(
+        0: Linear(4096, 8192, float32[8192,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(8192, 4096, float32[4096,], None)
+        4: relu()
+        5: Dropout(0.1, is_train=False)
+        6: Linear(4096, 16, float32[16,], None)
+    )
+) , Params num: 72362576
+INFO:root:Best epoch: 6, best acc: 0.03950152101769912
+Final train_loss: 383.114355 dev_loss: 374.995813
+Final train_acc: 0.003801 dev_acc: 0.011249
+Config: {'use_cuda': 1, 'preprocess': True, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'method': 'classic', 'criterion': 'my_mse', 'enable_sinkhorn': False, 'n_input': [3, 16, 16], 'epoch': 10, 'eval_epoch': 2, 'batch_size': 512, 'num_workers': 8, 'lr': 5e-05, 'betas': (0.9, 0.9), 'dropout': 0.1, 'enable_scheduler': True, 'milestones': [15, 30, 40, 60, 70, 80], 'gamma': 0.3}
+
+INFO:root:
+
+----------Sun May 21 13:24:50 2023----------
+INFO:root:Config: {'use_cuda': 1, 'preprocess': True, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'method': 'classic', 'criterion': 'my_mse', 'enable_sinkhorn': False, 'n_input': [3, 16, 16], 'epoch': 10, 'eval_epoch': 2, 'batch_size': 512, 'num_workers': 8, 'lr': 5e-08, 'betas': (0.9, 0.9), 'dropout': 0.1, 'enable_scheduler': True, 'milestones': [15, 30, 40, 60, 70, 80], 'gamma': 0.3}
+INFO:root:Model: RealSmallCNN(
+    features: Sequential(
+        0: Conv(3, 32, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[32,], None, Kw=None, fan=None, i=None, bound=None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        4: Conv(32, 64, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[64,], None, Kw=None, fan=None, i=None, bound=None)
+        5: relu()
+        6: Dropout(0.1, is_train=False)
+        7: Conv(64, 128, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[128,], None, Kw=None, fan=None, i=None, bound=None)
+        8: relu()
+        9: Dropout(0.1, is_train=False)
+        10: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        11: Conv(128, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        12: relu()
+        13: Dropout(0.1, is_train=False)
+        14: Conv(256, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        15: relu()
+        16: Dropout(0.1, is_train=False)
+    )
+    avgpool: AdaptiveAvgPool2d((2, 2))
+    classifier: Sequential(
+        0: Linear(1024, 2048, float32[2048,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(2048, 1024, float32[1024,], None)
+    )
+    tail: Sequential(
+        0: Linear(4096, 8192, float32[8192,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(8192, 4096, float32[4096,], None)
+        4: relu()
+        5: Dropout(0.1, is_train=False)
+        6: Linear(4096, 16, float32[16,], None)
+    )
+) , Params num: 72362576
+INFO:root:Start Training: Sun May 21 13:24:54 2023
+INFO:root:Model Save at ./save/675494_epoch0.model/.optim, 
+INFO:root:Epoch 0: train_loss 507.777217, train_acc 0.006, dev_loss 487.131158, dev_acc 0.005, 
+	 time 25.667 s/epoch, total time 25.667 s, time left 231.0 s
+INFO:root:Epoch 1: train_loss 483.882267, train_acc 0.006, dev_loss 487.131158, dev_acc 0.005, 
+	 time 16.538 s/epoch, total time 33.077 s, time left 132.308 s
+INFO:root:Model Save at ./save/675494_epoch2.model/.optim, 
+INFO:root:Epoch 2: train_loss 462.367835, train_acc 0.005, dev_loss 454.934149, dev_acc 0.007, 
+	 time 19.675 s/epoch, total time 59.026 s, time left 137.728 s
+INFO:root:Epoch 3: train_loss 443.077875, train_acc 0.006, dev_loss 454.934149, dev_acc 0.007, 
+	 time 16.642 s/epoch, total time 66.569 s, time left 99.854 s
+INFO:root:Test: loss 375.012154, acc 0.03997
+INFO:root:
+
+----------Sun May 21 13:29:22 2023----------
+INFO:root:Config: {'use_cuda': 1, 'preprocess': True, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'method': 'classic', 'criterion': 'my_mse', 'enable_sinkhorn': True, 'n_input': [3, 16, 16], 'epoch': 10, 'eval_epoch': 2, 'batch_size': 512, 'num_workers': 8, 'lr': 5e-08, 'betas': (0.9, 0.9), 'dropout': 0.1, 'enable_scheduler': True, 'milestones': [15, 30, 40, 60, 70, 80], 'gamma': 0.3}
+INFO:root:Model: RealSmallCNN(
+    features: Sequential(
+        0: Conv(3, 32, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[32,], None, Kw=None, fan=None, i=None, bound=None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        4: Conv(32, 64, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[64,], None, Kw=None, fan=None, i=None, bound=None)
+        5: relu()
+        6: Dropout(0.1, is_train=False)
+        7: Conv(64, 128, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[128,], None, Kw=None, fan=None, i=None, bound=None)
+        8: relu()
+        9: Dropout(0.1, is_train=False)
+        10: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        11: Conv(128, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        12: relu()
+        13: Dropout(0.1, is_train=False)
+        14: Conv(256, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        15: relu()
+        16: Dropout(0.1, is_train=False)
+    )
+    avgpool: AdaptiveAvgPool2d((2, 2))
+    classifier: Sequential(
+        0: Linear(1024, 2048, float32[2048,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(2048, 1024, float32[1024,], None)
+    )
+    tail: Sequential(
+        0: Linear(4096, 8192, float32[8192,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(8192, 4096, float32[4096,], None)
+        4: relu()
+        5: Dropout(0.1, is_train=False)
+        6: Linear(4096, 16, float32[16,], None)
+    )
+) , Params num: 72362576
+INFO:root:Start Training: Sun May 21 13:29:28 2023
+INFO:root:Model Save at ./save/675768_epoch0.model/.optim, 
+INFO:root:Epoch 0: train_loss 383.165925, train_acc 0.015, dev_loss 375.000928, dev_acc 0.013, 
+	 time 131.398 s/epoch, total time 131.398 s, time left 1182.585 s
+INFO:root:Epoch 1: train_loss 383.082661, train_acc 0.01, dev_loss 375.000928, dev_acc 0.013, 
+	 time 119.697 s/epoch, total time 239.394 s, time left 957.578 s
+INFO:root:Epoch 2: train_loss 383.081291, train_acc 0.011, dev_loss 375.000208, dev_acc 0.007, 
+	 time 116.743 s/epoch, total time 350.23 s, time left 817.204 s
+INFO:root:Epoch 3: train_loss 383.08078, train_acc 0.01, dev_loss 375.000208, dev_acc 0.007, 
+	 time 114.565 s/epoch, total time 458.26 s, time left 687.39 s
+INFO:root:Test: loss 375.000152, acc 0.009243
+INFO:root:
+
+----------Sun May 21 13:59:12 2023----------
+INFO:root:Config: {'use_cuda': 1, 'preprocess': True, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'method': 'classic', 'criterion': 'my_mse', 'enable_sinkhorn': True, 'n_input': [3, 16, 16], 'epoch': 10, 'eval_epoch': 2, 'batch_size': 512, 'num_workers': 8, 'lr': 5e-08, 'betas': (0.9, 0.9), 'dropout': 0.1, 'enable_scheduler': True, 'milestones': [15, 30, 40, 60, 70, 80], 'gamma': 0.3}
+INFO:root:Model: RealSmallCNN(
+    features: Sequential(
+        0: Conv(3, 32, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[32,], None, Kw=None, fan=None, i=None, bound=None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        4: Conv(32, 64, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[64,], None, Kw=None, fan=None, i=None, bound=None)
+        5: relu()
+        6: Dropout(0.1, is_train=False)
+        7: Conv(64, 128, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[128,], None, Kw=None, fan=None, i=None, bound=None)
+        8: relu()
+        9: Dropout(0.1, is_train=False)
+        10: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        11: Conv(128, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        12: relu()
+        13: Dropout(0.1, is_train=False)
+        14: Conv(256, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        15: relu()
+        16: Dropout(0.1, is_train=False)
+    )
+    avgpool: AdaptiveAvgPool2d((2, 2))
+    classifier: Sequential(
+        0: Linear(1024, 2048, float32[2048,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(2048, 1024, float32[1024,], None)
+    )
+    tail: Sequential(
+        0: Linear(4096, 8192, float32[8192,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(8192, 4096, float32[4096,], None)
+        4: relu()
+        5: Dropout(0.1, is_train=False)
+        6: Linear(4096, 16, float32[16,], None)
+    )
+) , Params num: 72362576
+INFO:root:Start Training: Sun May 21 13:59:19 2023
+INFO:root:
+
+----------Sun May 21 14:01:23 2023----------
+INFO:root:Config: {'use_cuda': 1, 'preprocess': True, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'method': 'relate', 'criterion': 'jittor_cel', 'enable_sinkhorn': False, 'n_input': [3, 16, 16], 'epoch': 10, 'eval_epoch': 2, 'batch_size': 512, 'num_workers': 8, 'lr': 5e-08, 'betas': (0.9, 0.9), 'dropout': 0.1, 'enable_scheduler': True, 'milestones': [15, 30, 40, 60, 70, 80], 'gamma': 0.3}
+INFO:root:Model: RealSmallCNN(
+    features: Sequential(
+        0: Conv(3, 32, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[32,], None, Kw=None, fan=None, i=None, bound=None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        4: Conv(32, 64, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[64,], None, Kw=None, fan=None, i=None, bound=None)
+        5: relu()
+        6: Dropout(0.1, is_train=False)
+        7: Conv(64, 128, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[128,], None, Kw=None, fan=None, i=None, bound=None)
+        8: relu()
+        9: Dropout(0.1, is_train=False)
+        10: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+        11: Conv(128, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        12: relu()
+        13: Dropout(0.1, is_train=False)
+        14: Conv(256, 256, (3, 3), (1, 1), (1, 1), (1, 1), 1, float32[256,], None, Kw=None, fan=None, i=None, bound=None)
+        15: relu()
+        16: Dropout(0.1, is_train=False)
+    )
+    avgpool: AdaptiveAvgPool2d((2, 2))
+    classifier: Sequential(
+        0: Linear(1024, 2048, float32[2048,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(2048, 1024, float32[1024,], None)
+    )
+    tail: Sequential(
+        0: Linear(4096, 8192, float32[8192,], None)
+        1: relu()
+        2: Dropout(0.1, is_train=False)
+        3: Linear(8192, 4096, float32[4096,], None)
+        4: relu()
+        5: Dropout(0.1, is_train=False)
+        6: Linear(4096, 16, float32[16,], None)
+    )
+) , Params num: 72362576
+INFO:root:Start Training: Sun May 21 14:01:28 2023
+INFO:root:Model Save at ./save/677688_epoch0.model/.optim, 
+INFO:root:Epoch 0: train_loss 3.182564, train_acc 0.043, dev_loss 3.178024, dev_acc 0.048, 
+	 time 32.4 s/epoch, total time 32.4 s, time left 291.603 s
+INFO:root:Epoch 1: train_loss 3.180224, train_acc 0.041, dev_loss 3.178024, dev_acc 0.048, 
+	 time 19.915 s/epoch, total time 39.829 s, time left 159.318 s

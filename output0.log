@@ -1,0 +1,661 @@
+
+----------Tue May 16 03:47:26 2023----------
+INFO:root:Start Training: Tue May 16 03:47:29 2023
+INFO:root:Epoch 0: train_loss 1.386098, train_acc 0, dev_loss 1.385179, dev_acc 0.1, 
+	 time 5.801 s/epoch, total time 5.801 s, time left 226.227 s
+INFO:root:Epoch 1: train_loss 1.386368, train_acc 0, dev_loss 1.385179, dev_acc 0.1, 
+	 time 3.943 s/epoch, total time 7.886 s, time left 149.841 s
+INFO:root:Epoch 2: train_loss 1.386041, train_acc 0, dev_loss 1.385179, dev_acc 0.1, 
+	 time 3.315 s/epoch, total time 9.945 s, time left 122.65 s
+INFO:root:Epoch 3: train_loss 1.385744, train_acc 0, dev_loss 1.385179, dev_acc 0.1, 
+	 time 3.002 s/epoch, total time 12.01 s, time left 108.089 s
+INFO:root:Epoch 4: train_loss 1.384901, train_acc 0, dev_loss 1.385179, dev_acc 0.1, 
+	 time 2.829 s/epoch, total time 14.144 s, time left 99.009 s
+INFO:root:Epoch 5: train_loss 1.382218, train_acc 0, dev_loss 1.381615, dev_acc 0.04, 
+	 time 3.262 s/epoch, total time 19.571 s, time left 110.905 s
+INFO:root:Epoch 6: train_loss 1.377922, train_acc 0, dev_loss 1.381615, dev_acc 0.04, 
+	 time 3.09 s/epoch, total time 21.631 s, time left 101.977 s
+INFO:root:Epoch 7: train_loss 1.368327, train_acc 0, dev_loss 1.381615, dev_acc 0.04, 
+	 time 2.964 s/epoch, total time 23.71 s, time left 94.841 s
+INFO:root:Epoch 8: train_loss 1.358742, train_acc 0, dev_loss 1.381615, dev_acc 0.04, 
+	 time 2.863 s/epoch, total time 25.769 s, time left 88.76 s
+INFO:root:Epoch 9: train_loss 1.344526, train_acc 0, dev_loss 1.381615, dev_acc 0.04, 
+	 time 2.782 s/epoch, total time 27.819 s, time left 83.458 s
+INFO:root:Epoch 10: train_loss 1.339684, train_acc 0, dev_loss 1.334897, dev_acc 0.16, 
+	 time 2.953 s/epoch, total time 32.484 s, time left 85.641 s
+INFO:root:Epoch 11: train_loss 1.329187, train_acc 0, dev_loss 1.334897, dev_acc 0.16, 
+	 time 2.88 s/epoch, total time 34.555 s, time left 80.628 s
+INFO:root:Epoch 12: train_loss 1.320377, train_acc 0, dev_loss 1.334897, dev_acc 0.16, 
+	 time 2.818 s/epoch, total time 36.64 s, time left 76.099 s
+INFO:root:Epoch 13: train_loss 1.308801, train_acc 0, dev_loss 1.334897, dev_acc 0.16, 
+	 time 2.766 s/epoch, total time 38.723 s, time left 71.914 s
+INFO:root:Epoch 14: train_loss 1.296447, train_acc 0, dev_loss 1.334897, dev_acc 0.16, 
+	 time 2.72 s/epoch, total time 40.795 s, time left 67.991 s
+INFO:root:Epoch 15: train_loss 1.284172, train_acc 0, dev_loss 1.282287, dev_acc 0.3, 
+	 time 2.821 s/epoch, total time 45.144 s, time left 67.716 s
+INFO:root:Epoch 16: train_loss 1.271684, train_acc 0, dev_loss 1.282287, dev_acc 0.3, 
+	 time 2.777 s/epoch, total time 47.212 s, time left 63.874 s
+INFO:root:Epoch 17: train_loss 1.264878, train_acc 0, dev_loss 1.282287, dev_acc 0.3, 
+	 time 2.738 s/epoch, total time 49.29 s, time left 60.243 s
+INFO:root:Epoch 18: train_loss 1.252186, train_acc 0, dev_loss 1.282287, dev_acc 0.3, 
+	 time 2.706 s/epoch, total time 51.423 s, time left 56.835 s
+INFO:root:Epoch 19: train_loss 1.24877, train_acc 0, dev_loss 1.282287, dev_acc 0.3, 
+	 time 2.675 s/epoch, total time 53.501 s, time left 53.501 s
+INFO:root:Epoch 20: train_loss 1.242845, train_acc 0, dev_loss 1.226073, dev_acc 0.36, 
+	 time 2.749 s/epoch, total time 57.728 s, time left 52.23 s
+INFO:root:Epoch 21: train_loss 1.231276, train_acc 0, dev_loss 1.226073, dev_acc 0.36, 
+	 time 2.719 s/epoch, total time 59.826 s, time left 48.948 s
+INFO:root:Epoch 22: train_loss 1.230017, train_acc 0, dev_loss 1.226073, dev_acc 0.36, 
+	 time 2.692 s/epoch, total time 61.922 s, time left 45.769 s
+INFO:root:Epoch 23: train_loss 1.223998, train_acc 0, dev_loss 1.226073, dev_acc 0.36, 
+	 time 2.667 s/epoch, total time 64.003 s, time left 42.669 s
+INFO:root:Epoch 24: train_loss 1.220445, train_acc 0, dev_loss 1.226073, dev_acc 0.36, 
+	 time 2.643 s/epoch, total time 66.072 s, time left 39.643 s
+INFO:root:Epoch 25: train_loss 1.216952, train_acc 0, dev_loss 1.197943, dev_acc 0.42, 
+	 time 2.706 s/epoch, total time 70.363 s, time left 37.888 s
+INFO:root:Epoch 26: train_loss 1.213682, train_acc 0, dev_loss 1.197943, dev_acc 0.42, 
+	 time 2.682 s/epoch, total time 72.426 s, time left 34.872 s
+INFO:root:Epoch 27: train_loss 1.208209, train_acc 0, dev_loss 1.197943, dev_acc 0.42, 
+	 time 2.661 s/epoch, total time 74.508 s, time left 31.932 s
+INFO:root:Epoch 28: train_loss 1.204565, train_acc 0, dev_loss 1.197943, dev_acc 0.42, 
+	 time 2.641 s/epoch, total time 76.603 s, time left 29.056 s
+INFO:root:Epoch 29: train_loss 1.201716, train_acc 0, dev_loss 1.197943, dev_acc 0.42, 
+	 time 2.623 s/epoch, total time 78.701 s, time left 26.234 s
+INFO:root:Epoch 30: train_loss 1.194375, train_acc 0, dev_loss 1.197062, dev_acc 0.38, 
+	 time 2.678 s/epoch, total time 83.007 s, time left 24.099 s
+INFO:root:Epoch 31: train_loss 1.185465, train_acc 0, dev_loss 1.197062, dev_acc 0.38, 
+	 time 2.662 s/epoch, total time 85.188 s, time left 21.297 s
+INFO:root:Epoch 32: train_loss 1.187477, train_acc 0, dev_loss 1.197062, dev_acc 0.38, 
+	 time 2.645 s/epoch, total time 87.276 s, time left 18.513 s
+INFO:root:Epoch 33: train_loss 1.176026, train_acc 0, dev_loss 1.197062, dev_acc 0.38, 
+	 time 2.628 s/epoch, total time 89.339 s, time left 15.766 s
+INFO:root:Epoch 34: train_loss 1.174811, train_acc 0, dev_loss 1.197062, dev_acc 0.38, 
+	 time 2.612 s/epoch, total time 91.412 s, time left 13.059 s
+INFO:root:Epoch 35: train_loss 1.171062, train_acc 0, dev_loss 1.16274, dev_acc 0.44, 
+	 time 2.659 s/epoch, total time 95.719 s, time left 10.635 s
+INFO:root:Epoch 36: train_loss 1.166363, train_acc 0, dev_loss 1.16274, dev_acc 0.44, 
+	 time 2.643 s/epoch, total time 97.786 s, time left 7.929 s
+INFO:root:Epoch 37: train_loss 1.168161, train_acc 0, dev_loss 1.16274, dev_acc 0.44, 
+	 time 2.628 s/epoch, total time 99.846 s, time left 5.255 s
+INFO:root:Epoch 38: train_loss 1.164885, train_acc 0, dev_loss 1.16274, dev_acc 0.44, 
+	 time 2.613 s/epoch, total time 101.905 s, time left 2.613 s
+INFO:root:Epoch 39: train_loss 1.15457, train_acc 0, dev_loss 1.15421, dev_acc 0.46, 
+	 time 2.652 s/epoch, total time 106.096 s, time left 0.0 s
+INFO:root:Model: RealSmallCNN(
+    conv1: Conv(3, 10, (5, 5), (1, 1), (1, 1), (0, 0), 1, float32[10,], None, Kw=None, fan=None, i=None, bound=None)
+    pool1: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+    conv2: Conv(10, 20, (3, 3), (1, 1), (1, 1), (0, 0), 1, float32[20,], None, Kw=None, fan=None, i=None, bound=None)
+    avgpool: AdaptiveAvgPool2d((4, 4))
+    fc1: Linear(320, 100, float32[100,], None)
+    fc2: Linear(100, 50, float32[50,], None)
+    fc3: Linear(200, 16, float32[16,], None)
+) , Params num: 42946
+INFO:root:Config: {'use_cuda': 1, 'preprocess': False, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'n_input': [3, 16, 16], 'epoch': 40, 'eval_epoch': 5, 'lr': 0.001, 'batch_size': 256, 'num_workers': 8, 'enable_scheduler': False, 'milestones': [10, 15], 'gamma': 0.7}
+INFO:root:Best epoch: 39, best acc: 0.46
+Final train_loss: 1.15457 dev_loss: 1.15421
+Final train_acc: 0 dev_acc: 0.46
+Config: {'use_cuda': 1, 'preprocess': False, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'n_input': [3, 16, 16], 'epoch': 40, 'eval_epoch': 5, 'lr': 0.001, 'batch_size': 256, 'num_workers': 8, 'enable_scheduler': False, 'milestones': [10, 15], 'gamma': 0.7}
+
+INFO:root:
+
+----------Tue May 16 03:50:02 2023----------
+INFO:root:Start Training: Tue May 16 03:50:04 2023
+INFO:root:
+
+----------Tue May 16 03:56:36 2023----------
+INFO:root:Start Training: Tue May 16 03:56:39 2023
+INFO:root:
+
+----------Tue May 16 03:58:03 2023----------
+INFO:root:Start Training: Tue May 16 03:58:05 2023
+INFO:root:Epoch 0: train_loss 1.386345, train_acc 0, dev_loss 1.386026, dev_acc 0.0, 
+	 time 9.678 s/epoch, total time 9.678 s, time left 474.239 s
+INFO:root:Epoch 1: train_loss 1.386028, train_acc 0, dev_loss 1.386026, dev_acc 0.0, 
+	 time 9.526 s/epoch, total time 19.053 s, time left 457.265 s
+INFO:root:Epoch 2: train_loss 1.384432, train_acc 0, dev_loss 1.386026, dev_acc 0.0, 
+	 time 9.473 s/epoch, total time 28.419 s, time left 445.237 s
+INFO:root:Epoch 3: train_loss 1.376052, train_acc 0, dev_loss 1.386026, dev_acc 0.0, 
+	 time 9.451 s/epoch, total time 37.806 s, time left 434.764 s
+INFO:root:Epoch 4: train_loss 1.355519, train_acc 0, dev_loss 1.386026, dev_acc 0.0, 
+	 time 9.441 s/epoch, total time 47.204 s, time left 424.834 s
+INFO:root:Epoch 5: train_loss 1.337531, train_acc 0, dev_loss 1.323398, dev_acc 0.124, 
+	 time 9.464 s/epoch, total time 56.786 s, time left 416.43 s
+INFO:root:Epoch 6: train_loss 1.31988, train_acc 0, dev_loss 1.323398, dev_acc 0.124, 
+	 time 9.466 s/epoch, total time 66.262 s, time left 407.036 s
+INFO:root:Epoch 7: train_loss 1.295814, train_acc 0, dev_loss 1.323398, dev_acc 0.124, 
+	 time 9.451 s/epoch, total time 75.611 s, time left 396.96 s
+INFO:root:Epoch 8: train_loss 1.274858, train_acc 0, dev_loss 1.323398, dev_acc 0.124, 
+	 time 9.446 s/epoch, total time 85.014 s, time left 387.288 s
+INFO:root:Epoch 9: train_loss 1.258444, train_acc 0, dev_loss 1.323398, dev_acc 0.124, 
+	 time 9.442 s/epoch, total time 94.422 s, time left 377.689 s
+INFO:root:Epoch 10: train_loss 1.245053, train_acc 0, dev_loss 1.247643, dev_acc 0.252, 
+	 time 9.455 s/epoch, total time 104.003 s, time left 368.736 s
+INFO:root:Epoch 11: train_loss 1.234694, train_acc 0, dev_loss 1.247643, dev_acc 0.252, 
+	 time 9.447 s/epoch, total time 113.359 s, time left 358.969 s
+INFO:root:Epoch 12: train_loss 1.225988, train_acc 0, dev_loss 1.247643, dev_acc 0.252, 
+	 time 9.442 s/epoch, total time 122.751 s, time left 349.367 s
+INFO:root:Epoch 13: train_loss 1.216739, train_acc 0, dev_loss 1.247643, dev_acc 0.252, 
+	 time 9.437 s/epoch, total time 132.124 s, time left 339.747 s
+INFO:root:Epoch 14: train_loss 1.211007, train_acc 0, dev_loss 1.247643, dev_acc 0.252, 
+	 time 9.433 s/epoch, total time 141.502 s, time left 330.172 s
+INFO:root:Epoch 15: train_loss 1.203206, train_acc 0, dev_loss 1.206282, dev_acc 0.292, 
+	 time 9.443 s/epoch, total time 151.087 s, time left 321.06 s
+INFO:root:Epoch 16: train_loss 1.195899, train_acc 0, dev_loss 1.206282, dev_acc 0.292, 
+	 time 9.443 s/epoch, total time 160.533 s, time left 311.623 s
+INFO:root:Epoch 17: train_loss 1.192527, train_acc 0, dev_loss 1.206282, dev_acc 0.292, 
+	 time 9.442 s/epoch, total time 169.95 s, time left 302.133 s
+INFO:root:Epoch 18: train_loss 1.184883, train_acc 0, dev_loss 1.206282, dev_acc 0.292, 
+	 time 9.439 s/epoch, total time 179.334 s, time left 292.598 s
+INFO:root:Epoch 19: train_loss 1.175888, train_acc 0, dev_loss 1.206282, dev_acc 0.292, 
+	 time 9.436 s/epoch, total time 188.721 s, time left 283.082 s
+INFO:root:Epoch 20: train_loss 1.170707, train_acc 0, dev_loss 1.179457, dev_acc 0.324, 
+	 time 9.442 s/epoch, total time 198.285 s, time left 273.822 s
+INFO:root:Epoch 21: train_loss 1.161977, train_acc 0, dev_loss 1.179457, dev_acc 0.324, 
+	 time 9.438 s/epoch, total time 207.629 s, time left 264.255 s
+INFO:root:Epoch 22: train_loss 1.154858, train_acc 0, dev_loss 1.179457, dev_acc 0.324, 
+	 time 9.435 s/epoch, total time 217.006 s, time left 254.747 s
+INFO:root:Epoch 23: train_loss 1.145578, train_acc 0, dev_loss 1.179457, dev_acc 0.324, 
+	 time 9.434 s/epoch, total time 226.412 s, time left 245.28 s
+INFO:root:Epoch 24: train_loss 1.138352, train_acc 0, dev_loss 1.179457, dev_acc 0.324, 
+	 time 9.43 s/epoch, total time 235.749 s, time left 235.749 s
+INFO:root:Epoch 25: train_loss 1.131767, train_acc 0, dev_loss 1.140747, dev_acc 0.428, 
+	 time 9.435 s/epoch, total time 245.317 s, time left 226.447 s
+INFO:root:Epoch 26: train_loss 1.124614, train_acc 0, dev_loss 1.140747, dev_acc 0.428, 
+	 time 9.435 s/epoch, total time 254.744 s, time left 217.004 s
+INFO:root:Epoch 27: train_loss 1.11795, train_acc 0, dev_loss 1.140747, dev_acc 0.428, 
+	 time 9.431 s/epoch, total time 264.08 s, time left 207.492 s
+INFO:root:Epoch 28: train_loss 1.112397, train_acc 0, dev_loss 1.140747, dev_acc 0.428, 
+	 time 9.429 s/epoch, total time 273.431 s, time left 198.002 s
+INFO:root:Epoch 29: train_loss 1.108561, train_acc 0, dev_loss 1.140747, dev_acc 0.428, 
+	 time 9.427 s/epoch, total time 282.816 s, time left 188.544 s
+INFO:root:Epoch 30: train_loss 1.102741, train_acc 0, dev_loss 1.119598, dev_acc 0.444, 
+	 time 9.432 s/epoch, total time 292.4 s, time left 179.213 s
+INFO:root:Epoch 31: train_loss 1.101263, train_acc 0, dev_loss 1.119598, dev_acc 0.444, 
+	 time 9.43 s/epoch, total time 301.771 s, time left 169.746 s
+INFO:root:Epoch 32: train_loss 1.09661, train_acc 0, dev_loss 1.119598, dev_acc 0.444, 
+	 time 9.429 s/epoch, total time 311.156 s, time left 160.293 s
+INFO:root:Epoch 33: train_loss 1.096648, train_acc 0, dev_loss 1.119598, dev_acc 0.444, 
+	 time 9.429 s/epoch, total time 320.571 s, time left 150.857 s
+INFO:root:Epoch 34: train_loss 1.094001, train_acc 0, dev_loss 1.119598, dev_acc 0.444, 
+	 time 9.427 s/epoch, total time 329.95 s, time left 141.407 s
+INFO:root:Epoch 35: train_loss 1.090828, train_acc 0, dev_loss 1.10436, dev_acc 0.46, 
+	 time 9.442 s/epoch, total time 339.912 s, time left 132.188 s
+INFO:root:Epoch 36: train_loss 1.086695, train_acc 0, dev_loss 1.10436, dev_acc 0.46, 
+	 time 9.44 s/epoch, total time 349.27 s, time left 122.716 s
+INFO:root:Epoch 37: train_loss 1.086106, train_acc 0, dev_loss 1.10436, dev_acc 0.46, 
+	 time 9.441 s/epoch, total time 358.743 s, time left 113.287 s
+INFO:root:Epoch 38: train_loss 1.082365, train_acc 0, dev_loss 1.10436, dev_acc 0.46, 
+	 time 9.439 s/epoch, total time 368.129 s, time left 103.831 s
+INFO:root:Epoch 39: train_loss 1.082959, train_acc 0, dev_loss 1.10436, dev_acc 0.46, 
+	 time 9.437 s/epoch, total time 377.492 s, time left 94.373 s
+INFO:root:Epoch 40: train_loss 1.080557, train_acc 0, dev_loss 1.099114, dev_acc 0.472, 
+	 time 9.441 s/epoch, total time 387.095 s, time left 84.972 s
+INFO:root:Epoch 41: train_loss 1.081635, train_acc 0, dev_loss 1.099114, dev_acc 0.472, 
+	 time 9.44 s/epoch, total time 396.467 s, time left 75.517 s
+INFO:root:Epoch 42: train_loss 1.078595, train_acc 0, dev_loss 1.099114, dev_acc 0.472, 
+	 time 9.439 s/epoch, total time 405.888 s, time left 66.075 s
+INFO:root:Epoch 43: train_loss 1.075718, train_acc 0, dev_loss 1.099114, dev_acc 0.472, 
+	 time 9.44 s/epoch, total time 415.356 s, time left 56.639 s
+INFO:root:Epoch 44: train_loss 1.076439, train_acc 0, dev_loss 1.099114, dev_acc 0.472, 
+	 time 9.44 s/epoch, total time 424.788 s, time left 47.199 s
+INFO:root:Epoch 45: train_loss 1.074417, train_acc 0, dev_loss 1.092397, dev_acc 0.472, 
+	 time 9.442 s/epoch, total time 434.347 s, time left 37.769 s
+INFO:root:Epoch 46: train_loss 1.074507, train_acc 0, dev_loss 1.092397, dev_acc 0.472, 
+	 time 9.441 s/epoch, total time 443.719 s, time left 28.323 s
+INFO:root:Epoch 47: train_loss 1.068364, train_acc 0, dev_loss 1.092397, dev_acc 0.472, 
+	 time 9.442 s/epoch, total time 453.192 s, time left 18.883 s
+INFO:root:Epoch 48: train_loss 1.071941, train_acc 0, dev_loss 1.092397, dev_acc 0.472, 
+	 time 9.44 s/epoch, total time 462.568 s, time left 9.44 s
+INFO:root:Epoch 49: train_loss 1.070152, train_acc 0, dev_loss 1.083729, dev_acc 0.48, 
+	 time 9.443 s/epoch, total time 472.155 s, time left 0.0 s
+INFO:root:Model: RealSmallCNN(
+    conv1: Conv(3, 10, (5, 5), (1, 1), (1, 1), (0, 0), 1, float32[10,], None, Kw=None, fan=None, i=None, bound=None)
+    pool1: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+    conv2: Conv(10, 20, (3, 3), (1, 1), (1, 1), (0, 0), 1, float32[20,], None, Kw=None, fan=None, i=None, bound=None)
+    avgpool: AdaptiveAvgPool2d((4, 4))
+    fc1: Linear(320, 100, float32[100,], None)
+    fc2: Linear(100, 50, float32[50,], None)
+    fc3: Linear(200, 16, float32[16,], None)
+) , Params num: 42946
+INFO:root:Config: {'use_cuda': 1, 'preprocess': False, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'n_input': [3, 16, 16], 'epoch': 50, 'eval_epoch': 5, 'lr': 0.0003, 'batch_size': 256, 'num_workers': 8, 'enable_scheduler': False, 'milestones': [10, 15], 'gamma': 0.7}
+INFO:root:Best epoch: 49, best acc: 0.48
+Final train_loss: 1.070152 dev_loss: 1.083729
+Final train_acc: 0 dev_acc: 0.48
+Config: {'use_cuda': 1, 'preprocess': False, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'n_input': [3, 16, 16], 'epoch': 50, 'eval_epoch': 5, 'lr': 0.0003, 'batch_size': 256, 'num_workers': 8, 'enable_scheduler': False, 'milestones': [10, 15], 'gamma': 0.7}
+
+INFO:root:
+
+----------Tue May 16 04:09:11 2023----------
+INFO:root:Start Training: Tue May 16 04:09:19 2023
+INFO:root:Epoch 0: train_loss 1.386424, train_acc 0, dev_loss 1.386503, dev_acc 0.0, 
+	 time 25.031 s/epoch, total time 25.031 s, time left 1226.528 s
+INFO:root:Epoch 1: train_loss 1.369982, train_acc 0, dev_loss 1.386503, dev_acc 0.0, 
+	 time 22.467 s/epoch, total time 44.933 s, time left 1078.396 s
+INFO:root:Epoch 2: train_loss 1.302035, train_acc 0, dev_loss 1.386503, dev_acc 0.0, 
+	 time 21.611 s/epoch, total time 64.832 s, time left 1015.698 s
+INFO:root:Epoch 3: train_loss 1.212415, train_acc 0, dev_loss 1.386503, dev_acc 0.0, 
+	 time 21.204 s/epoch, total time 84.816 s, time left 975.383 s
+INFO:root:Epoch 4: train_loss 1.165228, train_acc 0, dev_loss 1.386503, dev_acc 0.0, 
+	 time 20.979 s/epoch, total time 104.893 s, time left 944.041 s
+INFO:root:Epoch 5: train_loss 1.135606, train_acc 0, dev_loss 1.118376, dev_acc 0.405, 
+	 time 20.886 s/epoch, total time 125.315 s, time left 918.975 s
+INFO:root:Epoch 6: train_loss 1.112697, train_acc 0, dev_loss 1.118376, dev_acc 0.405, 
+	 time 20.749 s/epoch, total time 145.243 s, time left 892.209 s
+INFO:root:Epoch 7: train_loss 1.089557, train_acc 0, dev_loss 1.118376, dev_acc 0.405, 
+	 time 20.648 s/epoch, total time 165.18 s, time left 867.195 s
+INFO:root:Epoch 8: train_loss 1.075373, train_acc 0, dev_loss 1.118376, dev_acc 0.405, 
+	 time 20.569 s/epoch, total time 185.119 s, time left 843.32 s
+INFO:root:Epoch 9: train_loss 1.057387, train_acc 0, dev_loss 1.118376, dev_acc 0.405, 
+	 time 20.512 s/epoch, total time 205.118 s, time left 820.473 s
+INFO:root:Epoch 10: train_loss 1.054107, train_acc 0, dev_loss 1.038222, dev_acc 0.536, 
+	 time 20.505 s/epoch, total time 225.553 s, time left 799.689 s
+INFO:root:Epoch 11: train_loss 1.046592, train_acc 0, dev_loss 1.038222, dev_acc 0.536, 
+	 time 20.46 s/epoch, total time 245.521 s, time left 777.484 s
+INFO:root:Epoch 12: train_loss 1.041001, train_acc 0, dev_loss 1.038222, dev_acc 0.536, 
+	 time 20.419 s/epoch, total time 265.447 s, time left 755.503 s
+INFO:root:Epoch 13: train_loss 1.039945, train_acc 0, dev_loss 1.038222, dev_acc 0.536, 
+	 time 20.386 s/epoch, total time 285.408 s, time left 733.906 s
+INFO:root:Epoch 14: train_loss 1.039748, train_acc 0, dev_loss 1.038222, dev_acc 0.536, 
+	 time 20.361 s/epoch, total time 305.416 s, time left 712.638 s
+INFO:root:Epoch 15: train_loss 1.035196, train_acc 0, dev_loss 1.023481, dev_acc 0.558, 
+	 time 20.365 s/epoch, total time 325.841 s, time left 692.412 s
+INFO:root:Epoch 16: train_loss 1.028666, train_acc 0, dev_loss 1.023481, dev_acc 0.558, 
+	 time 20.342 s/epoch, total time 345.809 s, time left 671.276 s
+INFO:root:Epoch 17: train_loss 1.027495, train_acc 0, dev_loss 1.023481, dev_acc 0.558, 
+	 time 20.322 s/epoch, total time 365.788 s, time left 650.29 s
+INFO:root:Epoch 18: train_loss 1.023732, train_acc 0, dev_loss 1.023481, dev_acc 0.558, 
+	 time 20.303 s/epoch, total time 385.75 s, time left 629.381 s
+INFO:root:Epoch 19: train_loss 1.023076, train_acc 0, dev_loss 1.023481, dev_acc 0.558, 
+	 time 20.29 s/epoch, total time 405.809 s, time left 608.714 s
+INFO:root:Epoch 20: train_loss 1.019916, train_acc 0, dev_loss 1.011091, dev_acc 0.578, 
+	 time 20.299 s/epoch, total time 426.274 s, time left 588.664 s
+INFO:root:Epoch 21: train_loss 1.014621, train_acc 0, dev_loss 1.011091, dev_acc 0.578, 
+	 time 20.284 s/epoch, total time 446.257 s, time left 567.963 s
+INFO:root:Epoch 22: train_loss 1.016777, train_acc 0, dev_loss 1.011091, dev_acc 0.578, 
+	 time 20.272 s/epoch, total time 466.254 s, time left 547.342 s
+INFO:root:Epoch 23: train_loss 1.018394, train_acc 0, dev_loss 1.011091, dev_acc 0.578, 
+	 time 20.259 s/epoch, total time 486.209 s, time left 526.726 s
+INFO:root:Epoch 24: train_loss 1.015431, train_acc 0, dev_loss 1.011091, dev_acc 0.578, 
+	 time 20.247 s/epoch, total time 506.177 s, time left 506.177 s
+INFO:root:Epoch 25: train_loss 1.005581, train_acc 0, dev_loss 1.012777, dev_acc 0.564, 
+	 time 20.255 s/epoch, total time 526.618 s, time left 486.109 s
+INFO:root:Epoch 26: train_loss 1.008049, train_acc 0, dev_loss 1.012777, dev_acc 0.564, 
+	 time 20.244 s/epoch, total time 546.579 s, time left 465.604 s
+INFO:root:Epoch 27: train_loss 1.007027, train_acc 0, dev_loss 1.012777, dev_acc 0.564, 
+	 time 20.234 s/epoch, total time 566.539 s, time left 445.138 s
+INFO:root:Epoch 28: train_loss 1.002989, train_acc 0, dev_loss 1.012777, dev_acc 0.564, 
+	 time 20.225 s/epoch, total time 586.515 s, time left 424.718 s
+INFO:root:Epoch 29: train_loss 1.004981, train_acc 0, dev_loss 1.012777, dev_acc 0.564, 
+	 time 20.216 s/epoch, total time 606.466 s, time left 404.311 s
+INFO:root:Epoch 30: train_loss 1.00527, train_acc 0, dev_loss 1.004094, dev_acc 0.578, 
+	 time 20.225 s/epoch, total time 626.971 s, time left 384.272 s
+INFO:root:Epoch 31: train_loss 0.999785, train_acc 0, dev_loss 1.004094, dev_acc 0.578, 
+	 time 20.217 s/epoch, total time 646.937 s, time left 363.902 s
+INFO:root:Epoch 32: train_loss 0.995094, train_acc 0, dev_loss 1.004094, dev_acc 0.578, 
+	 time 20.209 s/epoch, total time 666.895 s, time left 343.552 s
+INFO:root:Epoch 33: train_loss 0.999372, train_acc 0, dev_loss 1.004094, dev_acc 0.578, 
+	 time 20.202 s/epoch, total time 686.874 s, time left 323.235 s
+INFO:root:Epoch 34: train_loss 0.996328, train_acc 0, dev_loss 1.004094, dev_acc 0.578, 
+	 time 20.196 s/epoch, total time 706.851 s, time left 302.936 s
+INFO:root:Epoch 35: train_loss 0.993115, train_acc 0, dev_loss 0.990209, dev_acc 0.598, 
+	 time 20.204 s/epoch, total time 727.355 s, time left 282.86 s
+INFO:root:Epoch 36: train_loss 0.99488, train_acc 0, dev_loss 0.990209, dev_acc 0.598, 
+	 time 20.198 s/epoch, total time 747.319 s, time left 262.571 s
+INFO:root:Epoch 37: train_loss 0.991539, train_acc 0, dev_loss 0.990209, dev_acc 0.598, 
+	 time 20.192 s/epoch, total time 767.304 s, time left 242.306 s
+INFO:root:Epoch 38: train_loss 0.992586, train_acc 0, dev_loss 0.990209, dev_acc 0.598, 
+	 time 20.186 s/epoch, total time 787.256 s, time left 222.047 s
+INFO:root:Epoch 39: train_loss 0.989773, train_acc 0, dev_loss 0.990209, dev_acc 0.598, 
+	 time 20.181 s/epoch, total time 807.241 s, time left 201.81 s
+INFO:root:Epoch 40: train_loss 0.993119, train_acc 0, dev_loss 0.989633, dev_acc 0.608, 
+	 time 20.187 s/epoch, total time 827.68 s, time left 181.686 s
+INFO:root:Epoch 41: train_loss 0.99198, train_acc 0, dev_loss 0.989633, dev_acc 0.608, 
+	 time 20.184 s/epoch, total time 847.717 s, time left 161.47 s
+INFO:root:Epoch 42: train_loss 0.987073, train_acc 0, dev_loss 0.989633, dev_acc 0.608, 
+	 time 20.179 s/epoch, total time 867.702 s, time left 141.254 s
+INFO:root:Epoch 43: train_loss 0.984842, train_acc 0, dev_loss 0.989633, dev_acc 0.608, 
+	 time 20.174 s/epoch, total time 887.671 s, time left 121.046 s
+INFO:root:Epoch 44: train_loss 0.984833, train_acc 0, dev_loss 0.989633, dev_acc 0.608, 
+	 time 20.169 s/epoch, total time 907.614 s, time left 100.846 s
+INFO:root:Epoch 45: train_loss 0.988304, train_acc 0, dev_loss 0.987648, dev_acc 0.6, 
+	 time 20.174 s/epoch, total time 927.994 s, time left 80.695 s
+INFO:root:Epoch 46: train_loss 0.981076, train_acc 0, dev_loss 0.987648, dev_acc 0.6, 
+	 time 20.171 s/epoch, total time 948.032 s, time left 60.513 s
+INFO:root:Epoch 47: train_loss 0.981675, train_acc 0, dev_loss 0.987648, dev_acc 0.6, 
+	 time 20.167 s/epoch, total time 968.003 s, time left 40.333 s
+INFO:root:Epoch 48: train_loss 0.982651, train_acc 0, dev_loss 0.987648, dev_acc 0.6, 
+	 time 20.163 s/epoch, total time 987.977 s, time left 20.163 s
+INFO:root:Epoch 49: train_loss 0.984638, train_acc 0, dev_loss 0.985545, dev_acc 0.601, 
+	 time 20.167 s/epoch, total time 1008.359 s, time left 0.0 s
+INFO:root:Model: RealSmallCNN(
+    conv1: Conv(3, 10, (5, 5), (1, 1), (1, 1), (0, 0), 1, float32[10,], None, Kw=None, fan=None, i=None, bound=None)
+    pool1: Pool((2, 2), (2, 2), padding=(0, 0), dilation=None, return_indices=None, ceil_mode=False, count_include_pad=False, op=maximum)
+    conv2: Conv(10, 20, (3, 3), (1, 1), (1, 1), (0, 0), 1, float32[20,], None, Kw=None, fan=None, i=None, bound=None)
+    conv3: Conv(20, 60, (3, 3), (1, 1), (1, 1), (0, 0), 1, float32[60,], None, Kw=None, fan=None, i=None, bound=None)
+    avgpool: AdaptiveAvgPool2d((4, 4))
+    fc1: Linear(960, 512, float32[512,], None)
+    fc22: Linear(512, 256, float32[256,], None)
+    fc23: Linear(256, 50, float32[50,], None)
+    fc31: Linear(200, 128, float32[128,], None)
+    fc32: Linear(128, 16, float32[16,], None)
+) , Params num: 677442
+INFO:root:Config: {'use_cuda': 1, 'preprocess': False, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'n_input': [3, 16, 16], 'epoch': 50, 'eval_epoch': 5, 'lr': 0.0003, 'batch_size': 256, 'num_workers': 8, 'enable_scheduler': False, 'milestones': [10, 15], 'gamma': 0.7}
+INFO:root:Best epoch: 40, best acc: 0.608062243852459
+Final train_loss: 0.984638 dev_loss: 0.985545
+Final train_acc: 0 dev_acc: 0.600634
+Config: {'use_cuda': 1, 'preprocess': False, 'val_ratio': 0.05, 'data_dir': './cifar-10-batches-py', 'save_dir': './save', 'model': 'realsmallcnn', 'n_input': [3, 16, 16], 'epoch': 50, 'eval_epoch': 5, 'lr': 0.0003, 'batch_size': 256, 'num_workers': 8, 'enable_scheduler': False, 'milestones': [10, 15], 'gamma': 0.7}
+
+INFO:root:
+
+----------Tue May 16 04:45:32 2023----------
+INFO:root:INFO:root:
+
+----------Tue May 16 04:52:19 2023----------
+INFO:root:Start Training: Tue May 16 04:52:22 2023
+INFO:root:
+
+----------Tue May 16 04:54:47 2023----------
+INFO:root:Start Training: Tue May 16 04:54:50 2023
+INFO:root:
+
+----------Tue May 16 04:56:40 2023----------
+INFO:root:Start Training: Tue May 16 04:56:48 2023
+INFO:root:
+
+----------Tue May 16 04:57:33 2023----------
+INFO:root:Start Training: Tue May 16 04:57:36 2023
+INFO:root:
+
+----------Tue May 16 04:58:10 2023----------
+INFO:root:Start Training: Tue May 16 04:58:14 2023
+INFO:root:Epoch 0: train_loss 1.372886, train_acc 0, dev_loss 1.331835, dev_acc 0.08, 
+	 time 50.961 s/epoch, total time 50.961 s, time left 4025.91 s
+INFO:root:Epoch 1: train_loss 1.312793, train_acc 0, dev_loss 1.331835, dev_acc 0.08, 
+	 time 49.865 s/epoch, total time 99.731 s, time left 3889.507 s
+INFO:root:Epoch 2: train_loss 1.241078, train_acc 0, dev_loss 1.331835, dev_acc 0.08, 
+	 time 49.494 s/epoch, total time 148.482 s, time left 3811.046 s
+INFO:root:Epoch 3: train_loss 1.192987, train_acc 0, dev_loss 1.331835, dev_acc 0.08, 
+	 time 49.319 s/epoch, total time 197.277 s, time left 3748.256 s
+INFO:root:Epoch 4: train_loss 1.162952, train_acc 0, dev_loss 1.331835, dev_acc 0.08, 
+	 time 49.217 s/epoch, total time 246.086 s, time left 3691.285 s
+INFO:root:Epoch 5: train_loss 1.116397, train_acc 0, dev_loss 1.04586, dev_acc 0.511, 
+	 time 49.385 s/epoch, total time 296.308 s, time left 3654.46 s
+INFO:root:Epoch 6: train_loss 1.078817, train_acc 0, dev_loss 1.04586, dev_acc 0.511, 
+	 time 49.316 s/epoch, total time 345.212 s, time left 3600.073 s
+INFO:root:Epoch 7: train_loss 1.057605, train_acc 0, dev_loss 1.04586, dev_acc 0.511, 
+	 time 49.252 s/epoch, total time 394.016 s, time left 3546.143 s
+INFO:root:Epoch 8: train_loss 1.038776, train_acc 0, dev_loss 1.04586, dev_acc 0.511, 
+	 time 49.204 s/epoch, total time 442.84 s, time left 3493.516 s
+INFO:root:Epoch 9: train_loss 1.024785, train_acc 0, dev_loss 1.04586, dev_acc 0.511, 
+	 time 49.16 s/epoch, total time 491.602 s, time left 3441.214 s
+INFO:root:Epoch 10: train_loss 1.014599, train_acc 0, dev_loss 0.995649, dev_acc 0.585, 
+	 time 49.249 s/epoch, total time 541.744 s, time left 3398.212 s
+INFO:root:Epoch 11: train_loss 1.008381, train_acc 0, dev_loss 0.995649, dev_acc 0.585, 
+	 time 49.212 s/epoch, total time 590.542 s, time left 3346.405 s
+INFO:root:Epoch 12: train_loss 1.00141, train_acc 0, dev_loss 0.995649, dev_acc 0.585, 
+	 time 49.177 s/epoch, total time 639.304 s, time left 3294.873 s
+INFO:root:Epoch 13: train_loss 0.988897, train_acc 0, dev_loss 0.995649, dev_acc 0.585, 
+	 time 49.146 s/epoch, total time 688.045 s, time left 3243.639 s
+INFO:root:Epoch 14: train_loss 0.986916, train_acc 0, dev_loss 0.995649, dev_acc 0.585, 
+	 time 49.117 s/epoch, total time 736.752 s, time left 3192.59 s
+INFO:root:Epoch 15: train_loss 0.984904, train_acc 0, dev_loss 0.964986, dev_acc 0.619, 
+	 time 49.182 s/epoch, total time 786.914 s, time left 3147.657 s
+INFO:root:Epoch 16: train_loss 0.983615, train_acc 0, dev_loss 0.964986, dev_acc 0.619, 
+	 time 49.158 s/epoch, total time 835.694 s, time left 3096.985 s
+INFO:root:Epoch 17: train_loss 0.977402, train_acc 0, dev_loss 0.964986, dev_acc 0.619, 
+	 time 49.134 s/epoch, total time 884.412 s, time left 3046.308 s
+INFO:root:Epoch 18: train_loss 0.968295, train_acc 0, dev_loss 0.964986, dev_acc 0.619, 
+	 time 49.11 s/epoch, total time 933.096 s, time left 2995.728 s
+INFO:root:Epoch 19: train_loss 0.966436, train_acc 0, dev_loss 0.964986, dev_acc 0.619, 
+	 time 49.093 s/epoch, total time 981.853 s, time left 2945.56 s
+INFO:root:Epoch 20: train_loss 0.962113, train_acc 0, dev_loss 0.946507, dev_acc 0.655, 
+	 time 49.14 s/epoch, total time 1031.939 s, time left 2899.257 s
+INFO:root:Epoch 21: train_loss 0.961387, train_acc 0, dev_loss 0.946507, dev_acc 0.655, 
+	 time 49.122 s/epoch, total time 1080.686 s, time left 2849.081 s
+INFO:root:Epoch 22: train_loss 0.955538, train_acc 0, dev_loss 0.946507, dev_acc 0.655, 
+	 time 49.102 s/epoch, total time 1129.347 s, time left 2798.816 s
+INFO:root:Epoch 23: train_loss 0.955315, train_acc 0, dev_loss 0.946507, dev_acc 0.655, 
+	 time 49.086 s/epoch, total time 1178.07 s, time left 2748.83 s
+INFO:root:Epoch 24: train_loss 0.952876, train_acc 0, dev_loss 0.946507, dev_acc 0.655, 
+	 time 49.07 s/epoch, total time 1226.742 s, time left 2698.833 s
+INFO:root:Epoch 25: train_loss 0.950555, train_acc 0, dev_loss 0.940205, dev_acc 0.668, 
+	 time 49.108 s/epoch, total time 1276.804 s, time left 2651.824 s
+INFO:root:Epoch 26: train_loss 0.949172, train_acc 0, dev_loss 0.940205, dev_acc 0.668, 
+	 time 49.091 s/epoch, total time 1325.468 s, time left 2601.845 s
+INFO:root:Epoch 27: train_loss 0.943727, train_acc 0, dev_loss 0.940205, dev_acc 0.668, 
+	 time 49.076 s/epoch, total time 1374.118 s, time left 2551.933 s
+INFO:root:Epoch 28: train_loss 0.942788, train_acc 0, dev_loss 0.940205, dev_acc 0.668, 
+	 time 49.06 s/epoch, total time 1422.748 s, time left 2502.075 s
+INFO:root:Epoch 29: train_loss 0.93877, train_acc 0, dev_loss 0.940205, dev_acc 0.668, 
+	 time 49.049 s/epoch, total time 1471.468 s, time left 2452.447 s
+INFO:root:Epoch 30: train_loss 0.942469, train_acc 0, dev_loss 0.932893, dev_acc 0.667, 
+	 time 49.073 s/epoch, total time 1521.272 s, time left 2404.591 s
+INFO:root:Epoch 31: train_loss 0.936528, train_acc 0, dev_loss 0.932893, dev_acc 0.667, 
+	 time 49.061 s/epoch, total time 1569.957 s, time left 2354.935 s
+INFO:root:Epoch 32: train_loss 0.93216, train_acc 0, dev_loss 0.932893, dev_acc 0.667, 
+	 time 49.049 s/epoch, total time 1618.617 s, time left 2305.303 s
+INFO:root:Epoch 33: train_loss 0.930015, train_acc 0, dev_loss 0.932893, dev_acc 0.667, 
+	 time 49.041 s/epoch, total time 1667.397 s, time left 2255.889 s
+INFO:root:Epoch 34: train_loss 0.927167, train_acc 0, dev_loss 0.932893, dev_acc 0.667, 
+	 time 49.032 s/epoch, total time 1716.131 s, time left 2206.454 s
+INFO:root:Epoch 35: train_loss 0.929274, train_acc 0, dev_loss 0.931696, dev_acc 0.674, 
+	 time 49.06 s/epoch, total time 1766.165 s, time left 2158.646 s
+INFO:root:Epoch 36: train_loss 0.926262, train_acc 0, dev_loss 0.931696, dev_acc 0.674, 
+	 time 49.05 s/epoch, total time 1814.845 s, time left 2109.144 s
+INFO:root:Epoch 37: train_loss 0.923446, train_acc 0, dev_loss 0.931696, dev_acc 0.674, 
+	 time 49.038 s/epoch, total time 1863.46 s, time left 2059.613 s
+INFO:root:Epoch 38: train_loss 0.922592, train_acc 0, dev_loss 0.931696, dev_acc 0.674, 
+	 time 49.03 s/epoch, total time 1912.178 s, time left 2010.238 s
+INFO:root:Epoch 39: train_loss 0.91879, train_acc 0, dev_loss 0.931696, dev_acc 0.674, 
+	 time 49.022 s/epoch, total time 1960.875 s, time left 1960.875 s
+INFO:root:Epoch 40: train_loss 0.920164, train_acc 0, dev_loss 0.920166, dev_acc 0.696, 
+	 time 49.046 s/epoch, total time 2010.89 s, time left 1912.798 s
+INFO:root:Epoch 41: train_loss 0.915614, train_acc 0, dev_loss 0.920166, dev_acc 0.696, 
+	 time 49.037 s/epoch, total time 2059.568 s, time left 1863.419 s
+INFO:root:Epoch 42: train_loss 0.917156, train_acc 0, dev_loss 0.920166, dev_acc 0.696, 
+	 time 49.029 s/epoch, total time 2108.238 s, time left 1814.065 s
+INFO:root:Epoch 43: train_loss 0.911937, train_acc 0, dev_loss 0.920166, dev_acc 0.696, 
+	 time 49.023 s/epoch, total time 2157.01 s, time left 1764.827 s
+INFO:root:Epoch 44: train_loss 0.91129, train_acc 0, dev_loss 0.920166, dev_acc 0.696, 
+	 time 49.014 s/epoch, total time 2205.633 s, time left 1715.492 s
+INFO:root:Epoch 45: train_loss 0.909856, train_acc 0, dev_loss 0.91889, dev_acc 0.694, 
+	 time 49.028 s/epoch, total time 2255.297 s, time left 1666.958 s
+INFO:root:Epoch 46: train_loss 0.90639, train_acc 0, dev_loss 0.91889, dev_acc 0.694, 
+	 time 49.02 s/epoch, total time 2303.952 s, time left 1617.668 s
+INFO:root:Epoch 47: train_loss 0.905309, train_acc 0, dev_loss 0.91889, dev_acc 0.694, 
+	 time 49.014 s/epoch, total time 2352.673 s, time left 1568.449 s
+INFO:root:Epoch 48: train_loss 0.907629, train_acc 0, dev_loss 0.91889, dev_acc 0.694, 
+	 time 49.008 s/epoch, total time 2401.414 s, time left 1519.262 s
+INFO:root:Epoch 49: train_loss 0.902071, train_acc 0, dev_loss 0.91889, dev_acc 0.694, 
+	 time 49.003 s/epoch, total time 2450.135 s, time left 1470.081 s
+INFO:root:Epoch 50: train_loss 0.903326, train_acc 0, dev_loss 0.915055, dev_acc 0.702, 
+	 time 49.024 s/epoch, total time 2500.248 s, time left 1421.71 s
+INFO:root:Epoch 51: train_loss 0.899323, train_acc 0, dev_loss 0.915055, dev_acc 0.702, 
+	 time 49.019 s/epoch, total time 2548.992 s, time left 1372.534 s
+INFO:root:Epoch 52: train_loss 0.898996, train_acc 0, dev_loss 0.915055, dev_acc 0.702, 
+	 time 49.012 s/epoch, total time 2597.653 s, time left 1323.333 s
+INFO:root:Epoch 53: train_loss 0.901643, train_acc 0, dev_loss 0.915055, dev_acc 0.702, 
+	 time 49.006 s/epoch, total time 2646.332 s, time left 1274.16 s
+INFO:root:Epoch 54: train_loss 0.896158, train_acc 0, dev_loss 0.915055, dev_acc 0.702, 
+	 time 49.001 s/epoch, total time 2695.028 s, time left 1225.013 s
+INFO:root:Epoch 55: train_loss 0.893595, train_acc 0, dev_loss 0.917866, dev_acc 0.696, 
+	 time 49.016 s/epoch, total time 2744.877 s, time left 1176.376 s
+INFO:root:Epoch 56: train_loss 0.896591, train_acc 0, dev_loss 0.917866, dev_acc 0.696, 
+	 time 49.01 s/epoch, total time 2793.571 s, time left 1127.231 s
+INFO:root:Epoch 57: train_loss 0.894405, train_acc 0, dev_loss 0.917866, dev_acc 0.696, 
+	 time 49.005 s/epoch, total time 2842.262 s, time left 1078.099 s
+INFO:root:Epoch 58: train_loss 0.893175, train_acc 0, dev_loss 0.917866, dev_acc 0.696, 
+	 time 49.022 s/epoch, total time 2892.3 s, time left 1029.463 s
+INFO:root:Epoch 59: train_loss 0.891311, train_acc 0, dev_loss 0.917866, dev_acc 0.696, 
+	 time 49.052 s/epoch, total time 2943.14 s, time left 981.047 s
+INFO:root:Epoch 60: train_loss 0.88781, train_acc 0, dev_loss 0.918246, dev_acc 0.695, 
+	 time 49.107 s/epoch, total time 2995.499 s, time left 933.024 s
+INFO:root:Epoch 61: train_loss 0.888606, train_acc 0, dev_loss 0.918246, dev_acc 0.695, 
+	 time 49.138 s/epoch, total time 3046.535 s, time left 884.478 s
+INFO:root:Epoch 62: train_loss 0.887998, train_acc 0, dev_loss 0.918246, dev_acc 0.695, 
+	 time 49.152 s/epoch, total time 3096.593 s, time left 835.589 s
+INFO:root:Epoch 63: train_loss 0.892843, train_acc 0, dev_loss 0.918246, dev_acc 0.695, 
+	 time 49.166 s/epoch, total time 3146.618 s, time left 786.654 s
+INFO:root:
+
+----------Tue May 16 05:52:49 2023----------
+INFO:root:
+
+----------Tue May 16 05:53:16 2023----------
+INFO:root:Start Training: Tue May 16 05:53:19 2023
+INFO:root:Epoch 0: train_loss 1.308923, train_acc 0, dev_loss 1.167517, dev_acc 0.295, 
+	 time 329.472 s/epoch, total time 329.472 s, time left 26028.263 s
+INFO:root:Epoch 1: train_loss 1.165153, train_acc 0, dev_loss 1.167517, dev_acc 0.295, 
+	 time 325.366 s/epoch, total time 650.731 s, time left 25378.518 s
+INFO:root:Epoch 2: train_loss 1.129071, train_acc 0, dev_loss 1.167517, dev_acc 0.295, 
+	 time 323.841 s/epoch, total time 971.523 s, time left 24935.767 s
+INFO:root:Epoch 3: train_loss 1.104255, train_acc 0, dev_loss 1.167517, dev_acc 0.295, 
+	 time 322.922 s/epoch, total time 1291.686 s, time left 24542.038 s
+INFO:root:Epoch 4: train_loss 1.083726, train_acc 0, dev_loss 1.167517, dev_acc 0.295, 
+	 time 322.459 s/epoch, total time 1612.294 s, time left 24184.407 s
+INFO:root:Epoch 5: train_loss 1.042802, train_acc 0, dev_loss 1.005516, dev_acc 0.557, 
+	 time 323.309 s/epoch, total time 1939.855 s, time left 23924.879 s
+INFO:root:Epoch 6: train_loss 1.021145, train_acc 0, dev_loss 1.005516, dev_acc 0.557, 
+	 time 322.841 s/epoch, total time 2259.884 s, time left 23567.365 s
+INFO:root:Epoch 7: train_loss 0.998665, train_acc 0, dev_loss 1.005516, dev_acc 0.557, 
+	 time 322.504 s/epoch, total time 2580.033 s, time left 23220.301 s
+INFO:root:Epoch 8: train_loss 0.984562, train_acc 0, dev_loss 1.005516, dev_acc 0.557, 
+	 time 322.303 s/epoch, total time 2900.724 s, time left 22883.486 s
+INFO:root:Epoch 9: train_loss 0.966734, train_acc 0, dev_loss 1.005516, dev_acc 0.557, 
+	 time 322.176 s/epoch, total time 3221.756 s, time left 22552.294 s
+INFO:root:Epoch 10: train_loss 0.951914, train_acc 0, dev_loss 0.937976, dev_acc 0.664, 
+	 time 322.545 s/epoch, total time 3547.998 s, time left 22255.626 s
+INFO:root:Epoch 11: train_loss 0.944203, train_acc 0, dev_loss 0.937976, dev_acc 0.664, 
+	 time 322.364 s/epoch, total time 3868.37 s, time left 21920.765 s
+INFO:root:Epoch 12: train_loss 0.943855, train_acc 0, dev_loss 0.937976, dev_acc 0.664, 
+	 time 322.321 s/epoch, total time 4190.177 s, time left 21595.528 s
+INFO:root:Epoch 13: train_loss 0.93851, train_acc 0, dev_loss 0.937976, dev_acc 0.664, 
+	 time 322.212 s/epoch, total time 4510.966 s, time left 21265.982 s
+INFO:root:Epoch 14: train_loss 0.932491, train_acc 0, dev_loss 0.937976, dev_acc 0.664, 
+	 time 322.086 s/epoch, total time 4831.296 s, time left 20935.615 s
+INFO:root:Epoch 15: train_loss 0.927177, train_acc 0, dev_loss 0.915774, dev_acc 0.7, 
+	 time 322.362 s/epoch, total time 5157.8 s, time left 20631.199 s
+INFO:root:Epoch 16: train_loss 0.925693, train_acc 0, dev_loss 0.915774, dev_acc 0.7, 
+	 time 322.347 s/epoch, total time 5479.895 s, time left 20307.848 s
+INFO:root:Epoch 17: train_loss 0.923458, train_acc 0, dev_loss 0.915774, dev_acc 0.7, 
+	 time 322.259 s/epoch, total time 5800.666 s, time left 19980.073 s
+INFO:root:Epoch 18: train_loss 0.922618, train_acc 0, dev_loss 0.915774, dev_acc 0.7, 
+	 time 322.181 s/epoch, total time 6121.441 s, time left 19653.046 s
+INFO:root:Epoch 19: train_loss 0.921363, train_acc 0, dev_loss 0.915774, dev_acc 0.7, 
+	 time 322.112 s/epoch, total time 6442.24 s, time left 19326.721 s
+INFO:root:Epoch 20: train_loss 0.920151, train_acc 0, dev_loss 0.912454, dev_acc 0.713, 
+	 time 322.331 s/epoch, total time 6768.945 s, time left 19017.511 s
+INFO:root:Epoch 21: train_loss 0.919864, train_acc 0, dev_loss 0.912454, dev_acc 0.713, 
+	 time 322.333 s/epoch, total time 7091.329 s, time left 18695.322 s
+INFO:root:
+
+----------Tue May 16 08:01:12 2023----------
+INFO:root:Start Training: Tue May 16 08:01:16 2023
+INFO:root:Epoch 0: train_loss 1.352272, train_acc 0, dev_loss 1.260308, dev_acc 0.175, 
+	 time 202.237 s/epoch, total time 202.237 s, time left 15976.73 s
+INFO:root:Epoch 1: train_loss 1.222158, train_acc 0, dev_loss 1.260308, dev_acc 0.175, 
+	 time 199.159 s/epoch, total time 398.318 s, time left 15534.396 s
+INFO:root:Epoch 2: train_loss 1.159428, train_acc 0, dev_loss 1.260308, dev_acc 0.175, 
+	 time 198.043 s/epoch, total time 594.129 s, time left 15249.304 s
+INFO:root:Epoch 3: train_loss 1.128583, train_acc 0, dev_loss 1.074631, dev_acc 0.431, 
+	 time 198.516 s/epoch, total time 794.063 s, time left 15087.203 s
+INFO:root:Epoch 4: train_loss 1.102422, train_acc 0, dev_loss 1.074631, dev_acc 0.431, 
+	 time 198.12 s/epoch, total time 990.601 s, time left 14859.012 s
+INFO:root:
+
+----------Tue May 16 08:37:11 2023----------
+INFO:root:Start Training: Tue May 16 08:37:13 2023
+INFO:root:Epoch 0: train_loss 1.349853, train_acc 0, dev_loss 1.289661, dev_acc 0.115, 
+	 time 196.615 s/epoch, total time 196.615 s, time left 15532.574 s
+INFO:root:Epoch 1: train_loss 1.249541, train_acc 0, dev_loss 1.289661, dev_acc 0.115, 
+	 time 195.403 s/epoch, total time 390.807 s, time left 15241.469 s
+INFO:root:Epoch 2: train_loss 1.168502, train_acc 0, dev_loss 1.289661, dev_acc 0.115, 
+	 time 195.046 s/epoch, total time 585.139 s, time left 15018.56 s
+INFO:root:Epoch 3: train_loss 1.13419, train_acc 0, dev_loss 1.087338, dev_acc 0.429, 
+	 time 195.809 s/epoch, total time 783.236 s, time left 14881.493 s
+INFO:root:Epoch 4: train_loss 1.113931, train_acc 0, dev_loss 1.087338, dev_acc 0.429, 
+	 time 195.46 s/epoch, total time 977.298 s, time left 14659.472 s
+INFO:root:Epoch 5: train_loss 1.094289, train_acc 0, dev_loss 1.087338, dev_acc 0.429, 
+	 time 195.317 s/epoch, total time 1171.9 s, time left 14453.429 s
+INFO:root:Epoch 6: train_loss 1.062708, train_acc 0, dev_loss 1.005162, dev_acc 0.559, 
+	 time 195.781 s/epoch, total time 1370.47 s, time left 14292.042 s
+INFO:root:Epoch 7: train_loss 1.032524, train_acc 0, dev_loss 1.005162, dev_acc 0.559, 
+	 time 195.614 s/epoch, total time 1564.91 s, time left 14084.186 s
+INFO:root:Epoch 8: train_loss 0.997711, train_acc 0, dev_loss 1.005162, dev_acc 0.559, 
+	 time 195.508 s/epoch, total time 1759.576 s, time left 13881.1 s
+INFO:root:Epoch 9: train_loss 0.978837, train_acc 0, dev_loss 0.944256, dev_acc 0.66, 
+	 time 195.715 s/epoch, total time 1957.149 s, time left 13700.043 s
+INFO:root:Epoch 10: train_loss 0.972231, train_acc 0, dev_loss 0.944256, dev_acc 0.66, 
+	 time 195.582 s/epoch, total time 2151.405 s, time left 13495.179 s
+INFO:root:Epoch 11: train_loss 0.946721, train_acc 0, dev_loss 0.944256, dev_acc 0.66, 
+	 time 195.519 s/epoch, total time 2346.222 s, time left 13295.259 s
+INFO:root:Epoch 12: train_loss 0.939788, train_acc 0, dev_loss 0.917595, dev_acc 0.703, 
+	 time 195.727 s/epoch, total time 2544.452 s, time left 13113.713 s
+INFO:root:Epoch 13: train_loss 0.934033, train_acc 0, dev_loss 0.917595, dev_acc 0.703, 
+	 time 195.637 s/epoch, total time 2738.917 s, time left 12912.035 s
+INFO:root:Epoch 14: train_loss 0.93005, train_acc 0, dev_loss 0.917595, dev_acc 0.703, 
+	 time 195.582 s/epoch, total time 2933.732 s, time left 12712.84 s
+INFO:root:Epoch 15: train_loss 0.926985, train_acc 0, dev_loss 0.90832, dev_acc 0.716, 
+	 time 195.762 s/epoch, total time 3132.194 s, time left 12528.775 s
+INFO:root:Epoch 16: train_loss 0.924554, train_acc 0, dev_loss 0.90832, dev_acc 0.716, 
+	 time 195.673 s/epoch, total time 3326.443 s, time left 12327.406 s
+INFO:root:Epoch 17: train_loss 0.922354, train_acc 0, dev_loss 0.90832, dev_acc 0.716, 
+	 time 195.685 s/epoch, total time 3522.324 s, time left 12132.449 s
+INFO:root:Epoch 18: train_loss 0.919131, train_acc 0, dev_loss 0.903728, dev_acc 0.722, 
+	 time 195.952 s/epoch, total time 3723.088 s, time left 11953.071 s
+INFO:root:Epoch 19: train_loss 0.915822, train_acc 0, dev_loss 0.903728, dev_acc 0.722, 
+	 time 195.881 s/epoch, total time 3917.627 s, time left 11752.882 s
+INFO:root:Epoch 20: train_loss 0.912889, train_acc 0, dev_loss 0.903728, dev_acc 0.722, 
+	 time 195.817 s/epoch, total time 4112.161 s, time left 11553.214 s
+INFO:root:Epoch 21: train_loss 0.911844, train_acc 0, dev_loss 0.903668, dev_acc 0.72, 
+	 time 195.879 s/epoch, total time 4309.328 s, time left 11360.956 s
+INFO:root:Epoch 22: train_loss 0.908915, train_acc 0, dev_loss 0.903668, dev_acc 0.72, 
+	 time 195.786 s/epoch, total time 4503.077 s, time left 11159.8 s
+INFO:root:Epoch 23: train_loss 0.908419, train_acc 0, dev_loss 0.903668, dev_acc 0.72, 
+	 time 195.714 s/epoch, total time 4697.143 s, time left 10959.999 s
+INFO:root:Epoch 24: train_loss 0.905704, train_acc 0, dev_loss 0.896503, dev_acc 0.734, 
+	 time 195.847 s/epoch, total time 4896.167 s, time left 10771.567 s
+INFO:root:Epoch 25: train_loss 0.903129, train_acc 0, dev_loss 0.896503, dev_acc 0.734, 
+	 time 195.768 s/epoch, total time 5089.957 s, time left 10571.449 s
+INFO:root:Epoch 26: train_loss 0.896662, train_acc 0, dev_loss 0.896503, dev_acc 0.734, 
+	 time 195.744 s/epoch, total time 5285.096 s, time left 10374.448 s
+INFO:root:Epoch 27: train_loss 0.894046, train_acc 0, dev_loss 0.893823, dev_acc 0.736, 
+	 time 195.813 s/epoch, total time 5482.751 s, time left 10182.253 s
+INFO:root:Epoch 28: train_loss 0.89245, train_acc 0, dev_loss 0.893823, dev_acc 0.736, 
+	 time 195.754 s/epoch, total time 5676.869 s, time left 9983.46 s
+INFO:root:Epoch 29: train_loss 0.891704, train_acc 0, dev_loss 0.893823, dev_acc 0.736, 
+	 time 195.704 s/epoch, total time 5871.109 s, time left 9785.182 s
+INFO:root:Epoch 30: train_loss 0.891542, train_acc 0, dev_loss 0.894778, dev_acc 0.737, 
+	 time 195.78 s/epoch, total time 6069.172 s, time left 9593.208 s
+INFO:root:Epoch 31: train_loss 0.89062, train_acc 0, dev_loss 0.894778, dev_acc 0.737, 
+	 time 195.731 s/epoch, total time 6263.398 s, time left 9395.097 s
+INFO:root:Epoch 32: train_loss 0.889409, train_acc 0, dev_loss 0.894778, dev_acc 0.737, 
+	 time 195.692 s/epoch, total time 6457.848 s, time left 9197.541 s
+INFO:root:Epoch 33: train_loss 0.888533, train_acc 0, dev_loss 0.893301, dev_acc 0.744, 
+	 time 195.757 s/epoch, total time 6655.747 s, time left 9004.834 s
+INFO:root:Epoch 34: train_loss 0.888502, train_acc 0, dev_loss 0.893301, dev_acc 0.744, 
+	 time 195.702 s/epoch, total time 6849.573 s, time left 8806.594 s
+INFO:root:Epoch 35: train_loss 0.886654, train_acc 0, dev_loss 0.893301, dev_acc 0.744, 
+	 time 195.668 s/epoch, total time 7044.063 s, time left 8609.411 s
+INFO:root:Epoch 36: train_loss 0.885751, train_acc 0, dev_loss 0.891008, dev_acc 0.744, 
+	 time 195.749 s/epoch, total time 7242.728 s, time left 8417.224 s
+INFO:root:Epoch 37: train_loss 0.885655, train_acc 0, dev_loss 0.891008, dev_acc 0.744, 
+	 time 195.714 s/epoch, total time 7437.123 s, time left 8219.978 s
+INFO:root:Epoch 38: train_loss 0.884331, train_acc 0, dev_loss 0.891008, dev_acc 0.744, 
+	 time 195.689 s/epoch, total time 7631.865 s, time left 8023.243 s
+INFO:root:Epoch 39: train_loss 0.884226, train_acc 0, dev_loss 0.893271, dev_acc 0.738, 
+	 time 195.737 s/epoch, total time 7829.474 s, time left 7829.474 s
+INFO:root:Epoch 40: train_loss 0.883536, train_acc 0, dev_loss 0.893271, dev_acc 0.738, 
+	 time 195.692 s/epoch, total time 8023.372 s, time left 7631.988 s
+INFO:root:Epoch 41: train_loss 0.880665, train_acc 0, dev_loss 0.893271, dev_acc 0.738, 
+	 time 195.657 s/epoch, total time 8217.587 s, time left 7434.96 s
+INFO:root:Epoch 42: train_loss 0.880228, train_acc 0, dev_loss 0.892558, dev_acc 0.741, 
+	 time 195.711 s/epoch, total time 8415.578 s, time left 7241.312 s
+INFO:root:Epoch 43: train_loss 0.879479, train_acc 0, dev_loss 0.892558, dev_acc 0.741, 
+	 time 195.676 s/epoch, total time 8609.748 s, time left 7044.339 s
+INFO:root:Epoch 44: train_loss 0.878988, train_acc 0, dev_loss 0.892558, dev_acc 0.741, 
+	 time 195.649 s/epoch, total time 8804.197 s, time left 6847.709 s
+INFO:root:Epoch 45: train_loss 0.878004, train_acc 0, dev_loss 0.891466, dev_acc 0.745, 
+	 time 195.697 s/epoch, total time 9002.053 s, time left 6653.691 s
+INFO:root:Epoch 46: train_loss 0.87831, train_acc 0, dev_loss 0.891466, dev_acc 0.745, 
+	 time 195.658 s/epoch, total time 9195.941 s, time left 6456.725 s
